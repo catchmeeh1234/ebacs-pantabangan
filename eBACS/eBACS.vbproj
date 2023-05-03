@@ -1,0 +1,928 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91A07A5E-6395-4EA3-BF68-8CF0F1F536C4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>eBACS.My.MyApplication</StartupObject>
+    <RootNamespace>eBACS</RootNamespace>
+    <AssemblyName>eBACS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>eBACS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>eBACS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>pantabangan.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net20\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Billing\billcompute.Designer.vb">
+      <DependentUpon>billcompute.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billing\billcompute.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing\billingAdjustmentOther.Designer.vb">
+      <DependentUpon>billingAdjustmentOther.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billing\billingAdjustmentOther.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing\billingAdjustmentBill.Designer.vb">
+      <DependentUpon>billingAdjustmentBill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billing\billingAdjustmentBill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing\BillingCancel.Designer.vb">
+      <DependentUpon>BillingCancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billing\BillingCancel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing\billingcreatebills.Designer.vb">
+      <DependentUpon>billingcreatebills.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billing\billingcreatebills.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing\billingDisconnection.Designer.vb">
+      <DependentUpon>billingDisconnection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billing\billingDisconnection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing\billinginfo.Designer.vb">
+      <DependentUpon>billinginfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billing\billinginfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing\billingPenalty.Designer.vb">
+      <DependentUpon>billingPenalty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billing\billingPenalty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing\billingpostbills.Designer.vb">
+      <DependentUpon>billingpostbills.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billing\billingpostbills.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing\billingcreatedbills.Designer.vb">
+      <DependentUpon>billingcreatedbills.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billing\billingcreatedbills.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing\Online Billing.Designer.vb">
+      <DependentUpon>Online Billing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billing\Online Billing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing\writeoff.Designer.vb">
+      <DependentUpon>writeoff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billing\writeoff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collections\AddDCR.designer.vb">
+      <DependentUpon>AddDCR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Collections\AddDCR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collections\Calculator.designer.vb">
+      <DependentUpon>Calculator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Collections\Calculator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collections\CollectedPayments.designer.vb">
+      <DependentUpon>CollectedPayments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Collections\CollectedPayments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collections\Collection CR.designer.vb">
+      <DependentUpon>Collection CR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Collections\Collection CR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collections\CollectionCancel.Designer.vb">
+      <DependentUpon>CollectionCancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Collections\CollectionCancel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collections\CollectionPost.designer.vb">
+      <DependentUpon>CollectionPost.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Collections\CollectionPost.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collections\CollectionsAndDeposits.designer.vb">
+      <DependentUpon>CollectionsAndDeposits.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Collections\CollectionsAndDeposits.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collections\Create OR.designer.vb">
+      <DependentUpon>Create OR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Collections\Create OR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collections\OR Items.designer.vb">
+      <DependentUpon>OR Items.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Collections\OR Items.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collections\ORCancel.Designer.vb">
+      <DependentUpon>ORCancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Collections\ORCancel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collections\ORCollected.designer.vb">
+      <DependentUpon>ORCollected.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Collections\ORCollected.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collections\ORPost.designer.vb">
+      <DependentUpon>ORPost.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Collections\ORPost.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collections\TempCR.Designer.vb">
+      <DependentUpon>TempCR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Collections\TempCR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collections\uploadpayment.Designer.vb">
+      <DependentUpon>uploadpayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Collections\uploadpayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Concessionaire\AssociatedAccounts.Designer.vb">
+      <DependentUpon>AssociatedAccounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Concessionaire\AssociatedAccounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Concessionaire\Camera.designer.vb">
+      <DependentUpon>Camera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Concessionaire\Camera.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Concessionaire\customerinfo.designer.vb">
+      <DependentUpon>customerinfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Concessionaire\customerinfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Concessionaire\meterreset.Designer.vb">
+      <DependentUpon>meterreset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Concessionaire\meterreset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Concessionaire\notes.Designer.vb">
+      <DependentUpon>notes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Concessionaire\notes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Concessionaire\SearchAccount.Designer.vb">
+      <DependentUpon>SearchAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Concessionaire\SearchAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Concessionaire\updateLedger.Designer.vb">
+      <DependentUpon>updateLedger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Concessionaire\updateLedger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Concessionaire\updatestatus.Designer.vb">
+      <DependentUpon>updatestatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Concessionaire\updatestatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="connectionsettings.vb" />
+    <Compile Include="DataSet1.designer.vb">
+      <DependentUpon>DataSet1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet11.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="eBACSmain.Designer.vb">
+      <DependentUpon>eBACSmain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="eBACSmain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Concessionaire\customercharges.Designer.vb">
+      <DependentUpon>customercharges.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Concessionaire\customercharges.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\AdjustmentSummary.designer.vb">
+      <DependentUpon>AdjustmentSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AdjustmentSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Aging.designer.vb">
+      <DependentUpon>Aging.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Aging.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\BillingList.designer.vb">
+      <DependentUpon>BillingList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BillingList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\BillingSummary.designer.vb">
+      <DependentUpon>BillingSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BillingSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\CancelledBill.Designer.vb">
+      <DependentUpon>CancelledBill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CancelledBill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\CancelledReceipts.designer.vb">
+      <DependentUpon>CancelledReceipts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CancelledReceipts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\CancellledOR.designer.vb">
+      <DependentUpon>CancellledOR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CancellledOR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ConcessionaireBreakdownbyType.designer.vb">
+      <DependentUpon>ConcessionaireBreakdownbyType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ConcessionaireBreakdownbyType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ConsumptionList.designer.vb">
+      <DependentUpon>ConsumptionList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ConsumptionList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ConsumptionPatternAnalysis.designer.vb">
+      <DependentUpon>ConsumptionPatternAnalysis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ConsumptionPatternAnalysis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\DailyCollectionReport.designer.vb">
+      <DependentUpon>DailyCollectionReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DailyCollectionReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Disconnected.designer.vb">
+      <DependentUpon>Disconnected.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Disconnected.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\DisconnectionList.designer.vb">
+      <DependentUpon>DisconnectionList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DisconnectionList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\LedgerReport.designer.vb">
+      <DependentUpon>LedgerReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LedgerReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ListofActiveConnection.designer.vb">
+      <DependentUpon>ListofActiveConnection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ListofActiveConnection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ListofPenaltyCharges.designer.vb">
+      <DependentUpon>ListofPenaltyCharges.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ListofPenaltyCharges.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\MasterListofServiceConnections.designer.vb">
+      <DependentUpon>MasterListofServiceConnections.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MasterListofServiceConnections.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\OtherAdjustmentReport.Designer.vb">
+      <DependentUpon>OtherAdjustmentReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\OtherAdjustmentReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportofCollectionsandDeposits.designer.vb">
+      <DependentUpon>ReportofCollectionsandDeposits.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportofCollectionsandDeposits.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\reprintReport.Designer.vb">
+      <DependentUpon>reprintReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\reprintReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ScheduleOfAR.designer.vb">
+      <DependentUpon>ScheduleOfAR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ScheduleOfAR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SeniorCitizenDiscounts.designer.vb">
+      <DependentUpon>SeniorCitizenDiscounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SeniorCitizenDiscounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\writeoffreport.Designer.vb">
+      <DependentUpon>writeoffreport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\writeoffreport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\SettingsAccounts.designer.vb">
+      <DependentUpon>SettingsAccounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\SettingsAccounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\settingsDataSett.Designer.vb">
+      <DependentUpon>settingsDataSett.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\settingsDataSett.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\settingsdiscount.Designer.vb">
+      <DependentUpon>settingsdiscount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\settingsdiscount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\settingscharges.Designer.vb">
+      <DependentUpon>settingscharges.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\settingscharges.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\settingsclass.Designer.vb">
+      <DependentUpon>settingsclass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\settingsclass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\SettingsFieldFindings.designer.vb">
+      <DependentUpon>SettingsFieldFindings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\SettingsFieldFindings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\settingsMaterials.designer.vb">
+      <DependentUpon>settingsMaterials.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\settingsMaterials.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\settingsPrinter.Designer.vb">
+      <DependentUpon>settingsPrinter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\settingsPrinter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\SettingsRates.designer.vb">
+      <DependentUpon>SettingsRates.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\SettingsRates.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\settingsreaders.Designer.vb">
+      <DependentUpon>settingsreaders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\settingsreaders.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\settingsZone.Designer.vb">
+      <DependentUpon>settingsZone.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\settingsZone.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\TransactionTemplate.designer.vb">
+      <DependentUpon>TransactionTemplate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\TransactionTemplate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\watingapproval.Designer.vb">
+      <DependentUpon>watingapproval.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\watingapproval.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Billing\billcompute.resx">
+      <DependentUpon>billcompute.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing\Online Billing.resx">
+      <DependentUpon>Online Billing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collections\uploadpayment.resx">
+      <DependentUpon>uploadpayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Concessionaire\AssociatedAccounts.resx">
+      <DependentUpon>AssociatedAccounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing\writeoff.resx">
+      <DependentUpon>writeoff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing\billingAdjustmentOther.resx">
+      <DependentUpon>billingAdjustmentOther.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing\billingAdjustmentBill.resx">
+      <DependentUpon>billingAdjustmentBill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing\BillingCancel.resx">
+      <DependentUpon>BillingCancel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing\billingcreatebills.resx">
+      <DependentUpon>billingcreatebills.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing\billingDisconnection.resx">
+      <DependentUpon>billingDisconnection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing\billinginfo.resx">
+      <DependentUpon>billinginfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing\billingPenalty.resx">
+      <DependentUpon>billingPenalty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing\billingpostbills.resx">
+      <DependentUpon>billingpostbills.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing\billingcreatedbills.resx">
+      <DependentUpon>billingcreatedbills.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collections\AddDCR.resx">
+      <DependentUpon>AddDCR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collections\Calculator.resx">
+      <DependentUpon>Calculator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collections\CollectedPayments.resx">
+      <DependentUpon>CollectedPayments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collections\Collection CR.resx">
+      <DependentUpon>Collection CR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collections\CollectionCancel.resx">
+      <DependentUpon>CollectionCancel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collections\CollectionPost.resx">
+      <DependentUpon>CollectionPost.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collections\CollectionsAndDeposits.resx">
+      <DependentUpon>CollectionsAndDeposits.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collections\OR Items.resx">
+      <DependentUpon>OR Items.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collections\ORPost.resx">
+      <DependentUpon>ORPost.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collections\TempCR.resx">
+      <DependentUpon>TempCR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Concessionaire\Camera.resx">
+      <DependentUpon>Camera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Concessionaire\customerinfo.resx">
+      <DependentUpon>customerinfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Concessionaire\notes.resx">
+      <DependentUpon>notes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collections\Create OR.resx">
+      <DependentUpon>Create OR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collections\ORCancel.resx">
+      <DependentUpon>ORCancel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collections\ORCollected.resx">
+      <DependentUpon>ORCollected.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Concessionaire\meterreset.resx">
+      <DependentUpon>meterreset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Concessionaire\SearchAccount.resx">
+      <DependentUpon>SearchAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Concessionaire\updateLedger.resx">
+      <DependentUpon>updateLedger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Concessionaire\updatestatus.resx">
+      <DependentUpon>updatestatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eBACSmain.resx">
+      <DependentUpon>eBACSmain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Concessionaire\customercharges.resx">
+      <DependentUpon>customercharges.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AdjustmentSummary.resx">
+      <DependentUpon>AdjustmentSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Aging.resx">
+      <DependentUpon>Aging.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BillingList.resx">
+      <DependentUpon>BillingList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BillingSummary.resx">
+      <DependentUpon>BillingSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CancelledBill.resx">
+      <DependentUpon>CancelledBill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CancelledReceipts.resx">
+      <DependentUpon>CancelledReceipts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CancellledOR.resx">
+      <DependentUpon>CancellledOR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ConcessionaireBreakdownbyType.resx">
+      <DependentUpon>ConcessionaireBreakdownbyType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ConsumptionList.resx">
+      <DependentUpon>ConsumptionList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ConsumptionPatternAnalysis.resx">
+      <DependentUpon>ConsumptionPatternAnalysis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DailyCollectionReport.rdlc" />
+    <EmbeddedResource Include="Reports\DailyCollectionReport.resx">
+      <DependentUpon>DailyCollectionReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Disconnected.resx">
+      <DependentUpon>Disconnected.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DisconnectionList.resx">
+      <DependentUpon>DisconnectionList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LedgerReport.resx">
+      <DependentUpon>LedgerReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ListofActiveConnection.resx">
+      <DependentUpon>ListofActiveConnection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ListofPenaltyCharges.resx">
+      <DependentUpon>ListofPenaltyCharges.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MasterListofServiceConnections.resx">
+      <DependentUpon>MasterListofServiceConnections.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\OtherAdjustmentReport.resx">
+      <DependentUpon>OtherAdjustmentReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportofCollectionsandDeposits.resx">
+      <DependentUpon>ReportofCollectionsandDeposits.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reprintReport.resx">
+      <DependentUpon>reprintReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ScheduleOfAR.resx">
+      <DependentUpon>ScheduleOfAR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SeniorCitizenDiscounts.resx">
+      <DependentUpon>SeniorCitizenDiscounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\writeoffreport.resx">
+      <DependentUpon>writeoffreport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\SettingsAccounts.resx">
+      <DependentUpon>SettingsAccounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\settingsDataSett.resx">
+      <DependentUpon>settingsDataSett.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\settingsdiscount.resx">
+      <DependentUpon>settingsdiscount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\settingscharges.resx">
+      <DependentUpon>settingscharges.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\settingsclass.resx">
+      <DependentUpon>settingsclass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\SettingsFieldFindings.resx">
+      <DependentUpon>SettingsFieldFindings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\settingsMaterials.resx">
+      <DependentUpon>settingsMaterials.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\settingsPrinter.resx">
+      <DependentUpon>settingsPrinter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\SettingsRates.resx">
+      <DependentUpon>SettingsRates.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\settingsreaders.resx">
+      <DependentUpon>settingsreaders.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\settingsZone.resx">
+      <DependentUpon>settingsZone.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\TransactionTemplate.resx">
+      <DependentUpon>TransactionTemplate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\watingapproval.resx">
+      <DependentUpon>watingapproval.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet11.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pantabangan.ico" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

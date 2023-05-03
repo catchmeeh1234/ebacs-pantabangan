@@ -1,0 +1,626 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+eBACS
+</name>
+</assembly>
+<members>
+<member name="T:eBACS.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:eBACS.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:eBACS.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="F:eBACS.Calculator.MoveForm">
+ <summary>
+ move form without border
+ </summary>
+</member>
+<member name="F:eBACS.Collection_CR.MoveForm">
+ <summary>
+ move form without border
+ </summary>
+</member>
+<member name="F:eBACS.Create_OR.MoveForm">
+ <summary>
+ move form without border
+ </summary>
+</member>
+<member name="F:eBACS.TempCR.MoveForm">
+ <summary>
+ move form without border
+ </summary>
+</member>
+<member name="T:eBACS.DataSet2">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.BillingListDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.SummaryofBillingDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.tblconsumplistDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.ListofActiveConnectionDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.ListofDesconnectedAccountsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.MasterListofServiceConnectionsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.ConcessionaireBreakdownbyTypeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.AgingDetailedDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.AgingSummaryDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.ScheduleofARDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.AdjustmentSummaryDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.PenaltyChargesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.DisconnectionListDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.BillingListRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.SummaryofBillingRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.tblconsumplistRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.ListofActiveConnectionRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.ListofDesconnectedAccountsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.MasterListofServiceConnectionsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.ConcessionaireBreakdownbyTypeRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.AgingDetailedRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.AgingSummaryRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.ScheduleofARRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.AdjustmentSummaryRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.PenaltyChargesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.DisconnectionListRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.BillingListRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.SummaryofBillingRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.tblconsumplistRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.ListofActiveConnectionRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.ListofDesconnectedAccountsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.MasterListofServiceConnectionsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.ConcessionaireBreakdownbyTypeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.AgingDetailedRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.AgingSummaryRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.ScheduleofARRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.AdjustmentSummaryRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.PenaltyChargesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet2.DisconnectionListRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.BillingListDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.SummaryofBillingDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.tblconsumplistDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.ListofActiveConnectionDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.ListofDesconnectedAccountsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.MasterListofServiceConnectionsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.ConcessionaireBreakdownbyTypeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.AgingDetailedDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.AgingSummaryDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.ScheduleofARDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.AdjustmentSummaryDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.PenaltyChargesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.DisconnectionListDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.ConsumptionPatternAnalysisDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.SeniorCitizenDiscountsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.CancelledReceiptsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.DailyCollectionReportDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.ReportofCollectionsandDepositsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.CancelledORDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.DisconnectedDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.LedgerDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.reprintReportDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.cancelledbillDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.writeoffDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.otheradjustmentDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.BillingListRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.SummaryofBillingRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.tblconsumplistRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.ListofActiveConnectionRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.ListofDesconnectedAccountsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.MasterListofServiceConnectionsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.ConcessionaireBreakdownbyTypeRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.AgingDetailedRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.AgingSummaryRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.ScheduleofARRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.AdjustmentSummaryRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.PenaltyChargesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.DisconnectionListRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.ConsumptionPatternAnalysisRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.SeniorCitizenDiscountsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.CancelledReceiptsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.DailyCollectionReportRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.ReportofCollectionsandDepositsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.CancelledORRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.DisconnectedRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.LedgerRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.reprintReportRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.cancelledbillRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.writeoffRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.otheradjustmentRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.BillingListRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.SummaryofBillingRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.tblconsumplistRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.ListofActiveConnectionRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.ListofDesconnectedAccountsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.MasterListofServiceConnectionsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.ConcessionaireBreakdownbyTypeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.AgingDetailedRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.AgingSummaryRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.ScheduleofARRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.AdjustmentSummaryRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.PenaltyChargesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.DisconnectionListRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.ConsumptionPatternAnalysisRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.SeniorCitizenDiscountsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.CancelledReceiptsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.DailyCollectionReportRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.ReportofCollectionsandDepositsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.CancelledORRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.DisconnectedRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.LedgerRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.reprintReportRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.cancelledbillRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.writeoffRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.otheradjustmentRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+</members>
+</doc>

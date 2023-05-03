@@ -1,0 +1,1322 @@
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\eBACS.exe.config
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\eBACS.exe
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\eBACS.pdb
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\eBACS.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\AForge.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\AForge.Video.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.Data.Desktop.v20.1.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.Data.v20.1.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.Printing.v20.1.Core.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.Utils.v20.1.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.XtraBars.v20.1.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.XtraEditors.v20.1.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.XtraGrid.v20.1.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.XtraLayout.v20.1.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.XtraPrinting.v20.1.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ExcelDataReader.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.Pdf.v20.1.Core.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.Pdf.v20.1.Drawing.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.Sparkline.v20.1.Core.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.RichEdit.v20.1.Core.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.XtraTreeList.v20.1.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.Office.v20.1.Core.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\stdole.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\AForge.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\AForge.Video.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.Data.Desktop.v20.1.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.Data.v20.1.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.Printing.v20.1.Core.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.Utils.v20.1.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.XtraBars.v20.1.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.XtraEditors.v20.1.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.XtraGrid.v20.1.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.XtraLayout.v20.1.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.XtraPrinting.v20.1.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ExcelDataReader.pdb
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ExcelDataReader.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.Pdf.v20.1.Core.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.Pdf.v20.1.Drawing.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.Sparkline.v20.1.Core.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.RichEdit.v20.1.Core.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.XtraTreeList.v20.1.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\DevExpress.Office.v20.1.Core.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\de\DevExpress.Data.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\es\DevExpress.Data.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ja\DevExpress.Data.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ru\DevExpress.Data.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\de\DevExpress.Printing.v20.1.Core.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\es\DevExpress.Printing.v20.1.Core.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ja\DevExpress.Printing.v20.1.Core.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ru\DevExpress.Printing.v20.1.Core.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\de\DevExpress.Utils.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\es\DevExpress.Utils.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ja\DevExpress.Utils.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ru\DevExpress.Utils.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\de\DevExpress.XtraBars.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\es\DevExpress.XtraBars.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ja\DevExpress.XtraBars.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ru\DevExpress.XtraBars.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\de\DevExpress.XtraEditors.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\es\DevExpress.XtraEditors.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ja\DevExpress.XtraEditors.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ru\DevExpress.XtraEditors.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\de\DevExpress.XtraGrid.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\es\DevExpress.XtraGrid.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ja\DevExpress.XtraGrid.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ru\DevExpress.XtraGrid.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\de\DevExpress.XtraLayout.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\es\DevExpress.XtraLayout.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ja\DevExpress.XtraLayout.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ru\DevExpress.XtraLayout.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\de\DevExpress.XtraPrinting.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\es\DevExpress.XtraPrinting.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ja\DevExpress.XtraPrinting.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ru\DevExpress.XtraPrinting.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\de\DevExpress.Pdf.v20.1.Core.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\es\DevExpress.Pdf.v20.1.Core.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ja\DevExpress.Pdf.v20.1.Core.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ru\DevExpress.Pdf.v20.1.Core.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\de\DevExpress.Sparkline.v20.1.Core.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\es\DevExpress.Sparkline.v20.1.Core.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ja\DevExpress.Sparkline.v20.1.Core.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ru\DevExpress.Sparkline.v20.1.Core.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\de\DevExpress.RichEdit.v20.1.Core.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\es\DevExpress.RichEdit.v20.1.Core.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ja\DevExpress.RichEdit.v20.1.Core.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ru\DevExpress.RichEdit.v20.1.Core.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\de\DevExpress.XtraTreeList.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\es\DevExpress.XtraTreeList.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ja\DevExpress.XtraTreeList.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ru\DevExpress.XtraTreeList.v20.1.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\de\DevExpress.Office.v20.1.Core.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\es\DevExpress.Office.v20.1.Core.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ja\DevExpress.Office.v20.1.Core.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\bin\Debug\ru\DevExpress.Office.v20.1.Core.resources.dll
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.vbproj.ResolveComReference.cache
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.billcompute.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.Online_Billing.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.uploadpayment.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.writeoff.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.billingAdjustmentOther.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.billingAdjustmentBill.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.BillingCancel.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.billingcreatebills.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.billingDisconnection.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.billinginfo.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.billingPenalty.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.billingpostbills.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.billingcreatedbills.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.AddDCR.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.Calculator.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.CollectedPayments.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.Collection_CR.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.CRCancel.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.CollectionPost.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.CollectionsAndDeposits.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.OR_Items.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.ORPost.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.TempCR.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.Camera.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.customerinfo.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.notes.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.Create_OR.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.login.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.ORCancel.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.ORCollected.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.meterreset.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.SearchAccount.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.updateLedger.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.updatestatus.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.eBACSmain.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.Resources.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.customercharges.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.AdjustmentSummary.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.Aging.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.BillingList.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.BillingSummary.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.CancelledBill.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.CancelledReceipts.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.CancellledOR.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.ConcessionaireBreakdownbyType.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.ConsumptionList.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.ConsumptionPatternAnalysis.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.DailyCollectionReport.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.Disconnected.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.DisconnectionList.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.LedgerReport.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.ListofActiveConnection.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.ListofPenaltyCharges.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.MasterListofServiceConnections.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.OtherAdjustmentReport.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.ReportofCollectionsandDeposits.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.reprintBIllsReport.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.ScheduleOfAR.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.SeniorCitizenDiscounts.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.writeoffreport.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.SettingsAccounts.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.settingsDataSett.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.settingsdiscount.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.settingscharges.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.settingsclass.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.SettingsFieldFindings.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.settingsMaterials.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.settingsPrinter.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.SettingsRates.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.settingsreaders.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.settingsZone.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.TransactionTemplate.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.waitingapproval.resources
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.vbproj.GenerateResource.cache
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.exe.licenses
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\RdlCompile.cache
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\RdlCompile.compiled
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.vbproj.CoreCompileInputs.cache
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.vbproj.CopyComplete
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.exe
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.xml
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.pdb
+C:\Users\mis-3\source\repos\eBACS\eBACS\obj\Debug\eBACS.vbprojAssemblyReference.cache
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.vbprojAssemblyReference.cache
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.vbproj.ResolveComReference.cache
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.billcompute.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.Online_Billing.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.uploadpayment.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.writeoff.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.billingAdjustmentOther.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.billingAdjustmentBill.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.BillingCancel.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.billingcreatebills.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.billingDisconnection.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.billinginfo.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.billingPenalty.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.billingpostbills.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.billingcreatedbills.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.AddDCR.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.Calculator.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.CollectedPayments.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.Collection_CR.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.CRCancel.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.CollectionPost.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.CollectionsAndDeposits.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.OR_Items.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.ORPost.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.TempCR.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.Camera.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.customerinfo.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.notes.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.Create_OR.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.login.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.ORCancel.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.ORCollected.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.meterreset.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.SearchAccount.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.updateLedger.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.updatestatus.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.eBACSmain.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.Resources.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.customercharges.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.AdjustmentSummary.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.Aging.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.BillingList.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.BillingSummary.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.CancelledBill.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.CancelledReceipts.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.CancellledOR.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.ConcessionaireBreakdownbyType.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.ConsumptionList.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.ConsumptionPatternAnalysis.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.DailyCollectionReport.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.Disconnected.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.DisconnectionList.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.LedgerReport.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.ListofActiveConnection.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.ListofPenaltyCharges.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.MasterListofServiceConnections.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.OtherAdjustmentReport.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.ReportofCollectionsandDeposits.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.reprintBIllsReport.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.ScheduleOfAR.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.SeniorCitizenDiscounts.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.writeoffreport.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.SettingsAccounts.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.settingsDataSett.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.settingsdiscount.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.settingscharges.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.settingsclass.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.SettingsFieldFindings.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.settingsMaterials.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.settingsPrinter.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.SettingsRates.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.settingsreaders.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.settingsZone.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.TransactionTemplate.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.waitingapproval.resources
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.vbproj.GenerateResource.cache
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.exe.licenses
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.vbproj.CoreCompileInputs.cache
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.exe
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.xml
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.pdb
+D:\Project\eBACS\eBACS\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Project\eBACS\eBACS\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Project\eBACS\eBACS\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Project\eBACS\eBACS\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Project\eBACS\eBACS\bin\Debug\eBACS.exe.config
+D:\Project\eBACS\eBACS\bin\Debug\eBACS.exe
+D:\Project\eBACS\eBACS\bin\Debug\eBACS.pdb
+D:\Project\eBACS\eBACS\bin\Debug\eBACS.xml
+D:\Project\eBACS\eBACS\bin\Debug\AForge.dll
+D:\Project\eBACS\eBACS\bin\Debug\AForge.Video.DirectShow.dll
+D:\Project\eBACS\eBACS\bin\Debug\AForge.Video.dll
+D:\Project\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.dll
+D:\Project\eBACS\eBACS\bin\Debug\ExcelDataReader.dll
+D:\Project\eBACS\eBACS\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Project\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Project\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Project\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\Project\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Project\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Project\eBACS\eBACS\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Project\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\Project\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\Project\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\Project\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\Project\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\Project\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Project\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\Project\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\Project\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\Project\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\Project\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.Pdf.v20.1.Core.dll
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.Pdf.v20.1.Drawing.dll
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.Sparkline.v20.1.Core.dll
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.RichEdit.v20.1.Core.dll
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.XtraTreeList.v20.1.dll
+D:\Project\eBACS\eBACS\bin\Debug\EnvDTE.dll
+D:\Project\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Project\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Project\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.Office.v20.1.Core.dll
+D:\Project\eBACS\eBACS\bin\Debug\stdole.dll
+D:\Project\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Project\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Project\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Project\eBACS\eBACS\bin\Debug\Microsoft.MSXML.dll
+D:\Project\eBACS\eBACS\bin\Debug\AForge.xml
+D:\Project\eBACS\eBACS\bin\Debug\AForge.Video.xml
+D:\Project\eBACS\eBACS\bin\Debug\AForge.Video.DirectShow.xml
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.Data.Desktop.v20.1.xml
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.Data.v20.1.xml
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.Printing.v20.1.Core.xml
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.Utils.v20.1.xml
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.XtraBars.v20.1.xml
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.XtraEditors.v20.1.xml
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.XtraGrid.v20.1.xml
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.XtraLayout.v20.1.xml
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.XtraPrinting.v20.1.xml
+D:\Project\eBACS\eBACS\bin\Debug\ExcelDataReader.pdb
+D:\Project\eBACS\eBACS\bin\Debug\ExcelDataReader.xml
+D:\Project\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\Project\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.xml
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.Pdf.v20.1.Core.xml
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.Pdf.v20.1.Drawing.xml
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.Sparkline.v20.1.Core.xml
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.RichEdit.v20.1.Core.xml
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.XtraTreeList.v20.1.xml
+D:\Project\eBACS\eBACS\bin\Debug\DevExpress.Office.v20.1.Core.xml
+D:\Project\eBACS\eBACS\bin\Debug\de\DevExpress.Data.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\es\DevExpress.Data.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ja\DevExpress.Data.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ru\DevExpress.Data.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\de\DevExpress.Printing.v20.1.Core.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\es\DevExpress.Printing.v20.1.Core.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ja\DevExpress.Printing.v20.1.Core.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ru\DevExpress.Printing.v20.1.Core.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\de\DevExpress.Utils.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\es\DevExpress.Utils.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ja\DevExpress.Utils.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ru\DevExpress.Utils.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\de\DevExpress.XtraBars.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\es\DevExpress.XtraBars.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ja\DevExpress.XtraBars.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ru\DevExpress.XtraBars.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\de\DevExpress.XtraEditors.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\es\DevExpress.XtraEditors.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ja\DevExpress.XtraEditors.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ru\DevExpress.XtraEditors.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\de\DevExpress.XtraGrid.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\es\DevExpress.XtraGrid.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ja\DevExpress.XtraGrid.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ru\DevExpress.XtraGrid.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\de\DevExpress.XtraLayout.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\es\DevExpress.XtraLayout.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ja\DevExpress.XtraLayout.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ru\DevExpress.XtraLayout.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\de\DevExpress.XtraPrinting.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\es\DevExpress.XtraPrinting.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ja\DevExpress.XtraPrinting.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ru\DevExpress.XtraPrinting.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\de\DevExpress.Pdf.v20.1.Core.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\es\DevExpress.Pdf.v20.1.Core.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ja\DevExpress.Pdf.v20.1.Core.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ru\DevExpress.Pdf.v20.1.Core.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\de\DevExpress.Sparkline.v20.1.Core.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\es\DevExpress.Sparkline.v20.1.Core.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ja\DevExpress.Sparkline.v20.1.Core.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ru\DevExpress.Sparkline.v20.1.Core.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\de\DevExpress.RichEdit.v20.1.Core.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\es\DevExpress.RichEdit.v20.1.Core.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ja\DevExpress.RichEdit.v20.1.Core.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ru\DevExpress.RichEdit.v20.1.Core.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\de\DevExpress.XtraTreeList.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\es\DevExpress.XtraTreeList.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ja\DevExpress.XtraTreeList.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ru\DevExpress.XtraTreeList.v20.1.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\de\DevExpress.Office.v20.1.Core.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\es\DevExpress.Office.v20.1.Core.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ja\DevExpress.Office.v20.1.Core.resources.dll
+D:\Project\eBACS\eBACS\bin\Debug\ru\DevExpress.Office.v20.1.Core.resources.dll
+D:\Project\eBACS\eBACS\obj\Debug\eBACS.vbproj.CopyComplete
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\eBACS.exe.config
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\eBACS.exe
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\eBACS.pdb
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\eBACS.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\AForge.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\AForge.Video.DirectShow.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\AForge.Video.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ExcelDataReader.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.Pdf.v20.1.Core.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.Pdf.v20.1.Drawing.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.Sparkline.v20.1.Core.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.RichEdit.v20.1.Core.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.XtraTreeList.v20.1.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\EnvDTE.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.Office.v20.1.Core.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\stdole.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\Microsoft.MSXML.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\AForge.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\AForge.Video.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\AForge.Video.DirectShow.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.Data.Desktop.v20.1.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.Data.v20.1.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.Printing.v20.1.Core.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.Utils.v20.1.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.XtraBars.v20.1.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.XtraEditors.v20.1.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.XtraGrid.v20.1.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.XtraLayout.v20.1.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.XtraPrinting.v20.1.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ExcelDataReader.pdb
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ExcelDataReader.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.Pdf.v20.1.Core.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.Pdf.v20.1.Drawing.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.Sparkline.v20.1.Core.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.RichEdit.v20.1.Core.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.XtraTreeList.v20.1.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\DevExpress.Office.v20.1.Core.xml
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\de\DevExpress.Data.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\es\DevExpress.Data.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ja\DevExpress.Data.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ru\DevExpress.Data.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\de\DevExpress.Printing.v20.1.Core.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\es\DevExpress.Printing.v20.1.Core.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ja\DevExpress.Printing.v20.1.Core.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ru\DevExpress.Printing.v20.1.Core.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\de\DevExpress.Utils.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\es\DevExpress.Utils.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ja\DevExpress.Utils.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ru\DevExpress.Utils.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\de\DevExpress.XtraBars.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\es\DevExpress.XtraBars.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ja\DevExpress.XtraBars.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ru\DevExpress.XtraBars.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\de\DevExpress.XtraEditors.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\es\DevExpress.XtraEditors.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ja\DevExpress.XtraEditors.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ru\DevExpress.XtraEditors.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\de\DevExpress.XtraGrid.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\es\DevExpress.XtraGrid.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ja\DevExpress.XtraGrid.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ru\DevExpress.XtraGrid.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\de\DevExpress.XtraLayout.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\es\DevExpress.XtraLayout.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ja\DevExpress.XtraLayout.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ru\DevExpress.XtraLayout.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\de\DevExpress.XtraPrinting.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\es\DevExpress.XtraPrinting.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ja\DevExpress.XtraPrinting.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ru\DevExpress.XtraPrinting.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\de\DevExpress.Pdf.v20.1.Core.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\es\DevExpress.Pdf.v20.1.Core.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ja\DevExpress.Pdf.v20.1.Core.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ru\DevExpress.Pdf.v20.1.Core.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\de\DevExpress.Sparkline.v20.1.Core.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\es\DevExpress.Sparkline.v20.1.Core.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ja\DevExpress.Sparkline.v20.1.Core.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ru\DevExpress.Sparkline.v20.1.Core.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\de\DevExpress.RichEdit.v20.1.Core.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\es\DevExpress.RichEdit.v20.1.Core.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ja\DevExpress.RichEdit.v20.1.Core.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ru\DevExpress.RichEdit.v20.1.Core.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\de\DevExpress.XtraTreeList.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\es\DevExpress.XtraTreeList.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ja\DevExpress.XtraTreeList.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ru\DevExpress.XtraTreeList.v20.1.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\de\DevExpress.Office.v20.1.Core.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\es\DevExpress.Office.v20.1.Core.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ja\DevExpress.Office.v20.1.Core.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\bin\Debug\ru\DevExpress.Office.v20.1.Core.resources.dll
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.vbprojAssemblyReference.cache
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.vbproj.ResolveComReference.cache
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.billcompute.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.Online_Billing.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.uploadpayment.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.writeoff.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.billingAdjustmentOther.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.billingAdjustmentBill.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.BillingCancel.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.billingcreatebills.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.billingDisconnection.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.billinginfo.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.billingPenalty.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.billingpostbills.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.billingcreatedbills.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.AddDCR.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.Calculator.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.CollectedPayments.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.Collection_CR.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.CRCancel.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.CollectionPost.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.CollectionsAndDeposits.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.OR_Items.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.ORPost.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.TempCR.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.Camera.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.customerinfo.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.notes.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.Create_OR.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.login.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.ORCancel.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.ORCollected.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.meterreset.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.SearchAccount.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.updateLedger.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.updatestatus.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.eBACSmain.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.Resources.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.customercharges.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.AdjustmentSummary.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.Aging.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.BillingList.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.BillingSummary.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.CancelledBill.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.CancelledReceipts.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.CancellledOR.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.ConcessionaireBreakdownbyType.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.ConsumptionList.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.ConsumptionPatternAnalysis.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.DailyCollectionReport.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.Disconnected.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.DisconnectionList.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.LedgerReport.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.ListofActiveConnection.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.ListofPenaltyCharges.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.MasterListofServiceConnections.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.OtherAdjustmentReport.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.ReportofCollectionsandDeposits.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.reprintBIllsReport.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.ScheduleOfAR.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.SeniorCitizenDiscounts.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.writeoffreport.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.SettingsAccounts.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.settingsDataSett.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.settingsdiscount.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.settingscharges.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.settingsclass.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.SettingsFieldFindings.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.settingsMaterials.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.settingsPrinter.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.SettingsRates.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.settingsreaders.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.settingsZone.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.TransactionTemplate.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.waitingapproval.resources
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.vbproj.GenerateResource.cache
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.exe.licenses
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.vbproj.CoreCompileInputs.cache
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.vbproj.CopyComplete
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.exe
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.xml
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.pdb
+D:\Project\Updated Projects\eBACS\eBACS\obj\Debug\eBACS.AssociatedAccounts.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\eBACS.exe.config
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\eBACS.exe
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\eBACS.pdb
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\eBACS.xml
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\AForge.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\AForge.Video.DirectShow.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\AForge.Video.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\ExcelDataReader.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\EnvDTE.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\stdole.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\Microsoft.MSXML.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\AForge.xml
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\AForge.Video.xml
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\AForge.Video.DirectShow.xml
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\ExcelDataReader.pdb
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\ExcelDataReader.xml
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.xml
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.vbproj.ResolveComReference.cache
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.billcompute.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.Online_Billing.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.uploadpayment.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.AssociatedAccounts.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.writeoff.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.billingAdjustmentOther.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.billingAdjustmentBill.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.BillingCancel.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.billingcreatebills.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.billingDisconnection.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.billinginfo.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.billingPenalty.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.billingpostbills.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.billingcreatedbills.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.AddDCR.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.Calculator.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.CollectedPayments.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.Collection_CR.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.CRCancel.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.CollectionPost.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.CollectionsAndDeposits.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.OR_Items.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.ORPost.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.TempCR.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.Camera.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.customerinfo.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.notes.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.Create_OR.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.login.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.ORCancel.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.ORCollected.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.meterreset.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.SearchAccount.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.updateLedger.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.updatestatus.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.eBACSmain.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.Resources.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.customercharges.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.AdjustmentSummary.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.Aging.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.BillingList.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.BillingSummary.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.CancelledBill.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.CancelledReceipts.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.CancellledOR.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.ConcessionaireBreakdownbyType.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.ConsumptionList.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.ConsumptionPatternAnalysis.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.DailyCollectionReport.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.Disconnected.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.DisconnectionList.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.LedgerReport.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.ListofActiveConnection.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.ListofPenaltyCharges.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.MasterListofServiceConnections.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.OtherAdjustmentReport.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.ReportofCollectionsandDeposits.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.reprintBIllsReport.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.ScheduleOfAR.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.SeniorCitizenDiscounts.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.writeoffreport.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.SettingsAccounts.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.settingsDataSett.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.settingsdiscount.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.settingscharges.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.settingsclass.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.SettingsFieldFindings.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.settingsMaterials.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.settingsPrinter.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.SettingsRates.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.settingsreaders.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.settingsZone.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.TransactionTemplate.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.waitingapproval.resources
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.vbproj.GenerateResource.cache
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.exe.licenses
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.vbproj.CoreCompileInputs.cache
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.vbproj.CopyComplete
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.exe
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.xml
+D:\Project\Updated Projects\blank ebacs\eBACS\eBACS\obj\Debug\eBACS.pdb
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\eBACS.exe.config
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\eBACS.exe
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\eBACS.pdb
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\eBACS.xml
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\AForge.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\AForge.Video.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\ExcelDataReader.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\EnvDTE.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\stdole.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\Microsoft.MSXML.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\AForge.xml
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\AForge.Video.xml
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\ExcelDataReader.pdb
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\ExcelDataReader.xml
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.vbprojAssemblyReference.cache
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.vbproj.ResolveComReference.cache
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.billcompute.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.Online_Billing.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.uploadpayment.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.AssociatedAccounts.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.writeoff.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.billingAdjustmentOther.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.billingAdjustmentBill.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.BillingCancel.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.billingcreatebills.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.billingDisconnection.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.billinginfo.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.billingPenalty.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.billingpostbills.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.billingcreatedbills.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.AddDCR.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.Calculator.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.CollectedPayments.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.Collection_CR.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.CRCancel.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.CollectionPost.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.CollectionsAndDeposits.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.OR_Items.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.ORPost.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.TempCR.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.Camera.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.customerinfo.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.notes.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.Create_OR.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.login.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.ORCancel.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.ORCollected.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.meterreset.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.SearchAccount.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.updateLedger.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.updatestatus.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.eBACSmain.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.Resources.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.customercharges.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.AdjustmentSummary.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.Aging.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.BillingList.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.BillingSummary.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.CancelledBill.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.CancelledReceipts.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.CancellledOR.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.ConcessionaireBreakdownbyType.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.ConsumptionList.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.ConsumptionPatternAnalysis.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.DailyCollectionReport.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.Disconnected.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.DisconnectionList.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.LedgerReport.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.ListofActiveConnection.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.ListofPenaltyCharges.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.MasterListofServiceConnections.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.OtherAdjustmentReport.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.ReportofCollectionsandDeposits.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.reprintBIllsReport.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.ScheduleOfAR.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.SeniorCitizenDiscounts.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.writeoffreport.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.SettingsAccounts.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.settingsDataSett.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.settingsdiscount.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.settingscharges.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.settingsclass.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.SettingsFieldFindings.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.settingsMaterials.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.settingsPrinter.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.SettingsRates.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.settingsreaders.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.settingsZone.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.TransactionTemplate.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.waitingapproval.resources
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.vbproj.GenerateResource.cache
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.exe.licenses
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.vbproj.CoreCompileInputs.cache
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.vbproj.CopyComplete
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.exe
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.xml
+C:\Users\My Computer\Desktop\pant\eBACS\eBACS\obj\Debug\eBACS.pdb
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\eBACS.exe.config
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\eBACS.exe
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\eBACS.pdb
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\eBACS.xml
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\AForge.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\AForge.Video.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\ExcelDataReader.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\EnvDTE.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\stdole.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\Microsoft.MSXML.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\AForge.xml
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\AForge.Video.xml
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\ExcelDataReader.pdb
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\ExcelDataReader.xml
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.vbprojAssemblyReference.cache
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.vbproj.ResolveComReference.cache
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.billcompute.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.Online_Billing.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.uploadpayment.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.AssociatedAccounts.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.writeoff.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.billingAdjustmentOther.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.billingAdjustmentBill.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.BillingCancel.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.billingcreatebills.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.billingDisconnection.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.billinginfo.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.billingPenalty.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.billingpostbills.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.billingcreatedbills.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.AddDCR.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.Calculator.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.CollectedPayments.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.Collection_CR.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.CRCancel.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.CollectionPost.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.CollectionsAndDeposits.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.OR_Items.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.ORPost.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.TempCR.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.Camera.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.customerinfo.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.notes.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.Create_OR.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.login.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.ORCancel.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.ORCollected.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.meterreset.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.SearchAccount.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.updateLedger.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.updatestatus.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.eBACSmain.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.Resources.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.customercharges.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.AdjustmentSummary.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.Aging.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.BillingList.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.BillingSummary.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.CancelledBill.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.CancelledReceipts.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.CancellledOR.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.ConcessionaireBreakdownbyType.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.ConsumptionList.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.ConsumptionPatternAnalysis.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.DailyCollectionReport.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.Disconnected.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.DisconnectionList.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.LedgerReport.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.ListofActiveConnection.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.ListofPenaltyCharges.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.MasterListofServiceConnections.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.OtherAdjustmentReport.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.ReportofCollectionsandDeposits.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.reprintBIllsReport.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.ScheduleOfAR.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.SeniorCitizenDiscounts.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.writeoffreport.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.SettingsAccounts.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.settingsDataSett.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.settingsdiscount.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.settingscharges.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.settingsclass.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.SettingsFieldFindings.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.settingsMaterials.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.settingsPrinter.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.SettingsRates.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.settingsreaders.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.settingsZone.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.TransactionTemplate.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.waitingapproval.resources
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.vbproj.GenerateResource.cache
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.exe.licenses
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.vbproj.CoreCompileInputs.cache
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.vbproj.CopyComplete
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.exe
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.xml
+C:\Users\My Computer\Desktop\new\pant\eBACS\eBACS\obj\Debug\eBACS.pdb
+D:\miguel\pant\eBACS\eBACS\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\eBACS.exe.config
+D:\miguel\pant\eBACS\eBACS\bin\Debug\eBACS.exe
+D:\miguel\pant\eBACS\eBACS\bin\Debug\eBACS.pdb
+D:\miguel\pant\eBACS\eBACS\bin\Debug\eBACS.xml
+D:\miguel\pant\eBACS\eBACS\bin\Debug\AForge.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\AForge.Video.DirectShow.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\AForge.Video.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\ExcelDataReader.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\EnvDTE.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\stdole.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\Microsoft.MSXML.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\AForge.xml
+D:\miguel\pant\eBACS\eBACS\bin\Debug\AForge.Video.xml
+D:\miguel\pant\eBACS\eBACS\bin\Debug\AForge.Video.DirectShow.xml
+D:\miguel\pant\eBACS\eBACS\bin\Debug\ExcelDataReader.pdb
+D:\miguel\pant\eBACS\eBACS\bin\Debug\ExcelDataReader.xml
+D:\miguel\pant\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\miguel\pant\eBACS\eBACS\bin\Debug\ExcelDataReader.DataSet.xml
+D:\miguel\pant\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\miguel\pant\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.vbproj.ResolveComReference.cache
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.billcompute.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.Online_Billing.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.uploadpayment.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.AssociatedAccounts.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.writeoff.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.billingAdjustmentOther.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.billingAdjustmentBill.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.BillingCancel.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.billingcreatebills.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.billingDisconnection.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.billinginfo.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.billingPenalty.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.billingpostbills.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.billingcreatedbills.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.AddDCR.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.Calculator.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.CollectedPayments.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.Collection_CR.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.CRCancel.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.CollectionPost.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.CollectionsAndDeposits.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.OR_Items.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.ORPost.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.TempCR.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.Camera.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.customerinfo.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.notes.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.Create_OR.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.login.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.ORCancel.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.ORCollected.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.meterreset.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.SearchAccount.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.updateLedger.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.updatestatus.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.eBACSmain.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.Resources.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.customercharges.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.AdjustmentSummary.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.Aging.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.BillingList.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.BillingSummary.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.CancelledBill.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.CancelledReceipts.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.CancellledOR.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.ConcessionaireBreakdownbyType.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.ConsumptionList.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.ConsumptionPatternAnalysis.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.DailyCollectionReport.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.Disconnected.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.DisconnectionList.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.LedgerReport.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.ListofActiveConnection.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.ListofPenaltyCharges.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.MasterListofServiceConnections.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.OtherAdjustmentReport.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.ReportofCollectionsandDeposits.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.reprintBIllsReport.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.ScheduleOfAR.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.SeniorCitizenDiscounts.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.writeoffreport.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.SettingsAccounts.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.settingsDataSett.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.settingsdiscount.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.settingscharges.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.settingsclass.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.SettingsFieldFindings.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.settingsMaterials.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.settingsPrinter.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.SettingsRates.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.settingsreaders.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.settingsZone.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.TransactionTemplate.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.waitingapproval.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.vbproj.GenerateResource.cache
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.exe.licenses
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.vbproj.CoreCompileInputs.cache
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.vbproj.CopyComplete
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.exe
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.xml
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.pdb
+D:\miguel\pant\eBACS\eBACS\obj\Debug\RdlCompile.cache
+D:\miguel\pant\eBACS\eBACS\obj\Debug\RdlCompile.compiled
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.vbprojAssemblyReference.cache
