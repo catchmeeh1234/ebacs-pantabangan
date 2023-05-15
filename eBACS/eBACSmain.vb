@@ -774,4 +774,14 @@ Public Class eBACSmain
         uploadpayment.Activate()
 
     End Sub
+
+    Private Sub CreateOfForOtherFeesToolStripMenuItem_Click(sender As Object, e As EventArgs)
+        Create_OR.Show()
+        Create_OR.Activate()
+    End Sub
+
+    Private Sub EditORNumberToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditORNumberToolStripMenuItem.Click
+        TempCR.ShowDialog()
+        TempCR.Activate()
+    End Sub
 End Class

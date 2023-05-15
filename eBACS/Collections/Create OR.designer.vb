@@ -359,13 +359,13 @@ Partial Class Create_OR
         Me.rbcheck.Name = "rbcheck"
         Me.rbcheck.Size = New System.Drawing.Size(61, 20)
         Me.rbcheck.TabIndex = 33
-        Me.rbcheck.TabStop = True
         Me.rbcheck.Text = "Check"
         Me.rbcheck.UseVisualStyleBackColor = True
         '
         'checkdate
         '
         Me.checkdate.BackColor = System.Drawing.Color.White
+        Me.checkdate.Enabled = False
         Me.checkdate.Location = New System.Drawing.Point(82, 80)
         Me.checkdate.Name = "checkdate"
         Me.checkdate.Size = New System.Drawing.Size(84, 21)
@@ -374,6 +374,7 @@ Partial Class Create_OR
         'rbcash
         '
         Me.rbcash.AutoSize = True
+        Me.rbcash.Checked = True
         Me.rbcash.Location = New System.Drawing.Point(39, 25)
         Me.rbcash.Name = "rbcash"
         Me.rbcash.Size = New System.Drawing.Size(54, 20)
@@ -385,6 +386,7 @@ Partial Class Create_OR
         'checkno
         '
         Me.checkno.BackColor = System.Drawing.Color.White
+        Me.checkno.Enabled = False
         Me.checkno.Location = New System.Drawing.Point(82, 51)
         Me.checkno.Name = "checkno"
         Me.checkno.Size = New System.Drawing.Size(84, 21)
@@ -640,7 +642,6 @@ Partial Class Create_OR
         '
         Me.Column5.HeaderText = "ID"
         Me.Column5.Name = "Column5"
-        Me.Column5.Visible = False
         '
         'Column6
         '

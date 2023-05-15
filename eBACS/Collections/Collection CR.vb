@@ -124,6 +124,7 @@
     Sub loadcurrentbill()
 
         Dim billdatacharges As New DataTable
+        Dim membershipfeecharge As New DataTable
 
 
         Try
@@ -167,17 +168,24 @@
                     earlyPaymentDate = Date.Parse(billdata(0)("ReadingDate")).AddDays(6)
                 End If
 
-                If (earlyPaymentDate >= d.ToShortDateString) Then
-                    Select Case MsgBox("Add early payment discount to this bill?", MsgBoxStyle.YesNo)
-                        Case MsgBoxResult.No
-                            billEarlyDisc.Text = 0.00
-                        Case MsgBoxResult.Yes
-                            billEarlyDisc.Text = Math.Round(billamountdue.Text * 0.05, 2).ToString("0.00")
-                    End Select
+                'If (earlyPaymentDate >= d.ToShortDateString) Then
+                '    Select Case MsgBox("Add early payment discount to this bill?", MsgBoxStyle.YesNo)
+                '        Case MsgBoxResult.No
+                '            billEarlyDisc.Text = 0.00
+                '        Case MsgBoxResult.Yes
+                '            billEarlyDisc.Text = Math.Round(billamountdue.Text * 0.05, 2).ToString("0.00")
+                '    End Select
 
-                Else
-                    billEarlyDisc.Text = 0.00
-                End If
+                'Else
+                '    billEarlyDisc.Text = 0.00
+                'End If
+
+                Select Case MsgBox("Add early payment discount to this bill?", MsgBoxStyle.YesNo)
+                    Case MsgBoxResult.No
+                        billEarlyDisc.Text = 0.00
+                    Case MsgBoxResult.Yes
+                        billEarlyDisc.Text = Math.Round(billamountdue.Text * 0.05, 2).ToString("0.00")
+                End Select
 
                 'If (Format(Date.Parse(billdata(0)("DiscDate")).AddDays(10) == "") Then
                 Dim disc_date As DateTime
@@ -228,8 +236,34 @@
 
                 End If
 
+                membershipfeecharge.Clear()
+                stracs = "SELECT * FROM BillCharges WHERE BillNumber = '" & CRBillno.Text & "' AND Particulars LIKE '%membership fee%'"
+                acscmd.CommandText = stracs
+                acscmd.Connection = acsconn
+                acsda.SelectCommand = acscmd
+                acsda.Fill(membershipfeecharge)
 
-                    If IsDBNull(billdata(0)("Adjustment")) = True Then
+                If membershipfeecharge.Rows.Count = 0 Then
+
+                Else
+                    Create_OR.clearallfields()
+                    Create_OR.AccountNo.Text = membershipfeecharge(0)("AccountNumber")
+                    Create_OR.loadinfo()
+
+                    Create_OR.Show()
+                    Create_OR.BringToFront()
+
+                    'Create_OR.Location = New Point(0 + Me.Width, ((My.Computer.Screen.WorkingArea.Height / 2) - (Me.Width / 2)) / 4)
+                    Create_OR.dgvitems.Rows.Add("1", membershipfeecharge(0)("Particulars"), membershipfeecharge(0)("Amount"), membershipfeecharge(0)("Amount"), membershipfeecharge(0)("BillChargesID"), membershipfeecharge(0)("Category"), membershipfeecharge(0)("Entry"), "Yes")
+
+                    Create_OR.compute()
+
+                    'Calculator.Show()
+                    'Calculator.BringToFront()
+
+                End If
+
+                If IsDBNull(billdata(0)("Adjustment")) = True Then
                         billAdjustment.Text = "0.00"
                     Else
                         billAdjustment.Text = billdata(0)("Adjustment")
@@ -239,9 +273,11 @@
                     If acsconn.State = ConnectionState.Closed Then acsconn.Open()
                     sqldataBilling.Clear()
 
-                    stracs = "select * from BillCharges where Category = 'Others' and BillNumber = " & CRBillno.Text
-                    acscmd.CommandText = stracs
-                    acscmd.Connection = acsconn
+                stracs = "select * from BillCharges where Category = 'Others' AND (Particulars = 'Metering Fee' OR Particulars = 'Reconnection Fee') and BillNumber = " & CRBillno.Text
+                'stracs = "select * from BillCharges where Category = 'Others' AND BillNumber = " & CRBillno.Text
+
+                acscmd.CommandText = stracs
+                acscmd.Connection = acsconn
                     acsda.SelectCommand = acscmd
                     acsda.Fill(sqldataBilling)
 
@@ -1850,7 +1886,7 @@
 
                         Else
 
-                            MsgBox("Duplicated CR Number. Please contact Admin.")
+                            MsgBox("Duplicated OR Number. Please contact Admin.")
 
                         End If
 
@@ -2529,7 +2565,7 @@
 
             Dim cellRectCashier As RectangleF
             cellRectCashier = New RectangleF()
-            cellRectCashier.Location = New Point(230, 735)
+            cellRectCashier.Location = New Point(240, 735)
             cellRectCashier.Size = New Size(250, 14)
 
             e.Graphics.DrawString(datetimecashier.Rows(0)("Collector"), headsubFont, Brushes.Black, cellRectCashier, MidLeft)
@@ -2544,7 +2580,7 @@
 
             Dim cellRectCashier As RectangleF
             cellRectCashier = New RectangleF()
-            cellRectCashier.Location = New Point(230, 735)
+            cellRectCashier.Location = New Point(240, 735)
             cellRectCashier.Size = New Size(250, 14)
 
             e.Graphics.DrawString(My.Settings.Nickname, headsubFont, Brushes.Black, cellRectCashier, MidLeft)
@@ -2555,7 +2591,10 @@
 
         End If
 
-        e.Graphics.DrawString(crno.Text, headsubFont, Brushes.Black, 250, 180)
+        'e.Graphics.DrawString("Pantabangan", headsubFont, Brushes.Black, 400, 30)
+
+
+        e.Graphics.DrawString(crno.Text, headsubFont, Brushes.Black, 250, 175)
 
         e.Graphics.DrawString(billName.Text, headsubFont, Brushes.Black, 60, 230)
         e.Graphics.DrawString(billAccountNo.Text, headsubFont, Brushes.Black, 60, 245)
@@ -2956,7 +2995,7 @@
 
         Dim NumberOfLines As Integer = Convert.ToInt32(TotalStringHeight / SingleLineHeight)
 
-        rectowords.Location = New Point(10, 560)
+        rectowords.Location = New Point(30, 560)
 
         e.Graphics.DrawString(convertedamout, headsubFont, Brushes.Black, rectowords, lefttop)
 

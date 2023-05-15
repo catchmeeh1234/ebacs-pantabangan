@@ -37,11 +37,6 @@ eBACS
  move form without border
  </summary>
 </member>
-<member name="F:eBACS.TempCR.MoveForm">
- <summary>
- move form without border
- </summary>
-</member>
 <member name="T:eBACS.DataSet2">
 <summary>
 Represents a strongly typed in-memory cache of data.

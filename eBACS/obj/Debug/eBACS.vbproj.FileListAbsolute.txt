@@ -1312,11 +1312,10 @@ D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.TransactionTemplate.resources
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.waitingapproval.resources
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.vbproj.GenerateResource.cache
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.exe.licenses
+D:\miguel\pant\eBACS\eBACS\obj\Debug\RdlCompile.cache
+D:\miguel\pant\eBACS\eBACS\obj\Debug\RdlCompile.compiled
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.vbproj.CoreCompileInputs.cache
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.vbproj.CopyComplete
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.exe
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.xml
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.pdb
-D:\miguel\pant\eBACS\eBACS\obj\Debug\RdlCompile.cache
-D:\miguel\pant\eBACS\eBACS\obj\Debug\RdlCompile.compiled
-D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.vbprojAssemblyReference.cache

@@ -7,6 +7,32 @@ Public Class Create_OR
     Dim accoundetails As New DataTable
     Dim reprintor As String = "Mode"
 
+    Public number As Double
+    Public ones As Integer
+    Public tenten As Integer
+    Public hundreds As Integer
+    Public thousands As Integer
+    Public hundredthou As Integer
+    Public callhundred As Integer
+    Public millions As Integer
+    Public millionsthou As Double
+    Public hundredmillion As Integer
+
+
+    Public tenthousandword As String
+    Public hundredthouword As String
+    Public thousanword As String
+    Public hundredword As String
+    Public gansal As String
+    Public tentenword As String
+    Public wordones As String
+    Public hundredwords As String
+    Public millionwords As String
+    Public millionthousanwords As String
+    Public hundredmillionswords As String
+
+    Public convertedamout As String
+
     Private Sub Create_OR_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MdiParent = eBACSmain
         autoprint.CheckState = CheckState.Checked
@@ -71,35 +97,37 @@ Public Class Create_OR
             If acsconn.State = ConnectionState.Closed Then acsconn.Open()
         End Try
 
-        If My.Settings.Office_Code = "A" Then
+        orno.Text = My.Settings.orfrom
 
-            sqlData1.Clear()
-            stracs = "select number from tbllogicnumbers where id = '2'"
-            acscmd.CommandText = stracs
-            acscmd.Connection = acsconn
-            acsda.SelectCommand = acscmd
-            acsda.Fill(sqlData1)
+        'If My.Settings.Office_Code = "A" Then
 
-            ornumber = sqlData1.Rows(0)("number")
+        '    sqlData1.Clear()
+        '    stracs = "select number from tbllogicnumbers where id = '2'"
+        '    acscmd.CommandText = stracs
+        '    acscmd.Connection = acsconn
+        '    acsda.SelectCommand = acscmd
+        '    acsda.Fill(sqlData1)
 
-            orno.Text = My.Settings.Office_Code & Format(ornumber, "0000000")
+        '    ornumber = sqlData1.Rows(0)("number")
 
-        End If
+        '    orno.Text = My.Settings.Office_Code & Format(ornumber, "0000000")
 
-        If My.Settings.Office_Code = "B" Then
+        'End If
 
-            sqlData1.Clear()
-            stracs = "select number from tbllogicnumbers where id = '12'"
-            acscmd.CommandText = stracs
-            acscmd.Connection = acsconn
-            acsda.SelectCommand = acscmd
-            acsda.Fill(sqlData1)
+        'If My.Settings.Office_Code = "B" Then
 
-            ornumber = sqlData1.Rows(0)("number")
+        '    sqlData1.Clear()
+        '    stracs = "select number from tbllogicnumbers where id = '12'"
+        '    acscmd.CommandText = stracs
+        '    acscmd.Connection = acsconn
+        '    acsda.SelectCommand = acscmd
+        '    acsda.Fill(sqlData1)
 
-            orno.Text = My.Settings.Office_Code & Format(ornumber, "0000000")
+        '    ornumber = sqlData1.Rows(0)("number")
 
-        End If
+        '    orno.Text = My.Settings.Office_Code & Format(ornumber, "0000000")
+
+        'End If
 
 
     End Sub
@@ -417,6 +445,11 @@ Public Class Create_OR
         billsave.Hide()
 
         clearallfields()
+
+        My.Settings.orfrom = My.Settings.orfrom + 1
+        My.Settings.Save()
+
+        loadornumber()
 
     End Sub
 
@@ -1104,7 +1137,6 @@ Public Class Create_OR
 
     Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles printest.PrintPage
 
-
         Dim headFont As New Font("Century Gothic", 10, FontStyle.Bold, GraphicsUnit.Point)
         Dim footFont As New Font("Century Gothic", 7, GraphicsUnit.Point)
         Dim headsubFont As New Font("Century Gothic", 8, GraphicsUnit.Point)
@@ -1115,8 +1147,8 @@ Public Class Create_OR
         Dim MidCenterhead As StringFormat = New StringFormat()
         Dim MidLeft As StringFormat = New StringFormat()
         Dim MidRight As StringFormat = New StringFormat()
-        Dim leftside As StringFormat = New StringFormat()
-        Dim rightright As StringFormat = New StringFormat()
+        Dim lefttop As StringFormat = New StringFormat()
+
 
         MidCenterhead.LineAlignment = StringAlignment.Near
         MidCenterhead.Alignment = StringAlignment.Center
@@ -1127,278 +1159,1046 @@ Public Class Create_OR
         MidRight.LineAlignment = StringAlignment.Center
         MidRight.Alignment = StringAlignment.Far
 
-        leftside.LineAlignment = StringAlignment.Near
-        leftside.Alignment = StringAlignment.Near
+        lefttop.LineAlignment = StringAlignment.Near
+        lefttop.Alignment = StringAlignment.Near
 
-        rightright.LineAlignment = StringAlignment.Near
-        rightright.Alignment = StringAlignment.Far
 
-        'Dim CurX As Integer = 50
-        'Dim CurY As Integer = 50
-        'Dim iWidth As Integer = 250
+        'If reprintcr = "Yes" Then
 
-        Dim cellRecthead As RectangleF
-        cellRecthead = New RectangleF()
-        cellRecthead.Location = New Point(0, 0)
-        cellRecthead.Size = New Size(250, 100)
+        '    If acsconn.State = ConnectionState.Closed Then acsconn.Open()
+        '    Dim datetimecashier As New DataTable
+        '    stracs = "select Collector, PaymentDate FROM Collection_Details WHERE CRNo = '" & crno.Text & "'"
+        '    acscmd.CommandText = stracs
+        '    acscmd.Connection = acsconn
+        '    acsda.SelectCommand = acscmd
+        '    acsda.Fill(datetimecashier)
 
-        Dim CurX As Integer = 0
-        Dim CurY As Integer = 0
-        Dim iWidth As Integer = 250
+        '    Dim cellRectCashier As RectangleF
+        '    cellRectCashier = New RectangleF()
+        '    cellRectCashier.Location = New Point(230, 735)
+        '    cellRectCashier.Size = New Size(250, 14)
 
-        CurY = PrintCellText("SANTA ROSA (NE) WATER DISTRICT", CurX, CurY, iWidth, e, headFont, MidCenterhead)
-        CurY = PrintCellText("Santa Rosa -  Fort Magsaysay Road", CurX, CurY, iWidth, e, headsubFont, MidCenterhead)
-        CurY = PrintCellText("Santa Rosa, Nueva Ecija", CurX, CurY, iWidth, e, headsubFont, MidCenterhead)
-        CurY = PrintCellText("Tel. No. (044) 940-0142", CurX, CurY, iWidth, e, headsubFont, MidCenterhead)
-        CurY = PrintCellText("TIN: 004-104-990-000 NON-VAT", CurX, CurY, iWidth, e, headsubFont, MidCenterhead)
+        '    e.Graphics.DrawString(datetimecashier.Rows(0)("Collector"), headsubFont, Brushes.Black, cellRectCashier, MidLeft)
 
-        e.Graphics.DrawString("OFFICIAL RECEIPT", headFont, Brushes.Black, 60, 80)
+        '    e.Graphics.DrawString(Format(datetimecashier.Rows(0)("PaymentDate"), "MM/dd/yyyy hh:mm tt"), headsubFont, Brushes.Black, 30, 175)
 
-        e.Graphics.DrawString("CR No.:", headsubFont, Brushes.Black, 0, 110)
-        e.Graphics.DrawString(orno.Text, headsubFont, Brushes.Black, 60, 110)
-        e.Graphics.DrawString("Acc. No.:", headsubFont, Brushes.Black, 0, 125)
-        e.Graphics.DrawString(AccountNo.Text, headsubFont, Brushes.Black, 60, 125)
+        'End If
 
-        e.Graphics.DrawString("Name:", headsubFont, Brushes.Black, 0, 140)
+        'If reprintcr = "No" Then
 
-        'start ng name
+        Dim cellRectCashier As RectangleF
+        cellRectCashier = New RectangleF()
+        cellRectCashier.Location = New Point(240, 735)
+        cellRectCashier.Size = New Size(250, 14)
 
-        Dim pangalanrec As RectangleF
-        pangalanrec = New RectangleF()
+        e.Graphics.DrawString(My.Settings.Nickname, headsubFont, Brushes.Black, cellRectCashier, MidLeft)
 
-        pangalanrec.Size = New Size(180, pangalanrec.Height)
+        e.Graphics.DrawString(Format(Now, "MM/dd/yyyy hh:mm tt"), headsubFont, Brushes.Black, 30, 175)
 
-        Dim TotalStringHeight As Single = e.Graphics.MeasureString(AccName.Text, headsubFont, New SizeF(pangalanrec.Width, pangalanrec.Height), leftside).Height
-        Dim SingleLineHeight As Single = e.Graphics.MeasureString("T", headsubFont, New SizeF(pangalanrec.Width, pangalanrec.Height), leftside).Height
+        'End If
+
+        e.Graphics.DrawString(orno.Text, headsubFont, Brushes.Black, 250, 175)
+
+        e.Graphics.DrawString(AccName.Text, headsubFont, Brushes.Black, 60, 230)
+        e.Graphics.DrawString(AccountNo.Text, headsubFont, Brushes.Black, 60, 245)
+        e.Graphics.DrawString(Zone.Text, headsubFont, Brushes.Black, 60, 260)
+
+        locationv = 325
+
+        For p = 0 To dgvitems.Rows.Count - 1
+            locationv = locationv + 20
+            Dim cellRectOtherFees As RectangleF
+            cellRectOtherFees = New RectangleF()
+            cellRectOtherFees.Location = New Point(20, locationv)
+            cellRectOtherFees.Size = New Size(320, 12)
+
+            e.Graphics.DrawString(dgvitems.Rows(p).Cells(1).Value, headsubFont, Brushes.Black, cellRectOtherFees, MidLeft)
+            e.Graphics.DrawString(dgvitems.Rows(p).Cells(3).Value, headsubFont, Brushes.Black, cellRectOtherFees, MidRight)
+        Next
+
+        Dim cellRecttotal As RectangleF
+        cellRecttotal = New RectangleF()
+        cellRecttotal.Location = New Point(20, 520)
+        cellRecttotal.Size = New Size(320, 12)
+
+        'e.Graphics.DrawString("Total Amount Paid", headsubFont, Brushes.Black, cellRecttotal, MidLeft)
+        e.Graphics.DrawString(lbltotalamountdue.Text, headsubFont, Brushes.Black, cellRecttotal, MidRight)
+
+        locationv = locationv + 20
+
+        Dim MidCenter As StringFormat = New StringFormat()
+        MidCenter.LineAlignment = StringAlignment.Center
+        MidCenter.Alignment = StringAlignment.Center
+
+        Dim cellRect As RectangleF
+        cellRect = New RectangleF()
+        cellRect.Location = New Point(0, locationv)
+        cellRect.Size = New Size(250, 50)
+
+        converttowords()
+
+        Dim rectowords As RectangleF
+        rectowords = New RectangleF()
+
+        rectowords.Size = New Size(350, rectowords.Height)
+
+        Dim TotalStringHeight As Single = e.Graphics.MeasureString(AccName.Text, headsubFont, New SizeF(rectowords.Width, rectowords.Height), lefttop).Height
+        Dim SingleLineHeight As Single = e.Graphics.MeasureString("T", headsubFont, New SizeF(rectowords.Width, rectowords.Height), lefttop).Height
 
         Dim NumberOfLines As Integer = Convert.ToInt32(TotalStringHeight / SingleLineHeight)
 
-        pangalanrec.Location = New Point(60, locationv + 1)
+        rectowords.Location = New Point(30, 560)
 
-        e.Graphics.DrawString(AccName.Text, headsubFont, Brushes.Black, pangalanrec, leftside)
+        e.Graphics.DrawString(convertedamout, headsubFont, Brushes.Black, rectowords, lefttop)
 
-        locationv = locationv + (NumberOfLines * 15)
 
-        'end ng name
+        ''''''''''''''''''''''''''''''''''''''''''''''''''''ENDDDDDDDDDDDDDD'''''''''''''''''''''''''''''''''''''''''''''''''
 
-        e.Graphics.DrawString("Address:", headsubFont, Brushes.Black, 0, locationv)
 
-        'start ng address
+        'Dim headFont As New Font("Century Gothic", 10, FontStyle.Bold, GraphicsUnit.Point)
+        'Dim footFont As New Font("Century Gothic", 7, GraphicsUnit.Point)
+        'Dim headsubFont As New Font("Century Gothic", 8, GraphicsUnit.Point)
+        'Dim headsubFontbold As New Font("Century Gothic", 8, FontStyle.Bold, GraphicsUnit.Point)
+        'Dim headsubFontitalic As New Font("Century Gothic", 8, FontStyle.Italic, GraphicsUnit.Point)
+        'Dim locationv As Integer = 140
 
-        Dim addrec As RectangleF
-        addrec = New RectangleF()
+        'Dim MidCenterhead As StringFormat = New StringFormat()
+        'Dim MidLeft As StringFormat = New StringFormat()
+        'Dim MidRight As StringFormat = New StringFormat()
+        'Dim leftside As StringFormat = New StringFormat()
+        'Dim rightright As StringFormat = New StringFormat()
 
-        addrec.Size = New Size(180, addrec.Height)
+        'MidCenterhead.LineAlignment = StringAlignment.Near
+        'MidCenterhead.Alignment = StringAlignment.Center
 
-        Dim TotalStringHeightaddress As Single = e.Graphics.MeasureString(Address.Text, headsubFont, New SizeF(addrec.Width, addrec.Height), leftside).Height
-        Dim SingleLineHeightaddress As Single = e.Graphics.MeasureString("T", headsubFont, New SizeF(addrec.Width, addrec.Height), leftside).Height
+        'MidLeft.LineAlignment = StringAlignment.Center
+        'MidLeft.Alignment = StringAlignment.Near
 
-        Dim NumberOfLinesaddress As Integer = Convert.ToInt32(TotalStringHeightaddress / SingleLineHeightaddress)
+        'MidRight.LineAlignment = StringAlignment.Center
+        'MidRight.Alignment = StringAlignment.Far
 
-        addrec.Location = New Point(60, locationv + 1)
+        'leftside.LineAlignment = StringAlignment.Near
+        'leftside.Alignment = StringAlignment.Near
 
-        e.Graphics.DrawString(Address.Text, headsubFont, Brushes.Black, addrec, leftside)
+        'rightright.LineAlignment = StringAlignment.Near
+        'rightright.Alignment = StringAlignment.Far
 
-        locationv = locationv + (NumberOfLinesaddress * 15)
+        ''Dim CurX As Integer = 50
+        ''Dim CurY As Integer = 50
+        ''Dim iWidth As Integer = 250
 
-        'end address
+        'Dim cellRecthead As RectangleF
+        'cellRecthead = New RectangleF()
+        'cellRecthead.Location = New Point(0, 0)
+        'cellRecthead.Size = New Size(250, 100)
 
-        locationv = locationv + 5
-        e.Graphics.DrawString("__________________________________________________", headsubFont, Brushes.Black, 0, locationv)
-        locationv = locationv + 20
+        'Dim CurX As Integer = 0
+        'Dim CurY As Integer = 0
+        'Dim iWidth As Integer = 250
 
-        e.Graphics.DrawString("As Payment for:", headsubFont, Brushes.Black, 0, locationv)
-        'e.Graphics.DrawString(paymentfor.Text, headsubFontbold, Brushes.Black, 90, locationv)
-        locationv = locationv + 20
+        'CurY = PrintCellText("SANTA ROSA (NE) WATER DISTRICT", CurX, CurY, iWidth, e, headFont, MidCenterhead)
+        'CurY = PrintCellText("Santa Rosa -  Fort Magsaysay Road", CurX, CurY, iWidth, e, headsubFont, MidCenterhead)
+        'CurY = PrintCellText("Santa Rosa, Nueva Ecija", CurX, CurY, iWidth, e, headsubFont, MidCenterhead)
+        'CurY = PrintCellText("Tel. No. (044) 940-0142", CurX, CurY, iWidth, e, headsubFont, MidCenterhead)
+        'CurY = PrintCellText("TIN: 004-104-990-000 NON-VAT", CurX, CurY, iWidth, e, headsubFont, MidCenterhead)
 
-        'as payment for start
+        'e.Graphics.DrawString("OFFICIAL RECEIPT", headFont, Brushes.Black, 60, 80)
 
-        Dim aspf As RectangleF
-        aspf = New RectangleF()
+        'e.Graphics.DrawString("CR No.:", headsubFont, Brushes.Black, 0, 110)
+        'e.Graphics.DrawString(orno.Text, headsubFont, Brushes.Black, 60, 110)
+        'e.Graphics.DrawString("Acc. No.:", headsubFont, Brushes.Black, 0, 125)
+        'e.Graphics.DrawString(AccountNo.Text, headsubFont, Brushes.Black, 60, 125)
 
-        'Dim sukatan As Integer
-        'Dim gansal As Double
+        'e.Graphics.DrawString("Name:", headsubFont, Brushes.Black, 0, 140)
 
-        'sukatan = (paymentfor.TextLength / 50)
-        'gansal = (paymentfor.TextLength / 50) - sukatan
+        ''start ng name
 
-        'If sukatan = 0 Then
+        'Dim pangalanrec As RectangleF
+        'pangalanrec = New RectangleF()
 
-        '    aspf.Size = New Size(250, 15)
+        'pangalanrec.Size = New Size(180, pangalanrec.Height)
 
-        'Else
-        '    If gansal > 0 Then
-        '        sukatan = sukatan + 1
-        '    Else
+        'Dim TotalStringHeight As Single = e.Graphics.MeasureString(AccName.Text, headsubFont, New SizeF(pangalanrec.Width, pangalanrec.Height), leftside).Height
+        'Dim SingleLineHeight As Single = e.Graphics.MeasureString("T", headsubFont, New SizeF(pangalanrec.Width, pangalanrec.Height), leftside).Height
 
-        '    End If
+        'Dim NumberOfLines As Integer = Convert.ToInt32(TotalStringHeight / SingleLineHeight)
 
-        '    aspf.Size = New Size(250, sukatan * 15)
+        'pangalanrec.Location = New Point(60, locationv + 1)
+
+        'e.Graphics.DrawString(AccName.Text, headsubFont, Brushes.Black, pangalanrec, leftside)
+
+        'locationv = locationv + (NumberOfLines * 15)
+
+        ''end ng name
+
+        'e.Graphics.DrawString("Address:", headsubFont, Brushes.Black, 0, locationv)
+
+        ''start ng address
+
+        'Dim addrec As RectangleF
+        'addrec = New RectangleF()
+
+        'addrec.Size = New Size(180, addrec.Height)
+
+        'Dim TotalStringHeightaddress As Single = e.Graphics.MeasureString(Address.Text, headsubFont, New SizeF(addrec.Width, addrec.Height), leftside).Height
+        'Dim SingleLineHeightaddress As Single = e.Graphics.MeasureString("T", headsubFont, New SizeF(addrec.Width, addrec.Height), leftside).Height
+
+        'Dim NumberOfLinesaddress As Integer = Convert.ToInt32(TotalStringHeightaddress / SingleLineHeightaddress)
+
+        'addrec.Location = New Point(60, locationv + 1)
+
+        'e.Graphics.DrawString(Address.Text, headsubFont, Brushes.Black, addrec, leftside)
+
+        'locationv = locationv + (NumberOfLinesaddress * 15)
+
+        ''end address
+
+        'locationv = locationv + 5
+        'e.Graphics.DrawString("__________________________________________________", headsubFont, Brushes.Black, 0, locationv)
+        'locationv = locationv + 20
+
+        'e.Graphics.DrawString("As Payment for:", headsubFont, Brushes.Black, 0, locationv)
+        ''e.Graphics.DrawString(paymentfor.Text, headsubFontbold, Brushes.Black, 90, locationv)
+        'locationv = locationv + 20
+
+        ''as payment for start
+
+        'Dim aspf As RectangleF
+        'aspf = New RectangleF()
+
+        ''Dim sukatan As Integer
+        ''Dim gansal As Double
+
+        ''sukatan = (paymentfor.TextLength / 50)
+        ''gansal = (paymentfor.TextLength / 50) - sukatan
+
+        ''If sukatan = 0 Then
+
+        ''    aspf.Size = New Size(250, 15)
+
+        ''Else
+        ''    If gansal > 0 Then
+        ''        sukatan = sukatan + 1
+        ''    Else
+
+        ''    End If
+
+        ''    aspf.Size = New Size(250, sukatan * 15)
+
+        ''End If
+
+
+        'aspf.Size = New Size(250, aspf.Height)
+
+        'Dim TotalStringHeightaspf As Single = e.Graphics.MeasureString(paymentfor.Text, headsubFont, New SizeF(aspf.Width, aspf.Height), leftside).Height
+        'Dim SingleLineHeightaspf As Single = e.Graphics.MeasureString("T", headsubFont, New SizeF(aspf.Width, aspf.Height), leftside).Height
+
+        'Dim NumberOfLinesaspf As Integer = Convert.ToInt32(TotalStringHeightaspf / SingleLineHeightaspf)
+
+
+        'aspf.Location = New Point(0, locationv + 1)
+
+        'e.Graphics.DrawString(paymentfor.Text, headsubFont, Brushes.Black, aspf, leftside)
+
+        'locationv = locationv + (NumberOfLinesaspf * 15)
+
+        ''as payment for end
+
+        'locationv = locationv + 5
+
+        'e.Graphics.DrawString("Qty", headsubFont, Brushes.Black, 5, locationv)
+        'e.Graphics.DrawString("Particulars", headsubFont, Brushes.Black, 40, locationv)
+        'e.Graphics.DrawString("Amount", headsubFont, Brushes.Black, 200, locationv)
+
+        'locationv = locationv + 20
+
+        'Dim cellamount, quan, part As RectangleF
+        'cellamount = New RectangleF()
+        'quan = New RectangleF()
+        'part = New RectangleF()
+
+        ''e.Graphics.DrawString(billPenalty.Text, headsubFont, Brushes.Black, cellRectpenalty, MidRight)
+
+
+
+        'For p = 0 To dgvitems.Rows.Count - 1
+
+        '    quan.Location = New Point(0, locationv)
+        '    quan.Size = New Size(30, 15)
+
+        '    'part.Location = New Point(40, locationv)
+        '    'part.Size = New Size(150, 15)
+
+        '    cellamount.Location = New Point(145, locationv)
+        '    cellamount.Size = New Size(100, 15)
+
+        '    'e.Graphics.DrawString(dgvitems.Rows(p).Cells(0).Value, headsubFont, Brushes.Black, 5, locationv)
+        '    'e.Graphics.DrawString(dgvitems.Rows(p).Cells(1).Value, headsubFont, Brushes.Black, 40, locationv)
+        '    'e.Graphics.DrawString(dgvitems.Rows(p).Cells(3).Value, headsubFont, Brushes.Black, 180, locationv)
+        '    e.Graphics.DrawString(dgvitems.Rows(p).Cells(0).Value, headsubFont, Brushes.Black, quan, rightright)
+
+        '    'start ng partculars
+
+
+        '    'Dim sukatan2 As Integer
+        '    'Dim gansal2 As Double
+
+        '    'sukatan2 = (dgvitems.Rows(p).Cells(1).Value.ToString.Length / 30)
+        '    'gansal2 = (dgvitems.Rows(p).Cells(1).Value.ToString.Length / 30) - sukatan2
+
+        '    'If sukatan2 = 0 Then
+
+        '    '    part.Size = New Size(150, 15)
+
+        '    'Else
+        '    '    If gansal2 > 0 Then
+        '    '        sukatan2 = sukatan2 + 1
+        '    '    Else
+
+        '    '    End If
+
+        '    '    part.Size = New Size(150, sukatan2 * 17)
+
+        '    'End If
+
+        '    part.Size = New Size(150, part.Height)
+
+        '    Dim TotalStringHeightpart As Single = e.Graphics.MeasureString(dgvitems.Rows(p).Cells(1).Value, headsubFont, New SizeF(part.Width, part.Height), leftside).Height
+        '    Dim SingleLineHeightpart As Single = e.Graphics.MeasureString("T", headsubFont, New SizeF(part.Width, part.Height), leftside).Height
+
+        '    Dim NumberOfLinespart As Integer = Convert.ToInt32(TotalStringHeightpart / SingleLineHeightpart)
+
+
+        '    part.Location = New Point(40, locationv + 1)
+
+
+
+        '    e.Graphics.DrawString(dgvitems.Rows(p).Cells(1).Value, headsubFont, Brushes.Black, part, leftside)
+
+        '    locationv = locationv + (NumberOfLinespart * 15)
+
+        '    'end ng partculars
+
+        '    'e.Graphics.DrawString(dgvitems.Rows(p).Cells(1).Value, headsubFont, Brushes.Black, part, MidLeft)
+        '    e.Graphics.DrawString(dgvitems.Rows(p).Cells(3).Value, headsubFont, Brushes.Black, cellamount, rightright)
+        '    'locationv = locationv + 15
+        'Next
+
+        'e.Graphics.DrawString("__________________________________________________", headsubFont, Brushes.Black, 0, locationv)
+        'locationv = locationv + 20
+
+        'Dim totalamount, totalabel As RectangleF
+        'totalamount = New RectangleF()
+        'totalabel = New RectangleF()
+
+        'totalamount.Location = New Point(145, locationv)
+        'totalamount.Size = New Size(100, 10)
+
+        'totalabel.Location = New Point(0, locationv)
+        'totalabel.Size = New Size(100, 10)
+
+        'e.Graphics.DrawString("Amount Paid", headsubFontbold, Brushes.Black, totalabel, MidLeft)
+        'e.Graphics.DrawString(lbltotalamountdue.Text, headsubFontbold, Brushes.Black, totalamount, MidRight)
+
+        'locationv = locationv + 10
+
+        'e.Graphics.DrawString("__________________________________________________", headsubFont, Brushes.Black, 0, locationv)
+        'locationv = locationv + 20
+
+        'If reprintor = "Yes" Then
+
+        '    If acsconn.State = ConnectionState.Closed Then acsconn.Open()
+        '    Dim datetimecashier As New DataTable
+        '    stracs = "select Collector, PaymentDate FROM OR_Details WHERE ORNo = '" & orno.Text & "'"
+        '    acscmd.CommandText = stracs
+        '    acscmd.Connection = acsconn
+        '    acsda.SelectCommand = acscmd
+        '    acsda.Fill(datetimecashier)
+
+        '    e.Graphics.DrawString("Cashier:  " & datetimecashier.Rows(0)("Collector"), headsubFont, Brushes.Black, 0, locationv)
+        '    locationv = locationv + 15
+
+        '    e.Graphics.DrawString("Date:     " & Format(datetimecashier.Rows(0)("PaymentDate"), "MM/dd/yyyy hh:mm tt"), headsubFont, Brushes.Black, 0, locationv)
+        '    locationv = locationv + 25
+
+        'End If
+
+        'If reprintor = "No" Then
+
+        '    e.Graphics.DrawString("Cashier:  " & My.Settings.Nickname, headsubFont, Brushes.Black, 0, locationv)
+        '    locationv = locationv + 15
+
+        '    e.Graphics.DrawString("Date:     " & Format(Now, "MM/dd/yyyy hh:mm tt"), headsubFont, Brushes.Black, 0, locationv)
+        '    locationv = locationv + 25
 
         'End If
 
 
-        aspf.Size = New Size(250, aspf.Height)
+        ''footFont
 
-        Dim TotalStringHeightaspf As Single = e.Graphics.MeasureString(paymentfor.Text, headsubFont, New SizeF(aspf.Width, aspf.Height), leftside).Height
-        Dim SingleLineHeightaspf As Single = e.Graphics.MeasureString("T", headsubFont, New SizeF(aspf.Width, aspf.Height), leftside).Height
+        'e.Graphics.DrawString("BIR CAS Permit No. 23B-CAS-0414-0001", footFont, Brushes.Black, 0, locationv)
+        'locationv = locationv + 15
 
-        Dim NumberOfLinesaspf As Integer = Convert.ToInt32(TotalStringHeightaspf / SingleLineHeightaspf)
+        'Dim footer As RectangleF
+        'footer = New RectangleF()
 
+        'footer.Location = New Point(0, locationv)
+        'footer.Size = New Size(250, paymentfor.TextLength \ 250)
 
-        aspf.Location = New Point(0, locationv + 1)
+        ''e.Graphics.DrawString(dgvitems.Rows(p).Cells(0).Value, headsubFont, Brushes.Black, quan, MidRight)
 
-        e.Graphics.DrawString(paymentfor.Text, headsubFont, Brushes.Black, aspf, leftside)
+        'e.Graphics.DrawString("Note: This Document is not a valid source of input tax.", footFont, Brushes.Black, footer, leftside)
+        'locationv = locationv + footer.Height + 15
 
-        locationv = locationv + (NumberOfLinesaspf * 15)
+    End Sub
 
-        'as payment for end
+    Sub libolibo()
 
-        locationv = locationv + 5
+        thousands = Int(millionsthou / 1000)
 
-        e.Graphics.DrawString("Qty", headsubFont, Brushes.Black, 5, locationv)
-        e.Graphics.DrawString("Particulars", headsubFont, Brushes.Black, 40, locationv)
-        e.Graphics.DrawString("Amount", headsubFont, Brushes.Black, 200, locationv)
+        If thousands = 0 Then
 
-        locationv = locationv + 20
+            callhundred = Int(millionsthou - (thousands * 1000))
 
-        Dim cellamount, quan, part As RectangleF
-        cellamount = New RectangleF()
-        quan = New RectangleF()
-        part = New RectangleF()
+            hundred()
 
-        'e.Graphics.DrawString(billPenalty.Text, headsubFont, Brushes.Black, cellRectpenalty, MidRight)
-
-
-
-        For p = 0 To dgvitems.Rows.Count - 1
-
-            quan.Location = New Point(0, locationv)
-            quan.Size = New Size(30, 15)
-
-            'part.Location = New Point(40, locationv)
-            'part.Size = New Size(150, 15)
-
-            cellamount.Location = New Point(145, locationv)
-            cellamount.Size = New Size(100, 15)
-
-            'e.Graphics.DrawString(dgvitems.Rows(p).Cells(0).Value, headsubFont, Brushes.Black, 5, locationv)
-            'e.Graphics.DrawString(dgvitems.Rows(p).Cells(1).Value, headsubFont, Brushes.Black, 40, locationv)
-            'e.Graphics.DrawString(dgvitems.Rows(p).Cells(3).Value, headsubFont, Brushes.Black, 180, locationv)
-            e.Graphics.DrawString(dgvitems.Rows(p).Cells(0).Value, headsubFont, Brushes.Black, quan, rightright)
-
-            'start ng partculars
-
-
-            'Dim sukatan2 As Integer
-            'Dim gansal2 As Double
-
-            'sukatan2 = (dgvitems.Rows(p).Cells(1).Value.ToString.Length / 30)
-            'gansal2 = (dgvitems.Rows(p).Cells(1).Value.ToString.Length / 30) - sukatan2
-
-            'If sukatan2 = 0 Then
-
-            '    part.Size = New Size(150, 15)
-
-            'Else
-            '    If gansal2 > 0 Then
-            '        sukatan2 = sukatan2 + 1
-            '    Else
-
-            '    End If
-
-            '    part.Size = New Size(150, sukatan2 * 17)
-
-            'End If
-
-            part.Size = New Size(150, part.Height)
-
-            Dim TotalStringHeightpart As Single = e.Graphics.MeasureString(dgvitems.Rows(p).Cells(1).Value, headsubFont, New SizeF(part.Width, part.Height), leftside).Height
-            Dim SingleLineHeightpart As Single = e.Graphics.MeasureString("T", headsubFont, New SizeF(part.Width, part.Height), leftside).Height
-
-            Dim NumberOfLinespart As Integer = Convert.ToInt32(TotalStringHeightpart / SingleLineHeightpart)
-
-
-            part.Location = New Point(40, locationv + 1)
-
-
-
-            e.Graphics.DrawString(dgvitems.Rows(p).Cells(1).Value, headsubFont, Brushes.Black, part, leftside)
-
-            locationv = locationv + (NumberOfLinespart * 15)
-
-            'end ng partculars
-
-            'e.Graphics.DrawString(dgvitems.Rows(p).Cells(1).Value, headsubFont, Brushes.Black, part, MidLeft)
-            e.Graphics.DrawString(dgvitems.Rows(p).Cells(3).Value, headsubFont, Brushes.Black, cellamount, rightright)
-            'locationv = locationv + 15
-        Next
-
-        e.Graphics.DrawString("__________________________________________________", headsubFont, Brushes.Black, 0, locationv)
-        locationv = locationv + 20
-
-        Dim totalamount, totalabel As RectangleF
-        totalamount = New RectangleF()
-        totalabel = New RectangleF()
-
-        totalamount.Location = New Point(145, locationv)
-        totalamount.Size = New Size(100, 10)
-
-        totalabel.Location = New Point(0, locationv)
-        totalabel.Size = New Size(100, 10)
-
-        e.Graphics.DrawString("Amount Paid", headsubFontbold, Brushes.Black, totalabel, MidLeft)
-        e.Graphics.DrawString(lbltotalamountdue.Text, headsubFontbold, Brushes.Black, totalamount, MidRight)
-
-        locationv = locationv + 10
-
-        e.Graphics.DrawString("__________________________________________________", headsubFont, Brushes.Black, 0, locationv)
-        locationv = locationv + 20
-
-        If reprintor = "Yes" Then
-
-            If acsconn.State = ConnectionState.Closed Then acsconn.Open()
-            Dim datetimecashier As New DataTable
-            stracs = "select Collector, PaymentDate FROM OR_Details WHERE ORNo = '" & orno.Text & "'"
-            acscmd.CommandText = stracs
-            acscmd.Connection = acsconn
-            acsda.SelectCommand = acscmd
-            acsda.Fill(datetimecashier)
-
-            e.Graphics.DrawString("Cashier:  " & datetimecashier.Rows(0)("Collector"), headsubFont, Brushes.Black, 0, locationv)
-            locationv = locationv + 15
-
-            e.Graphics.DrawString("Date:     " & Format(datetimecashier.Rows(0)("PaymentDate"), "MM/dd/yyyy hh:mm tt"), headsubFont, Brushes.Black, 0, locationv)
-            locationv = locationv + 25
+            millionthousanwords = hundredwords
 
         End If
 
-        If reprintor = "No" Then
+        If thousands > 19 And thousands < 100 Then
 
-            e.Graphics.DrawString("Cashier:  " & My.Settings.Nickname, headsubFont, Brushes.Black, 0, locationv)
-            locationv = locationv + 15
+            tenten = thousands \ 10
+            tens()
 
-            e.Graphics.DrawString("Date:     " & Format(Now, "MM/dd/yyyy hh:mm tt"), headsubFont, Brushes.Black, 0, locationv)
-            locationv = locationv + 25
+            ones = thousands - ((thousands \ 10) * 10)
+            onetonineteen()
+
+            thousanword = tentenword + " " + wordones + " Thousand "
+
+            callhundred = Int(millionsthou - (thousands * 1000))
+
+
+            hundred()
+
+            millionthousanwords = thousanword + " " + hundredwords
 
         End If
 
+        If thousands > 99 And thousands < 1000 Then
 
-        'footFont
+            ones = thousands \ 100
+            onetonineteen()
 
-        e.Graphics.DrawString("BIR CAS Permit No. 23B-CAS-0414-0001", footFont, Brushes.Black, 0, locationv)
-        locationv = locationv + 15
+            hundredthouword = wordones + " Hundred "
 
-        Dim footer As RectangleF
-        footer = New RectangleF()
+            tenten = (thousands - (ones * 100)) \ 10
 
-        footer.Location = New Point(0, locationv)
-        footer.Size = New Size(250, paymentfor.TextLength \ 250)
+            If tenten < 2 Then
 
-        'e.Graphics.DrawString(dgvitems.Rows(p).Cells(0).Value, headsubFont, Brushes.Black, quan, MidRight)
+                ones = Int(thousands - (ones * 100))
+                onetonineteen()
 
-        e.Graphics.DrawString("Note: This Document is not a valid source of input tax.", footFont, Brushes.Black, footer, leftside)
-        locationv = locationv + footer.Height + 15
+                hundredthouword = hundredthouword + wordones + " Thousand "
 
+                callhundred = Int(millionsthou - (thousands * 1000))
+
+                hundred()
+
+                millionthousanwords = hundredthouword + hundredwords
+
+            Else
+
+                tens()
+
+                ones = Int(thousands - ((ones * 100) + (tenten * 10)))
+                onetonineteen()
+
+                hundredthouword = hundredthouword + tentenword + " " + wordones + " Thousand "
+
+                callhundred = Int(millionsthou - (thousands * 1000))
+
+                hundred()
+
+                millionthousanwords = hundredthouword + " " + hundredwords
+
+            End If
+
+        End If
+
+        If thousands > 0 And thousands < 20 Then
+
+            ones = thousands
+            onetonineteen()
+
+            thousanword = wordones
+
+            hundreds = Int((millionsthou - (ones * 1000)) / 100)
+
+            If hundreds = 0 Then
+
+                tenten = Int((millionsthou - (thousands * 1000) + (hundreds * 100)) / 10)
+
+                If tenten < 2 Then
+
+                    ones = Int(millionsthou - ((thousands * 1000) + (hundreds * 100)))
+                    onetonineteen()
+
+                    gansal = Math.Round((Number - Int(Number)) * 100, 2)
+
+                    If gansal = 0 Then
+                        millionthousanwords = thousanword + " Thousand " + wordones + " pesos only"
+                    Else
+                        millionthousanwords = thousanword + " Thousand " + wordones + " and " + Format(Int(gansal), "00") + "/100 pesos only"
+                    End If
+
+
+
+                Else
+
+                    tens()
+
+                    ones = Int(millionsthou - ((thousands * 1000) + (hundreds * 100) + (tenten * 10)))
+                    onetonineteen()
+
+                    gansal = Math.Round((Number - Int(Number)) * 100, 2)
+
+                    If gansal = 0 Then
+                        millionthousanwords = thousanword + " Thousand " + tentenword + " " + wordones + " pesos only"
+                    Else
+                        millionthousanwords = thousanword + " Thousand " + tentenword + " " + wordones + " and " + Format(Int(gansal), "00") + "/100 pesos only"
+                    End If
+
+
+                End If
+
+            Else
+
+                ones = hundreds
+                onetonineteen()
+
+                hundredword = wordones
+
+                tenten = Int((millionsthou - ((thousands * 1000) + (hundreds * 100))) / 10)
+
+                If tenten < 2 Then
+
+                    ones = Int(millionsthou - ((thousands * 1000) + (hundreds * 100)))
+                    onetonineteen()
+
+                    gansal = Math.Round((Number - Int(Number)) * 100, 2)
+
+                    If gansal = 0 Then
+                        millionthousanwords = thousanword + " Thousand " + hundredword + " Hundred " + wordones + " pesos only"
+                    Else
+                        millionthousanwords = thousanword + " Thousand " + hundredword + " Hundred " + wordones + " and " + Format(Int(gansal), "00") + "/100 pesos only"
+                    End If
+
+
+                Else
+
+                    tens()
+
+                    ones = Int(millionsthou - ((thousands * 1000) + (hundreds * 100) + (tenten * 10)))
+                    onetonineteen()
+
+                    gansal = Math.Round((Number - Int(Number)) * 100, 2)
+
+                    If gansal = 0 Then
+                        millionthousanwords = thousanword + " Thousand " + hundredword + " Hundred " + tentenword + " " + wordones + " pesos only"
+                    Else
+                        millionthousanwords = thousanword + " Thousand " + hundredword + " Hundred " + tentenword + " " + wordones + " and " + Format(Int(gansal), "00") + "/100 pesos only"
+                    End If
+
+
+                End If
+
+            End If
+
+        End If
+
+    End Sub
+
+    Sub hundred()
+
+        ones = Int(callhundred / 100)
+        onetonineteen()
+
+        hundredword = wordones
+        hundreds = ones
+
+        tenten = Int((callhundred - (ones * 100)) / 10)
+
+        If tenten < 2 Then
+
+            ones = Int(callhundred - (ones * 100))
+            onetonineteen()
+
+            gansal = Math.Round((Number - Int(Number)) * 100, 2)
+
+            If hundreds = 0 Then
+
+                If gansal = 0 Then
+                    hundredwords = wordones + " pesos only"
+                Else
+                    hundredwords = wordones + " and " + Format(Int(gansal), "00") + "/100 pesos only"
+                End If
+
+            Else
+
+                If gansal = 0 Then
+                    hundredwords = hundredword + " Hundred " + wordones + " pesos only"
+                Else
+                    hundredwords = hundredword + " Hundred " + wordones + " and " + Format(Int(gansal), "00") + "/100 pesos pesos only"
+                End If
+
+            End If
+
+        Else
+
+            tens()
+
+            ones = Int(callhundred - ((hundreds * 100) + (tenten * 10)))
+            onetonineteen()
+
+            gansal = Math.Round((Number - Int(Number)) * 100, 2)
+
+            If hundreds = 0 Then
+
+                If gansal = 0 Then
+                    hundredwords = tentenword + " " + wordones + " pesos only"
+                Else
+                    hundredwords = tentenword + " " + wordones + " and " + Format(Int(gansal), "00") + "/100 pesos only"
+                End If
+
+            Else
+                If gansal = 0 Then
+                    hundredwords = hundredword + " Hundred " + tentenword + " " + wordones + " pesos only"
+                Else
+                    hundredwords = hundredword + " Hundred " + tentenword + " " + wordones + " and " + Format(Int(gansal), "00") + "/100 pesos only"
+                End If
+
+            End If
+
+        End If
+
+    End Sub
+
+    Sub onetonineteen()
+
+        Select Case ones
+            Case 0
+                wordones = ""
+            Case 1
+                wordones = "One"
+            Case 2
+                wordones = "Two"
+            Case 3
+                wordones = "Three"
+            Case 4
+                wordones = "Four"
+            Case 5
+                wordones = "Five"
+            Case 6
+                wordones = "Six"
+            Case 7
+                wordones = "Seven"
+            Case 8
+                wordones = "Eight"
+            Case 9
+                wordones = "Nine"
+            Case 10
+                wordones = "Ten"
+            Case 11
+                wordones = "Eleven"
+            Case 12
+                wordones = "Twelve"
+            Case 13
+                wordones = "Thirteen"
+            Case 14
+                wordones = "Fourteen"
+            Case 15
+                wordones = "Fifteen"
+            Case 16
+                wordones = "Sixteen"
+            Case 17
+                wordones = "Seventeen"
+            Case 18
+                wordones = "Eighteen"
+            Case 19
+                wordones = "Nineteen"
+        End Select
+
+    End Sub
+
+    Sub tens()
+
+        Select Case tenten
+            Case 2
+                tentenword = "Twenty"
+            Case 3
+                tentenword = "Thirty"
+            Case 4
+                tentenword = "Forty"
+            Case 5
+                tentenword = "Fifty"
+            Case 6
+                tentenword = "Sixty"
+            Case 7
+                tentenword = "Seventy"
+            Case 8
+                tentenword = "Eighty"
+            Case 9
+                tentenword = "Ninety"
+        End Select
+    End Sub
+
+    Private Sub converttowords()
+
+        Try
+            Dim number As Double
+            number = Double.Parse(lbltotalamountdue.Text)
+
+            lbltotalamountdue.Text = Format(number, "##,##0.00")
+
+            If number > 0 And number < 20 Then
+
+                ones = Int(number)
+                onetonineteen()
+
+                gansal = Math.Round((number - Int(number)) * 100, 2)
+
+                If gansal = 0 Then
+                    convertedamout = wordones + " pesos only"
+                Else
+                    convertedamout = wordones + " and " + Format(Int(gansal), "00") + "/100 pesos only"
+                End If
+
+
+            End If
+
+            If number > 19.99 And number < 100 Then
+
+                tenten = Int(number / 10)
+                tens()
+
+                ones = Int(number - (tenten * 10))
+                onetonineteen()
+
+                gansal = Math.Round((number - Int(number)) * 100, 2)
+
+                If gansal = 0 Then
+                    convertedamout = tentenword + " " + wordones + " pesos only"
+                Else
+                    convertedamout = tentenword + " " + wordones + " and " + Format(Int(gansal), "00") + "/100 pesos only"
+                End If
+
+
+            End If
+
+            If number > 99.99 And number < 1000 Then
+
+                ones = Int(number / 100)
+                onetonineteen()
+
+                hundredword = wordones
+                hundreds = ones
+
+                tenten = Int((number - (ones * 100)) / 10)
+
+                If tenten < 2 Then
+
+                    ones = Int(number - (ones * 100))
+                    onetonineteen()
+
+                    gansal = Math.Round((number - Int(number)) * 100, 2)
+
+                    If gansal = 0 Then
+                        convertedamout = hundredword + " Hundred " + wordones + " pesos only"
+                    Else
+                        convertedamout = hundredword + " Hundred " + wordones + " and " + Format(Int(gansal), "00") + "/100 pesos only"
+                    End If
+
+
+
+                Else
+
+                    tens()
+
+                    ones = Int(number - ((hundreds * 100) + (tenten * 10)))
+                    onetonineteen()
+
+                    gansal = Math.Round((number - Int(number)) * 100, 2)
+
+                    If gansal = 0 Then
+                        convertedamout = hundredword + " Hundred " + tentenword + " " + wordones + " pesos only"
+                    Else
+                        convertedamout = hundredword + " Hundred " + tentenword + " " + wordones + " and " + Format(Int(gansal), "00") + "/100 pesos only"
+                    End If
+
+
+
+                End If
+
+            End If
+
+            If number > 999.99 And number < 1000000 Then
+
+                thousands = Int(number / 1000)
+
+                If thousands > 19 And thousands < 100 Then
+
+                    tenten = thousands \ 10
+                    tens()
+
+                    ones = thousands - ((thousands \ 10) * 10)
+                    onetonineteen()
+
+                    thousanword = tentenword + " " + wordones + " Thousand "
+
+                    callhundred = Int(number - (thousands * 1000))
+
+
+                    hundred()
+
+                    convertedamout = thousanword + hundredwords
+
+                End If
+
+                If thousands > 99 And thousands < 1000 Then
+
+                    ones = thousands \ 100
+                    onetonineteen()
+
+                    hundredthouword = wordones + " Hundred "
+
+                    tenten = (thousands - (ones * 100)) \ 10
+
+                    If tenten < 2 Then
+
+                        ones = Int(thousands - (ones * 100))
+                        onetonineteen()
+
+                        hundredthouword = hundredthouword + wordones + " Thousand "
+
+                        callhundred = Int(number - (thousands * 1000))
+
+                        hundred()
+
+                        convertedamout = hundredthouword + hundredwords
+
+                    Else
+
+                        tens()
+
+                        ones = Int(thousands - ((ones * 100) + (tenten * 10)))
+                        onetonineteen()
+
+                        hundredthouword = hundredthouword + tentenword + " " + wordones + " Thousand "
+
+                        callhundred = Int(number - (thousands * 1000))
+
+                        hundred()
+
+                        convertedamout = hundredthouword + hundredwords
+
+                    End If
+
+                End If
+
+                If thousands < 20 Then
+
+                    ones = thousands
+                    onetonineteen()
+
+                    thousanword = wordones
+
+                    hundreds = Int((number - (ones * 1000)) / 100)
+
+                    If hundreds = 0 Then
+
+                        tenten = Int((number - (thousands * 1000) + (hundreds * 100)) / 10)
+
+                        If tenten < 2 Then
+
+                            ones = Int(number - ((thousands * 1000) + (hundreds * 100)))
+                            onetonineteen()
+
+                            gansal = Math.Round((number - Int(number)) * 100, 2)
+
+                            If gansal = 0 Then
+                                convertedamout = thousanword + " Thousand " + wordones + " pesos only"
+                            Else
+                                convertedamout = thousanword + " Thousand " + wordones + " and " + Format(Int(gansal), "00") + "/100 pesos only"
+                            End If
+
+
+                        Else
+
+                            tens()
+
+                            ones = Int(number - ((thousands * 1000) + (hundreds * 100) + (tenten * 10)))
+                            onetonineteen()
+
+                            gansal = Math.Round((number - Int(number)) * 100, 2)
+
+                            If gansal = 0 Then
+                                convertedamout = thousanword + " Thousand " + tentenword + " " + wordones + " pesos only"
+                            Else
+                                convertedamout = thousanword + " Thousand " + tentenword + " " + wordones + " and " + Format(Int(gansal), "00") + "/100 pesos only"
+                            End If
+
+
+                        End If
+
+                    Else
+
+                        ones = hundreds
+                        onetonineteen()
+
+                        hundredword = wordones
+
+                        tenten = Int((number - ((thousands * 1000) + (hundreds * 100))) / 10)
+
+                        If tenten < 2 Then
+
+                            ones = Int(number - ((thousands * 1000) + (hundreds * 100)))
+                            onetonineteen()
+
+                            gansal = Math.Round((number - Int(number)) * 100, 2)
+
+                            If gansal = 0 Then
+                                convertedamout = thousanword + " Thousand " + hundredword + " Hundred " + wordones + " pesos only"
+                            Else
+                                convertedamout = thousanword + " Thousand " + hundredword + " Hundred " + wordones + " and " + Format(Int(gansal), "00") + "/100 pesos only"
+                            End If
+
+
+                        Else
+
+                            tens()
+
+                            ones = Int(number - ((thousands * 1000) + (hundreds * 100) + (tenten * 10)))
+                            onetonineteen()
+
+                            gansal = Math.Round((number - Int(number)) * 100, 2)
+
+                            If gansal = 0 Then
+                                convertedamout = thousanword + " Thousand " + hundredword + " Hundred " + tentenword + " " + wordones + " pesos only"
+                            Else
+                                convertedamout = thousanword + " Thousand " + hundredword + " Hundred " + tentenword + " " + wordones + " and " + Format(Int(gansal), "00") + "/100 pesos only"
+                            End If
+
+
+                        End If
+
+                    End If
+
+                End If
+
+            End If
+
+            If number > 999999.99 And number < 1000000000 Then
+
+                millions = Int(number / 1000000)
+
+                If millions < 20 Then
+
+                    ones = millions
+                    onetonineteen()
+
+                    millionwords = wordones + " Million "
+
+                    millionsthou = number - (ones * 1000000)
+
+                    libolibo()
+
+                    convertedamout = millionwords + millionthousanwords
+
+                End If
+
+                If millions > 19.99 And millions < 100 Then
+
+                    tenten = Int(millions / 10)
+                    tens()
+
+                    ones = Int(millions - (tenten * 10))
+                    onetonineteen()
+
+                    millionwords = tentenword + " " + wordones + " Million "
+
+                    millionsthou = number - ((ones + (tenten * 10)) * 1000000)
+
+                    libolibo()
+
+                    convertedamout = millionwords + millionthousanwords
+
+                End If
+
+                If millions > 99.99 And millions < 1000 Then
+
+                    ones = Int(millions \ 100)
+                    onetonineteen()
+
+                    hundredmillion = ones
+                    hundredmillionswords = wordones + " Hundred "
+
+                    tenten = Int((millions - (hundredmillion * 100)) / 10)
+
+                    If tenten < 2 Then
+
+                        ones = Int(millions - (hundredmillion * 100))
+                        onetonineteen()
+
+                        millionwords = hundredmillionswords + wordones + " Million "
+
+                        millionsthou = Int(number - (((hundredmillion * 100) + ones) * 1000000))
+
+                        libolibo()
+
+                        convertedamout = millionwords + millionthousanwords
+
+                    Else
+
+                        tens()
+
+                        ones = Int(millions - ((tenten * 10) + (hundredmillion * 100)))
+
+                        onetonineteen()
+
+                        millionwords = hundredmillionswords + tentenword + " " + wordones + " Million "
+
+                        millionsthou = Int(number - (millions * 1000000))
+
+                        libolibo()
+
+                        convertedamout = millionwords + millionthousanwords
+
+                    End If
+
+                End If
+
+            End If
+
+            If number > 999999999.99 Or number < 1 Then
+
+            Else
+                'Me.PrintPreviewControl1.InvalidatePreview()
+            End If
+
+        Catch ex As Exception
+            MsgBox("Invalid amount")
+        End Try
+
+    End Sub
+
+    Private Sub rbcheck_CheckedChanged(sender As Object, e As EventArgs) Handles rbcheck.CheckedChanged
+        checkno.Enabled = True
+        checkdate.Enabled = True
+    End Sub
+
+    Private Sub rbcash_CheckedChanged(sender As Object, e As EventArgs) Handles rbcash.CheckedChanged
+        checkno.Enabled = False
+        checkdate.Enabled = False
     End Sub
 End Class

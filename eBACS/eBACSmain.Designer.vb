@@ -70,7 +70,6 @@ Partial Class eBACSmain
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btnConcessionaire = New System.Windows.Forms.Button()
         Me.btnCollections = New System.Windows.Forms.Button()
-        Me.btnReceipts = New System.Windows.Forms.Button()
         Me.btnSettings = New System.Windows.Forms.Button()
         Me.btnBilling = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -127,6 +126,8 @@ Partial Class eBACSmain
         Me.ToolStripSeparator19 = New System.Windows.Forms.ToolStripSeparator()
         Me.UpdatePasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnReceipts = New System.Windows.Forms.Button()
+        Me.EditORNumberToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.imageSettings, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.contextSettings.SuspendLayout()
         Me.cmsConcessionaire.SuspendLayout()
@@ -338,13 +339,13 @@ Partial Class eBACSmain
         Me.contextCR.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.contextCR.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem24, Me.ToolStripSeparator12, Me.ToolStripMenuItem26, Me.UploadOnlinePaymentToolStripMenuItem, Me.ToolStripSeparator13, Me.ToolStripMenuItem29, Me.ToolStripSeparator14, Me.CancelledToolStripMenuItem, Me.ToolStripSeparator17, Me.DailyCollectionReportToolStripMenuItem, Me.OpenCRAndORWCalcToolStripMenuItem, Me.CalculatorToolStripMenuItem, Me.TempCRToolStripMenuItem})
         Me.contextCR.Name = "cmsConcessionaire"
-        Me.contextCR.Size = New System.Drawing.Size(227, 248)
+        Me.contextCR.Size = New System.Drawing.Size(227, 226)
         '
         'ToolStripMenuItem24
         '
         Me.ToolStripMenuItem24.Name = "ToolStripMenuItem24"
         Me.ToolStripMenuItem24.Size = New System.Drawing.Size(226, 22)
-        Me.ToolStripMenuItem24.Text = "Create CR"
+        Me.ToolStripMenuItem24.Text = "Create OR"
         '
         'ToolStripSeparator12
         '
@@ -373,7 +374,7 @@ Partial Class eBACSmain
         Me.ToolStripMenuItem29.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripMenuItem29.Name = "ToolStripMenuItem29"
         Me.ToolStripMenuItem29.Size = New System.Drawing.Size(226, 22)
-        Me.ToolStripMenuItem29.Text = "Post CR"
+        Me.ToolStripMenuItem29.Text = "Post OR"
         '
         'ToolStripSeparator14
         '
@@ -384,7 +385,7 @@ Partial Class eBACSmain
         '
         Me.CancelledToolStripMenuItem.Name = "CancelledToolStripMenuItem"
         Me.CancelledToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
-        Me.CancelledToolStripMenuItem.Text = "Cancelled CR"
+        Me.CancelledToolStripMenuItem.Text = "Cancelled OR"
         '
         'ToolStripSeparator17
         '
@@ -402,7 +403,6 @@ Partial Class eBACSmain
         Me.OpenCRAndORWCalcToolStripMenuItem.Name = "OpenCRAndORWCalcToolStripMenuItem"
         Me.OpenCRAndORWCalcToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
         Me.OpenCRAndORWCalcToolStripMenuItem.Text = "Open CR and OR W/ Calc"
-        Me.OpenCRAndORWCalcToolStripMenuItem.Visible = False
         '
         'CalculatorToolStripMenuItem
         '
@@ -467,25 +467,6 @@ Partial Class eBACSmain
         Me.btnCollections.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnCollections.UseVisualStyleBackColor = False
         '
-        'btnReceipts
-        '
-        Me.btnReceipts.BackColor = System.Drawing.Color.White
-        Me.btnReceipts.FlatAppearance.BorderSize = 0
-        Me.btnReceipts.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke
-        Me.btnReceipts.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke
-        Me.btnReceipts.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnReceipts.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReceipts.ForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.btnReceipts.Image = CType(resources.GetObject("btnReceipts.Image"), System.Drawing.Image)
-        Me.btnReceipts.Location = New System.Drawing.Point(699, 3)
-        Me.btnReceipts.Name = "btnReceipts"
-        Me.btnReceipts.Size = New System.Drawing.Size(165, 40)
-        Me.btnReceipts.TabIndex = 15
-        Me.btnReceipts.Text = "  Receipts"
-        Me.btnReceipts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnReceipts.UseVisualStyleBackColor = False
-        Me.btnReceipts.Visible = False
-        '
         'btnSettings
         '
         Me.btnSettings.BackColor = System.Drawing.Color.White
@@ -496,7 +477,7 @@ Partial Class eBACSmain
         Me.btnSettings.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSettings.ForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.btnSettings.Image = CType(resources.GetObject("btnSettings.Image"), System.Drawing.Image)
-        Me.btnSettings.Location = New System.Drawing.Point(528, 3)
+        Me.btnSettings.Location = New System.Drawing.Point(699, 3)
         Me.btnSettings.Name = "btnSettings"
         Me.btnSettings.Size = New System.Drawing.Size(165, 40)
         Me.btnSettings.TabIndex = 16
@@ -524,8 +505,8 @@ Partial Class eBACSmain
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.btnCollections)
         Me.Panel1.Controls.Add(Me.btnReceipts)
+        Me.Panel1.Controls.Add(Me.btnCollections)
         Me.Panel1.Controls.Add(Me.btnSettings)
         Me.Panel1.Controls.Add(Me.btnConcessionaire)
         Me.Panel1.Controls.Add(Me.btnBilling)
@@ -538,9 +519,9 @@ Partial Class eBACSmain
         'contextOR
         '
         Me.contextOR.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.contextOR.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OfficialReceiptsToolStripMenuItem, Me.ToolStripMenuItem23, Me.ToolStripSeparator11, Me.CollectionDepositToolStripMenuItem, Me.ToolStripSeparator15, Me.ToolStripMenuItem27, Me.ToolStripSeparator16, Me.ToolStripMenuItem28, Me.ReportOfCollectionsAndDepositsToolStripMenuItem})
+        Me.contextOR.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OfficialReceiptsToolStripMenuItem, Me.ToolStripMenuItem23, Me.ToolStripSeparator11, Me.CollectionDepositToolStripMenuItem, Me.ToolStripSeparator15, Me.ToolStripMenuItem27, Me.ToolStripSeparator16, Me.ToolStripMenuItem28, Me.ReportOfCollectionsAndDepositsToolStripMenuItem, Me.EditORNumberToolStripMenuItem})
         Me.contextOR.Name = "cmsConcessionaire"
-        Me.contextOR.Size = New System.Drawing.Size(282, 154)
+        Me.contextOR.Size = New System.Drawing.Size(282, 198)
         '
         'OfficialReceiptsToolStripMenuItem
         '
@@ -552,7 +533,7 @@ Partial Class eBACSmain
         '
         Me.ToolStripMenuItem23.Name = "ToolStripMenuItem23"
         Me.ToolStripMenuItem23.Size = New System.Drawing.Size(281, 22)
-        Me.ToolStripMenuItem23.Text = "Create OR"
+        Me.ToolStripMenuItem23.Text = "Create OR for other fees"
         '
         'ToolStripSeparator11
         '
@@ -575,7 +556,7 @@ Partial Class eBACSmain
         Me.ToolStripMenuItem27.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripMenuItem27.Name = "ToolStripMenuItem27"
         Me.ToolStripMenuItem27.Size = New System.Drawing.Size(281, 22)
-        Me.ToolStripMenuItem27.Text = "Post OR"
+        Me.ToolStripMenuItem27.Text = "Post OR for other fees"
         '
         'ToolStripSeparator16
         '
@@ -586,7 +567,7 @@ Partial Class eBACSmain
         '
         Me.ToolStripMenuItem28.Name = "ToolStripMenuItem28"
         Me.ToolStripMenuItem28.Size = New System.Drawing.Size(281, 22)
-        Me.ToolStripMenuItem28.Text = "Cancelled OR"
+        Me.ToolStripMenuItem28.Text = "Cancelled OR for other fees"
         Me.ToolStripMenuItem28.Visible = False
         '
         'ReportOfCollectionsAndDepositsToolStripMenuItem
@@ -861,6 +842,30 @@ Partial Class eBACSmain
         Me.Label2.TabIndex = 22
         Me.Label2.Text = "Welcome"
         '
+        'btnReceipts
+        '
+        Me.btnReceipts.BackColor = System.Drawing.Color.White
+        Me.btnReceipts.FlatAppearance.BorderSize = 0
+        Me.btnReceipts.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke
+        Me.btnReceipts.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke
+        Me.btnReceipts.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnReceipts.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReceipts.ForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.btnReceipts.Image = CType(resources.GetObject("btnReceipts.Image"), System.Drawing.Image)
+        Me.btnReceipts.Location = New System.Drawing.Point(528, 3)
+        Me.btnReceipts.Name = "btnReceipts"
+        Me.btnReceipts.Size = New System.Drawing.Size(165, 40)
+        Me.btnReceipts.TabIndex = 15
+        Me.btnReceipts.Text = "Other Fees"
+        Me.btnReceipts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnReceipts.UseVisualStyleBackColor = False
+        '
+        'EditORNumberToolStripMenuItem
+        '
+        Me.EditORNumberToolStripMenuItem.Name = "EditORNumberToolStripMenuItem"
+        Me.EditORNumberToolStripMenuItem.Size = New System.Drawing.Size(281, 22)
+        Me.EditORNumberToolStripMenuItem.Text = "Edit OR number"
+        '
         'eBACSmain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -933,7 +938,6 @@ Partial Class eBACSmain
     Friend WithEvents Timer1 As Timer
     Friend WithEvents btnConcessionaire As Button
     Friend WithEvents btnCollections As Button
-    Friend WithEvents btnReceipts As Button
     Friend WithEvents btnSettings As Button
     Friend WithEvents btnBilling As Button
     Friend WithEvents Panel1 As Panel
@@ -997,4 +1001,6 @@ Partial Class eBACSmain
     Friend WithEvents BillComputationToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem12 As ToolStripMenuItem
     Friend WithEvents UploadOnlinePaymentToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnReceipts As Button
+    Friend WithEvents EditORNumberToolStripMenuItem As ToolStripMenuItem
 End Class
