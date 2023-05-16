@@ -642,6 +642,7 @@ Partial Class Create_OR
         '
         Me.Column5.HeaderText = "ID"
         Me.Column5.Name = "Column5"
+        Me.Column5.Visible = False
         '
         'Column6
         '

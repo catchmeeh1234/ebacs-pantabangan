@@ -15,8 +15,8 @@ Module connectionsettings
         'acsconn.ConnectionString = "Data source = " & My.Settings.dbServerIp & "; database=eBACS; user id=sa;password = p@$$w0rd;"
         'acsconn.ConnectionString = "Data source = 192.168.1.79; database=eBACS; user id=sa;password = p@$$w0rd;"
 
-        acsconn.ConnectionString = "Data source = " & My.Settings.dbServerIp & "; database=eBACS; user id=sa;password = p@$$w0rd;"
-        'acsconn.ConnectionString = "Data source = " & My.Settings.dbServerIp & "; database=pantabangan; user id=sa;password = p@$$w0rd;"
+        'acsconn.ConnectionString = "Data source = " & My.Settings.dbServerIp & "; database=eBACS; user id=sa;password = p@$$w0rd;"
+        acsconn.ConnectionString = "Data source = " & My.Settings.dbServerIp & "; database=pantabangan; user id=sa;password = p@$$w0rd;"
         'acsconn.ConnectionString = "Data source = " & My.Settings.dbServerIp & "; database=eBACS; user id=" & My.Settings.dbID & ";password = " & My.Settings.dbPassword & ";"
 
         Try

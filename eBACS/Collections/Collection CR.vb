@@ -264,43 +264,76 @@
                 End If
 
                 If IsDBNull(billdata(0)("Adjustment")) = True Then
-                        billAdjustment.Text = "0.00"
-                    Else
-                        billAdjustment.Text = billdata(0)("Adjustment")
-                    End If
+                    billAdjustment.Text = "0.00"
+                Else
+                    billAdjustment.Text = billdata(0)("Adjustment")
+                End If
 
 
-                    If acsconn.State = ConnectionState.Closed Then acsconn.Open()
-                    sqldataBilling.Clear()
+                If acsconn.State = ConnectionState.Closed Then acsconn.Open()
+                sqldataBilling.Clear()
 
                 stracs = "select * from BillCharges where Category = 'Others' AND (Particulars = 'Metering Fee' OR Particulars = 'Reconnection Fee') and BillNumber = " & CRBillno.Text
                 'stracs = "select * from BillCharges where Category = 'Others' AND BillNumber = " & CRBillno.Text
 
                 acscmd.CommandText = stracs
                 acscmd.Connection = acsconn
-                    acsda.SelectCommand = acscmd
-                    acsda.Fill(sqldataBilling)
+                acsda.SelectCommand = acscmd
+                acsda.Fill(sqldataBilling)
 
-                    'billcharges.Rows.Clear()
+                'billcharges.Rows.Clear()
 
-                    If sqldataBilling.Rows.Count = 0 Then
+                If sqldataBilling.Rows.Count = 0 Then
 
-                    Else
+                Else
 
-                        For i = 0 To sqldataBilling.Rows.Count - 1
-
-
+                    For i = 0 To sqldataBilling.Rows.Count - 1
 
 
-                            billcharges.Rows.Add(sqldataBilling(i)("Particulars"), Format(sqldataBilling(i)("Amount"), "standard"), sqldataBilling(i)("BillChargesID"))
 
 
-                        Next
+                        billcharges.Rows.Add(sqldataBilling(i)("Particulars"), Format(sqldataBilling(i)("Amount"), "standard"), sqldataBilling(i)("BillChargesID"))
 
-                    End If
 
-                    If maxbill.Rows.Count = 1 And searchbill(0)("CustomerStatus") <> "Disconnected" Then
+                    Next
 
+                End If
+
+                'auto ask for reconnection fee
+                Select Case MsgBox("Reconnection fee should be added to this bill. Add to payment?", MsgBoxStyle.YesNo)
+                    Case MsgBoxResult.Yes
+                        If acsconn.State = ConnectionState.Closed Then acsconn.Open()
+                        billdatacharges.Clear()
+
+                        stracs = "select * from Charges where Particular = 'Reconnection Fee'"
+                        acscmd.CommandText = stracs
+                        acscmd.Connection = acsconn
+                        acsda.SelectCommand = acscmd
+                        acsda.Fill(billdatacharges)
+
+
+                        If billdatacharges.Rows.Count = 0 Then
+
+                        Else
+                            reconnectionFee = Math.Round(billdatacharges(0)("Amount"), 2)
+                            Dim reconnectionFeeString As String = reconnectionFee.ToString("0.00")
+
+                            For i = 0 To billdatacharges.Rows.Count - 1
+                                billcharges.Rows.Add(billdatacharges(i)("Particular"), reconnectionFeeString, billdatacharges(i)("ChargeID"))
+                            Next
+
+
+
+
+                        End If
+
+                    Case MsgBoxResult.No
+                        reconnectionFee = 0.00
+                        'billcharges.Rows.Clear()
+
+                End Select
+
+                If maxbill.Rows.Count = 1 And searchbill(0)("CustomerStatus") <> "Disconnected" And 1 = 2 Then
                     If Format(Date.Parse(billdata(0)("DiscDate")), "yyyy-MM-dd") < Format(Date.Parse(Now), "yyyy-MM-dd") Then
                         Select Case MsgBox("Reconnection fee should be added to this bill. Add to payment?", MsgBoxStyle.YesNo)
                             Case MsgBoxResult.Yes
@@ -339,7 +372,7 @@
 
                 End If
 
-                If maxbill.Rows.Count > 1 And searchbill(0)("CustomerStatus") <> "Disconnected" Then
+                If maxbill.Rows.Count > 1 And searchbill(0)("CustomerStatus") <> "Disconnected" And 1 = 2 Then
                     Select Case MsgBox("Reconnection fee should be added to this bill. Add to payment?", MsgBoxStyle.YesNo)
                         Case MsgBoxResult.Yes
                             If acsconn.State = ConnectionState.Closed Then acsconn.Open()

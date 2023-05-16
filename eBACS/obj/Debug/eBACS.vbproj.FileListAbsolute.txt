@@ -1319,3 +1319,4 @@ D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.vbproj.CopyComplete
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.exe
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.xml
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.pdb
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.vbprojAssemblyReference.cache
