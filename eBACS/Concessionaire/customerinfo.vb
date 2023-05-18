@@ -753,6 +753,13 @@ Public Class customerinfo
                                 dontcharge = "No"
                             End If
 
+                            Dim member_fee As Decimal
+                            Select Case MsgBox("Add 1500 as membership fee to this account?", MsgBoxStyle.YesNo)
+                                Case MsgBoxResult.No
+                                    member_fee = 0.00
+                                Case MsgBoxResult.Yes
+                                    member_fee = 1500.0
+                            End Select
 
                             If concespic.BackgroundImage Is Nothing Then
 
@@ -777,7 +784,7 @@ Public Class customerinfo
                                 & txtLastReading.Text & ", '" & txtLandMark.Text.ToString.Replace("'", "''").ToUpper & "', " _
                                 & "'" & cmbMeterSize.Text.ToString.Replace("'", "''").ToUpper & "', 0, '" & Format(dateInstalled.Value, "yyyy-MM-dd") & "', '" _
                                 & Format(dateInstalled.Value, "yyyy-MM-dd") & "', '" _
-                                & My.Settings.PicPath & txtAccountNo.Text & ".jpg" & "', 1500.00)"
+                                & My.Settings.PicPath & txtAccountNo.Text & ".jpg" & "', " & member_fee & ")"
 
                                 acscmd.Connection = acsconn
                                 acscmd.CommandText = stracs
@@ -806,7 +813,7 @@ Public Class customerinfo
                                 & txtLastReading.Text & ", '" & txtLandMark.Text.ToString.Replace("'", "''").ToUpper & "', " _
                                 & "'" & cmbMeterSize.Text.ToString.Replace("'", "''").ToUpper & "', 0, '" & Format(dateInstalled.Value, "yyyy-MM-dd") & "', '" _
                                 & Format(dateInstalled.Value, "yyyy-MM-dd") & "', '" _
-                                & My.Settings.PicPath & txtAccountNo.Text & ".jpg" & "', 1500.00)"
+                                & My.Settings.PicPath & txtAccountNo.Text & ".jpg" & "', " & member_fee & ")"
 
 
 
