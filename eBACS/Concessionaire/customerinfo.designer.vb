@@ -68,6 +68,8 @@ Partial Class customerinfo
         Me.txtmname = New System.Windows.Forms.TextBox()
         Me.txtfname = New System.Windows.Forms.TextBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.lblmemfeebal = New System.Windows.Forms.Label()
+        Me.tbMembershipfee = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.txtAdvance = New System.Windows.Forms.TextBox()
         Me.lblStatus = New System.Windows.Forms.Label()
@@ -158,12 +160,12 @@ Partial Class customerinfo
         Me.conspanel.Controls.Add(Me.GroupBox6)
         Me.conspanel.Location = New System.Drawing.Point(1, 66)
         Me.conspanel.Name = "conspanel"
-        Me.conspanel.Size = New System.Drawing.Size(1073, 590)
+        Me.conspanel.Size = New System.Drawing.Size(1073, 613)
         Me.conspanel.TabIndex = 0
         '
         'assocacc
         '
-        Me.assocacc.Location = New System.Drawing.Point(877, 218)
+        Me.assocacc.Location = New System.Drawing.Point(877, 247)
         Me.assocacc.Name = "assocacc"
         Me.assocacc.Size = New System.Drawing.Size(185, 23)
         Me.assocacc.TabIndex = 60
@@ -188,7 +190,7 @@ Partial Class customerinfo
         Me.GroupBox3.Controls.Add(Me.Label10)
         Me.GroupBox3.Location = New System.Drawing.Point(614, 6)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(251, 235)
+        Me.GroupBox3.Size = New System.Drawing.Size(251, 264)
         Me.GroupBox3.TabIndex = 56
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Installation Details"
@@ -357,7 +359,7 @@ Partial Class customerinfo
         Me.GroupBox1.Controls.Add(Me.txtfname)
         Me.GroupBox1.Location = New System.Drawing.Point(16, 6)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(592, 235)
+        Me.GroupBox1.Size = New System.Drawing.Size(592, 264)
         Me.GroupBox1.TabIndex = 54
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Account Details"
@@ -556,6 +558,8 @@ Partial Class customerinfo
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.lblmemfeebal)
+        Me.GroupBox4.Controls.Add(Me.tbMembershipfee)
         Me.GroupBox4.Controls.Add(Me.Label19)
         Me.GroupBox4.Controls.Add(Me.txtAdvance)
         Me.GroupBox4.Controls.Add(Me.lblStatus)
@@ -567,10 +571,29 @@ Partial Class customerinfo
         Me.GroupBox4.Controls.Add(Me.txtLastReading)
         Me.GroupBox4.Location = New System.Drawing.Point(877, 6)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(185, 206)
+        Me.GroupBox4.Size = New System.Drawing.Size(185, 235)
         Me.GroupBox4.TabIndex = 57
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Status"
+        '
+        'lblmemfeebal
+        '
+        Me.lblmemfeebal.AutoSize = True
+        Me.lblmemfeebal.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblmemfeebal.Location = New System.Drawing.Point(10, 202)
+        Me.lblmemfeebal.Name = "lblmemfeebal"
+        Me.lblmemfeebal.Size = New System.Drawing.Size(74, 15)
+        Me.lblmemfeebal.TabIndex = 32
+        Me.lblmemfeebal.Text = "M.F balance"
+        '
+        'tbMembershipfee
+        '
+        Me.tbMembershipfee.BackColor = System.Drawing.Color.White
+        Me.tbMembershipfee.Location = New System.Drawing.Point(102, 199)
+        Me.tbMembershipfee.Name = "tbMembershipfee"
+        Me.tbMembershipfee.ReadOnly = True
+        Me.tbMembershipfee.Size = New System.Drawing.Size(77, 21)
+        Me.tbMembershipfee.TabIndex = 19
         '
         'Label19
         '
@@ -663,7 +686,7 @@ Partial Class customerinfo
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.gridLedger)
-        Me.GroupBox2.Location = New System.Drawing.Point(16, 247)
+        Me.GroupBox2.Location = New System.Drawing.Point(16, 276)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(683, 329)
         Me.GroupBox2.TabIndex = 55
@@ -753,7 +776,7 @@ Partial Class customerinfo
         'GroupBox5
         '
         Me.GroupBox5.Controls.Add(Me.gridCharges)
-        Me.GroupBox5.Location = New System.Drawing.Point(705, 247)
+        Me.GroupBox5.Location = New System.Drawing.Point(705, 276)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(357, 161)
         Me.GroupBox5.TabIndex = 58
@@ -797,7 +820,7 @@ Partial Class customerinfo
         'GroupBox6
         '
         Me.GroupBox6.Controls.Add(Me.gridHistory)
-        Me.GroupBox6.Location = New System.Drawing.Point(705, 414)
+        Me.GroupBox6.Location = New System.Drawing.Point(705, 443)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(357, 162)
         Me.GroupBox6.TabIndex = 59
@@ -1031,12 +1054,13 @@ Partial Class customerinfo
         Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(999, 5)
+        Me.Button1.Location = New System.Drawing.Point(982, 11)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(72, 30)
+        Me.Button1.Size = New System.Drawing.Size(81, 48)
         Me.Button1.TabIndex = 48
         Me.Button1.Text = " Close"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1048,7 +1072,7 @@ Partial Class customerinfo
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1075, 659)
+        Me.ClientSize = New System.Drawing.Size(1075, 675)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnCancelShortcut)
         Me.Controls.Add(Me.btnEditShortcut)
@@ -1189,4 +1213,6 @@ Partial Class customerinfo
     Friend WithEvents btnSaveShortcut As Button
     Friend WithEvents btnEditShortcut As Button
     Friend WithEvents btnCancelShortcut As Button
+    Friend WithEvents lblmemfeebal As Label
+    Public WithEvents tbMembershipfee As TextBox
 End Class

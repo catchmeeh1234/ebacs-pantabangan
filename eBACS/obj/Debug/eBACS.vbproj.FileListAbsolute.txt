@@ -1235,10 +1235,12 @@ D:\miguel\pant\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resource
 D:\miguel\pant\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 D:\miguel\pant\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\miguel\pant\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.vbprojAssemblyReference.cache
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.vbproj.ResolveComReference.cache
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.billcompute.resources
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.Online_Billing.resources
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.uploadpayment.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.adjustmembershipfee.resources
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.AssociatedAccounts.resources
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.writeoff.resources
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.billingAdjustmentOther.resources
@@ -1319,4 +1321,3 @@ D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.vbproj.CopyComplete
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.exe
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.xml
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.pdb
-D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.vbprojAssemblyReference.cache

@@ -94,6 +94,7 @@ Public Class customerinfo
         txtLastReading.Clear()
         txtAdvance.Clear()
         txtAveCons.Clear()
+        tbMembershipfee.Clear()
 
 
         lblAccountName.ForeColor = Color.Black
@@ -136,7 +137,6 @@ Public Class customerinfo
         dateCreated.Enabled = False
         dateInstalled.Enabled = False
         concespic.Image = Nothing
-
 
 
         cmbZone.Enabled = False
@@ -436,9 +436,12 @@ Public Class customerinfo
 
                     txtLastReading.Text = sqldataAccounts.Rows(0)("LastMeterReading")
                     txtAveCons.Text = sqldataAccounts.Rows(0)("Averagee")
-                    txtAdvance.Text = sqldataAccounts.Rows(0)("AdvancePayment")
+                txtAdvance.Text = sqldataAccounts.Rows(0)("AdvancePayment")
 
-                    sqlDatacharges.Clear()
+                tbMembershipfee.Text = sqldataAccounts.Rows(0)("Membership_balance")
+
+
+                sqlDatacharges.Clear()
 
                     If acsconn.State = ConnectionState.Closed Then acsconn.Open()
                     stracs = "select * from ScheduleCharges where AccountNumber = '" & txtAccountNo.Text.ToString.Replace("'", "''") & "' and ActiveInactive = 1"
@@ -750,13 +753,14 @@ Public Class customerinfo
                                 dontcharge = "No"
                             End If
 
+
                             If concespic.BackgroundImage Is Nothing Then
 
                                 If acsconn.State = ConnectionState.Closed Then acsconn.Open()
                                 stracs = "insert into Customers ([AccountNo],[Lastname],[Firstname],[Middlename],[ServiceAddress]" _
                                 & ",[ContactNo],[Averagee],[ReadingSeqNo],[CustomerStatus],[IsSenior],[Zone],[RateSchedule]" _
                                 & ",[DateCreated],[MeterNo],[DontCharge],[CompanyName],[CreatedBy],[LastMeterReading],[LandMark],
-                                [MeterSize],[AdvancePayment],[DateInstalled],[LasReadingDate], PicturePath) values (" _
+                                [MeterSize],[AdvancePayment],[DateInstalled],[LasReadingDate], PicturePath, Membership_balance) values (" _
                                 & "'" & txtAccountNo.Text & "', " _
                                 & "'" & txtlname.Text.ToString.Replace("'", "''").ToUpper & "', " _
                                 & "'" & txtfname.Text.ToString.Replace("'", "''").ToUpper & "', " _
@@ -773,7 +777,7 @@ Public Class customerinfo
                                 & txtLastReading.Text & ", '" & txtLandMark.Text.ToString.Replace("'", "''").ToUpper & "', " _
                                 & "'" & cmbMeterSize.Text.ToString.Replace("'", "''").ToUpper & "', 0, '" & Format(dateInstalled.Value, "yyyy-MM-dd") & "', '" _
                                 & Format(dateInstalled.Value, "yyyy-MM-dd") & "', '" _
-                                & My.Settings.PicPath & txtAccountNo.Text & ".jpg" & "')"
+                                & My.Settings.PicPath & txtAccountNo.Text & ".jpg" & "', 1500.00)"
 
                                 acscmd.Connection = acsconn
                                 acscmd.CommandText = stracs
@@ -785,7 +789,7 @@ Public Class customerinfo
                                 stracs = "insert into Customers ([AccountNo],[Lastname],[Firstname],[Middlename],[ServiceAddress]" _
                                 & ",[ContactNo],[Averagee],[ReadingSeqNo],[CustomerStatus],[IsSenior],[Zone],[RateSchedule]" _
                                 & ",[DateCreated],[MeterNo],[DontCharge],[CompanyName],[CreatedBy],[LastMeterReading],[LandMark],
-                                [MeterSize],[AdvancePayment],[DateInstalled],[LasReadingDate], PicturePath, ConsImage) values (" _
+                                [MeterSize],[AdvancePayment],[DateInstalled],[LasReadingDate], PicturePath, ConsImage, Membership_balance) values (" _
                                 & "'" & txtAccountNo.Text & "', " _
                                 & "'" & txtlname.Text.ToString.Replace("'", "''").ToUpper & "', " _
                                 & "'" & txtfname.Text.ToString.Replace("'", "''").ToUpper & "', " _
@@ -802,7 +806,7 @@ Public Class customerinfo
                                 & txtLastReading.Text & ", '" & txtLandMark.Text.ToString.Replace("'", "''").ToUpper & "', " _
                                 & "'" & cmbMeterSize.Text.ToString.Replace("'", "''").ToUpper & "', 0, '" & Format(dateInstalled.Value, "yyyy-MM-dd") & "', '" _
                                 & Format(dateInstalled.Value, "yyyy-MM-dd") & "', '" _
-                                & My.Settings.PicPath & txtAccountNo.Text & ".jpg" & "')"
+                                & My.Settings.PicPath & txtAccountNo.Text & ".jpg" & "', 1500.00)"
 
 
 
@@ -1498,6 +1502,33 @@ Public Class customerinfo
 
     End Sub
 
+    Private Sub tbMembershipfee_MouseDown(sender As Object, e As MouseEventArgs) Handles tbMembershipfee.MouseDown
+
+        If e.Button = MouseButtons.Right Then
+
+            Try
+                If acsconn.State = ConnectionState.Closed Then acsconn.Open()
+            Catch ex As Exception
+                If acsconn.State = ConnectionState.Closed Then acsconn.Open()
+            End Try
+
+            If txtAccountNo.Text <> "" Then
+                adjustmembershipfee.LoadMembershipAdjustment(txtAccountNo.Text)
+
+                adjustmembershipfee.ShowDialog()
+                adjustmembershipfee.BringToFront()
+
+            Else
+
+
+
+            End If
+        End If
+
+
+    End Sub
+
+
     Public Sub createnew()
 
         clearfields()
@@ -1961,6 +1992,11 @@ Public Class customerinfo
 
     End Sub
 
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles lblmemfeebal.Click
+
+    End Sub
+
+
     Private Sub accountginfo_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         Me.BackColor = Color.SteelBlue
     End Sub
@@ -1970,7 +2006,7 @@ Public Class customerinfo
         txtLandMark.Click, txtContactNo.Click, accSearch.Click, GroupBox2.Click, gridLedger.Click, GroupBox3.Click,
         txtMeterNo.Click, txtSequenceNo.Click, cmbZone.Click, cmbClass.Click, cmbMeterSize.Click, dateCreated.Click,
         dateInstalled.Click, GroupBox4.Click, lblStatus.Click, chkSenior.Click, chkDontCharge.Click, txtLastReading.Click,
-        txtAveCons.Click, GroupBox5.Click, GroupBox6.Click, gridCharges.Click, txtAdvance.Click, gridHistory.Click ' etc.
+        txtAveCons.Click, GroupBox5.Click, GroupBox6.Click, gridCharges.Click, txtAdvance.Click, gridHistory.Click, tbMembershipfee.Click ' etc.
         Me.Activate() 'Or Whatever
     End Sub
 
