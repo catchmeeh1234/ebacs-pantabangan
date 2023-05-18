@@ -296,6 +296,12 @@
     <Compile Include="Collections\uploadpayment.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Concessionaire\adjustmembershipfee.Designer.vb">
+      <DependentUpon>adjustmembershipfee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Concessionaire\adjustmembershipfee.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Concessionaire\AssociatedAccounts.Designer.vb">
       <DependentUpon>AssociatedAccounts.vb</DependentUpon>
     </Compile>
@@ -616,6 +622,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Collections\uploadpayment.resx">
       <DependentUpon>uploadpayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Concessionaire\adjustmembershipfee.resx">
+      <DependentUpon>adjustmembershipfee.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Concessionaire\AssociatedAccounts.resx">
       <DependentUpon>AssociatedAccounts.vb</DependentUpon>

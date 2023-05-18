@@ -218,7 +218,7 @@
                             If billdatacharges.Rows.Count = 0 Then
 
                             Else
-                                sur_charge = Math.Round((Format(billdata(0)("AmountDue"), "standard") - Double.Parse(billdata(0)("Discount")) + Double.Parse(billdata(0)("ArrearsBill")) + Double.Parse(billdata(0)("ArrearsCharges"))) * Format(billdatacharges(0)("Amount"), "standard"), 2).ToString("0.00")
+                                sur_charge = Math.Round(Format(billdata(0)("AmountDue"), "standard") * Format(billdatacharges(0)("Amount"), "standard"), 2).ToString("0.00")
                                 For i = 0 To billdatacharges.Rows.Count - 1
                                     billcharges.Rows.Add(billdatacharges(i)("Particular"), Format(sur_charge, "standard"), billdatacharges(i)("ChargeID"))
                                 Next
