@@ -803,9 +803,40 @@
                                 acsda.SelectCommand = acscmd
                                 acsda.Fill(sqldata2)
 
-                                billcharges.Rows.Clear()
+                            billcharges.Rows.Clear()
 
-                                For i = 0 To sqldata2.Rows.Count - 1
+                            If sqldata2.Rows.Count = 0 Then
+                                Dim membershipTable As New DataTable
+
+                                membershipTable.Rows.Clear()
+                                stracs = "select Membership_balance from Customers where AccountNo = '" & billAccountNo.Text.ToString.Replace("'", "''") & "'"
+                                acscmd.Connection = acsconn
+                                acscmd.CommandText = stracs
+                                acsda.SelectCommand = acscmd
+                                acsda.Fill(membershipTable)
+
+
+
+                                If membershipTable(0)("Membership_balance") > 0.00 Then
+                                    Dim membership_fee_divider As Integer
+                                    Dim billcharge_membership_fee As Decimal
+                                    If membershipTable(0)("Membership_balance") <= 1500.0 And membershipTable(0)("Membership_balance") >= 1000.0 Then
+                                        membership_fee_divider = 4
+                                    ElseIf membershipTable(0)("Membership_balance") < 1000.0 Then
+                                        membership_fee_divider = 2
+                                    Else
+                                        membership_fee_divider = 1
+                                        MsgBox("Something Went wrong")
+                                    End If
+                                    billcharge_membership_fee = membershipTable(0)("Membership_balance") / membership_fee_divider
+
+                                    billcharges.Rows.Add(0, "Others", "Others", "Membership Fee", Format(billcharge_membership_fee, "standard"))
+
+                                End If
+
+                            End If
+
+                            For i = 0 To sqldata2.Rows.Count - 1
 
                                     If sqldata2.Rows(i)("Recurring") = "Yes" Then
                                         billcharges.Rows.Add(sqldata2.Rows(i)("ChargeID"), sqldata2.Rows(i)("Category"), sqldata2.Rows(i)("Entry"), sqldata2.Rows(i)("Particular"), Format(sqldata2(i)("Amount"), "standard"))
@@ -859,9 +890,9 @@
                                         totalcharges = loadchargesarrears.Rows(0)("amount")
                                     End If
 
-                                billarrears.Rows.Add(loadbillarrears.Rows(0)("Billno"), loadbillarrears.Rows(0)("BillingDate"), Format((loadbillarrears.Rows(0)("AmountDue") + totalcharges + loadbillarrears.Rows(0)("PenaltyAfterDue") + loadbillarrears.Rows(0)("Discount")) - (loadbillarrears.Rows(0)("AdvancePayment")), "standard"))
+                                    billarrears.Rows.Add(loadbillarrears.Rows(0)("Billno"), loadbillarrears.Rows(0)("BillingDate"), Format((loadbillarrears.Rows(0)("AmountDue") + totalcharges + loadbillarrears.Rows(0)("PenaltyAfterDue") + loadbillarrears.Rows(0)("Discount")) - (loadbillarrears.Rows(0)("AdvancePayment")), "standard"))
 
-                            Next
+                                Next
 
                                 Dim getpromisorry As New DataTable
                                 getpromisorry.Rows.Clear()

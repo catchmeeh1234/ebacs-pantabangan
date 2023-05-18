@@ -77,14 +77,12 @@
 
     Private Sub UnlockFields()
         txtAccountNo.ReadOnly = False
-        adjustFrom.ReadOnly = False
         adjustTo.ReadOnly = False
         remarks.ReadOnly = False
     End Sub
 
     Private Sub LockFields()
         txtAccountNo.ReadOnly = True
-        adjustFrom.ReadOnly = True
         adjustTo.ReadOnly = True
         remarks.ReadOnly = True
     End Sub

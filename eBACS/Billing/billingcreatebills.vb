@@ -354,28 +354,52 @@
                 acsda.SelectCommand = acscmd
                 acsda.Fill(getcharges)
 
-                For b = 0 To getcharges.Rows.Count - 1
+                If getcharges.Rows.Count = 0 Then
+                    Dim membershipTable As New DataTable
 
-                    If getcharges.Rows(b)("Recurring") = "Yes" Then
+                    membershipTable.Rows.Clear()
+                    stracs = "select Membership_balance from Customers where AccountNo = '" & createPreparedBills.Rows(x).Cells(0).Value & "'"
+                    acscmd.Connection = acsconn
+                    acscmd.CommandText = stracs
+                    acsda.SelectCommand = acscmd
+                    acsda.Fill(membershipTable)
+
+
+
+                    If membershipTable(0)("Membership_balance") > 0.00 Then
+                        Dim membership_fee_divider As Integer
+                        Dim billcharge_membership_fee As Decimal
+                        If membershipTable(0)("Membership_balance") <= 1500.0 And membershipTable(0)("Membership_balance") >= 1000.0 Then
+                            membership_fee_divider = 4
+                        ElseIf membershipTable(0)("Membership_balance") < 1000.0 Then
+                            membership_fee_divider = 2
+                        Else
+                            membership_fee_divider = 1
+                            MsgBox("Something Went wrong")
+                        End If
+                        billcharge_membership_fee = membershipTable(0)("Membership_balance") / membership_fee_divider
 
                         If acsconn.State = ConnectionState.Closed Then acsconn.Open()
                         stracs = "insert into BillCharges (BillNumber, AccountNumber, AccountName, BillingMonth, Zone, ChargeID, Category, Entry, Particulars, Amount, IsPaid, Reader, RateSchedule) values (" _
-                                            & billno & ", '" & createPreparedBills.Rows(x).Cells(0).Value & "', '" & createPreparedBills.Rows(x).Cells(1).Value.ToString.Replace("'", "''") & "', '" & createPreparedBills.Rows(x).Cells(10).Value & "', '" _
-                                            & createPreparedBills.Rows(x).Cells(14).Value & "', " & getcharges.Rows(b)("ChargeID") & ", '" & getcharges.Rows(b)("Category").ToString.Replace("'", "''") & "', '" & getcharges.Rows(b)("Entry").ToString.Replace("'", "''") & "', '" & getcharges.Rows(b)("Particular").ToString.Replace("'", "''") & "', " & Val(Format(getcharges(b)("Amount"), "standard")) & ", 'No', " & "'" & createPreparedBills.Rows(x).Cells(19).Value.ToString.Replace("'", "''") & "', '" _
-                                            & createPreparedBills.Rows(x).Cells(12).Value & "')"
+                                    & billno & ", '" & createPreparedBills.Rows(x).Cells(0).Value & "', '" & createPreparedBills.Rows(x).Cells(1).Value.ToString.Replace("'", "''") & "', '" & createPreparedBills.Rows(x).Cells(10).Value & "', '" _
+                                    & createPreparedBills.Rows(x).Cells(14).Value & "', " & 0 & ", 'Others', 'Others', 'Membership Fee', " & billcharge_membership_fee & ", 'No', " & "'" & createPreparedBills.Rows(x).Cells(19).Value.ToString.Replace("'", "''") & "', '" _
+                                    & createPreparedBills.Rows(x).Cells(12).Value & "')"
                         acscmd.CommandText = stracs
                         acscmd.Connection = acsconn
                         acscmd.ExecuteNonQuery()
                         acscmd.Dispose()
+                    End If
+                Else
 
-                    Else
+                    For b = 0 To getcharges.Rows.Count - 1
 
-                        If MonthName(getcharges.Rows(b)("BillingMonth")) & " " & getcharges.Rows(b)("BillingYear") = createPreparedBills.Rows(x).Cells(10).Value Then
+                        If getcharges.Rows(b)("Recurring") = "Yes" Then
 
+                            If acsconn.State = ConnectionState.Closed Then acsconn.Open()
                             stracs = "insert into BillCharges (BillNumber, AccountNumber, AccountName, BillingMonth, Zone, ChargeID, Category, Entry, Particulars, Amount, IsPaid, Reader, RateSchedule) values (" _
-                                            & billno & ", '" & createPreparedBills.Rows(x).Cells(0).Value & "', '" & createPreparedBills.Rows(x).Cells(1).Value.ToString.Replace("'", "''") & "', '" & createPreparedBills.Rows(x).Cells(10).Value & "', '" _
-                                            & createPreparedBills.Rows(x).Cells(14).Value & "', " & getcharges.Rows(b)("ChargeID") & ", '" & getcharges.Rows(b)("Category").ToString.Replace("'", "''") & "', '" & getcharges.Rows(b)("Entry").ToString.Replace("'", "''") & "', '" & getcharges.Rows(b)("Particular").ToString.Replace("'", "''") & "', " & Val(Format(getcharges(b)("Amount"), "standard")) & ", 'No', " & "'" & createPreparedBills.Rows(x).Cells(19).Value.ToString.Replace("'", "''") & "','" _
-                                            & createPreparedBills.Rows(x).Cells(12).Value & "')"
+                                                & billno & ", '" & createPreparedBills.Rows(x).Cells(0).Value & "', '" & createPreparedBills.Rows(x).Cells(1).Value.ToString.Replace("'", "''") & "', '" & createPreparedBills.Rows(x).Cells(10).Value & "', '" _
+                                                & createPreparedBills.Rows(x).Cells(14).Value & "', " & getcharges.Rows(b)("ChargeID") & ", '" & getcharges.Rows(b)("Category").ToString.Replace("'", "''") & "', '" & getcharges.Rows(b)("Entry").ToString.Replace("'", "''") & "', '" & getcharges.Rows(b)("Particular").ToString.Replace("'", "''") & "', " & Val(Format(getcharges(b)("Amount"), "standard")) & ", 'No', " & "'" & createPreparedBills.Rows(x).Cells(19).Value.ToString.Replace("'", "''") & "', '" _
+                                                & createPreparedBills.Rows(x).Cells(12).Value & "')"
                             acscmd.CommandText = stracs
                             acscmd.Connection = acsconn
                             acscmd.ExecuteNonQuery()
@@ -383,11 +407,25 @@
 
                         Else
 
+                            If MonthName(getcharges.Rows(b)("BillingMonth")) & " " & getcharges.Rows(b)("BillingYear") = createPreparedBills.Rows(x).Cells(10).Value Then
+
+                                stracs = "insert into BillCharges (BillNumber, AccountNumber, AccountName, BillingMonth, Zone, ChargeID, Category, Entry, Particulars, Amount, IsPaid, Reader, RateSchedule) values (" _
+                                                & billno & ", '" & createPreparedBills.Rows(x).Cells(0).Value & "', '" & createPreparedBills.Rows(x).Cells(1).Value.ToString.Replace("'", "''") & "', '" & createPreparedBills.Rows(x).Cells(10).Value & "', '" _
+                                                & createPreparedBills.Rows(x).Cells(14).Value & "', " & getcharges.Rows(b)("ChargeID") & ", '" & getcharges.Rows(b)("Category").ToString.Replace("'", "''") & "', '" & getcharges.Rows(b)("Entry").ToString.Replace("'", "''") & "', '" & getcharges.Rows(b)("Particular").ToString.Replace("'", "''") & "', " & Val(Format(getcharges(b)("Amount"), "standard")) & ", 'No', " & "'" & createPreparedBills.Rows(x).Cells(19).Value.ToString.Replace("'", "''") & "','" _
+                                                & createPreparedBills.Rows(x).Cells(12).Value & "')"
+                                acscmd.CommandText = stracs
+                                acscmd.Connection = acsconn
+                                acscmd.ExecuteNonQuery()
+                                acscmd.Dispose()
+
+                            Else
+
+                            End If
+
                         End If
 
-                    End If
-
-                Next
+                    Next
+                End If
 
                 ProgressBar1.Value = ProgressBar1.Value + 1
 

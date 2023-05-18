@@ -237,7 +237,7 @@
                 End If
 
                 membershipfeecharge.Clear()
-                stracs = "SELECT * FROM BillCharges WHERE BillNumber = '" & CRBillno.Text & "' AND Particulars LIKE '%membership fee%'"
+                stracs = "SELECT * FROM BillCharges WHERE BillNumber = '" & CRBillno.Text & "' AND Particulars LIKE '%membership%'"
                 acscmd.CommandText = stracs
                 acscmd.Connection = acsconn
                 acsda.SelectCommand = acscmd
