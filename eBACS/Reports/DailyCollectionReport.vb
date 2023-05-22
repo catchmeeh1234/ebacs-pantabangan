@@ -109,8 +109,31 @@ Public Class DailyCollectionReport
         If collectiondata.Rows.Count = 0 Then
             MsgBox("No data found")
         Else
+            Dim orData As New DataTable
+            orData.Clear()
+            stracs = "select * FROM OR_Details WHERE CAST(PaymentDate as Date) = '" & Format(txtdate.Value, "yyyy-MM-dd") & "' AND Office = '" & cboffice.Text & "' and Status = 'Posted' and Cancelled ='No'"
+            acscmd.CommandText = stracs
+            acscmd.Connection = acsconn
+            acsda.SelectCommand = acscmd
+            acsda.Fill(orData)
 
+            For q = 0 To orData.Rows.Count - 1
+                Dim or_items_table As New DataTable
+                or_items_table.Clear()
+                Dim total_or_items As Decimal = 0.00
+                stracs = "select * FROM ORItems WHERE ORNo = '" & orData.Rows(q)("ORNo") & "' and Cancelled ='No' AND Particular LIKE '%membership%' AND Charges ='Yes'"
+                acscmd.CommandText = stracs
+                acscmd.Connection = acsconn
+                acsda.SelectCommand = acscmd
+                acsda.Fill(or_items_table)
 
+                For f = 0 To or_items_table.Rows.Count - 1
+                    total_or_items = total_or_items + or_items_table.Rows(f)("Total")
+                Next
+
+                dt.Rows.Add(orData.Rows(q)("ORNo"), orData.Rows(q)("AccountName"), orData.Rows(q)("AccountNo"), "0.00" _
+                            , "0.00", "0.00", "0.00", total_or_items, "0.00", "0.00", total_or_items)
+            Next
 
             For j = 0 To collectiondata.Rows.Count - 1
 
@@ -180,7 +203,7 @@ Public Class DailyCollectionReport
                                 Dim chargesdata2 As New DataTable
                                 chargesdata2.Clear()
                                 If acsconn.State = ConnectionState.Closed Then acsconn.Open()
-                                stracs = "select SUM(Amount) AS Totalcharges FROM BillCharges WHERE BillNumber = '" & billsdata.Rows(y)("BillNo") & "' AND isPromisorry = 'No' AND Category = 'Others' AND Entry = 'Others'"
+                                stracs = "select SUM(Amount) AS Totalcharges FROM BillCharges WHERE BillNumber = '" & billsdata.Rows(y)("BillNo") & "' AND isPromisorry = 'No' AND Category = 'Others' AND Entry = 'Others' AND Particulars NOT LIKE '%membership%'"
                                 acscmd.CommandText = stracs
                                 acscmd.Connection = acsconn
                                 acsda.SelectCommand = acscmd
@@ -220,7 +243,7 @@ Public Class DailyCollectionReport
                                 Dim chargesdata As New DataTable
                                 chargesdata.Clear()
                                 If acsconn.State = ConnectionState.Closed Then acsconn.Open()
-                                stracs = "select SUM(Amount) AS Totalcharges FROM BillCharges WHERE BillNumber = '" & billsdata.Rows(y)("BillNo") & "' AND isPromisorry = 'No' AND Category = 'Others' AND Entry = 'Others'"
+                                stracs = "select SUM(Amount) AS Totalcharges FROM BillCharges WHERE BillNumber = '" & billsdata.Rows(y)("BillNo") & "' AND isPromisorry = 'No' AND Category = 'Others' AND Entry = 'Others' AND Particulars NOT LIKE '%membership%'"
                                 acscmd.CommandText = stracs
                                 acscmd.Connection = acsconn
                                 acsda.SelectCommand = acscmd

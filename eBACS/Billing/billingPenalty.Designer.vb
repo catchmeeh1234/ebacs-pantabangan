@@ -51,6 +51,7 @@ Partial Class billingPenalty
         Me.Label11 = New System.Windows.Forms.Label()
         Me.billMonth = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         CType(Me.penaltyList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.dateCovered.SuspendLayout()
@@ -192,6 +193,7 @@ Partial Class billingPenalty
         '
         'dateCovered
         '
+        Me.dateCovered.Controls.Add(Me.FlowLayoutPanel1)
         Me.dateCovered.Controls.Add(Me.Label3)
         Me.dateCovered.Controls.Add(Me.dateto)
         Me.dateCovered.Controls.Add(Me.datefrom)
@@ -324,6 +326,13 @@ Partial Class billingPenalty
         Me.Label1.TabIndex = 29
         Me.Label1.Text = "Penalty Posting"
         '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(217, 17)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(200, 100)
+        Me.FlowLayoutPanel1.TabIndex = 40
+        '
         'billingPenalty
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -373,4 +382,5 @@ Partial Class billingPenalty
     Public WithEvents billMonth As ComboBox
     Public WithEvents prepare As Button
     Public WithEvents lastdaynopen As DateTimePicker
+    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
 End Class

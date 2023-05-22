@@ -110,7 +110,7 @@
                   <Width>0.61458in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.68485in</Width>
+                  <Width>0.54943in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.67708in</Width>
@@ -118,7 +118,7 @@
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.42708in</Height>
+                  <Height>0.47916in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -447,10 +447,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Charges</Value>
+                                  <Value>Charges/Membership fee</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
-                                    <FontSize>9pt</FontSize>
+                                    <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -519,7 +519,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Early Payment</Value>
+                                  <Value>Early Payment/S.C</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -1492,8 +1492,8 @@
             <DataSetName>DataSet1</DataSetName>
             <Top>0.02778in</Top>
             <Left>0.21874in</Left>
-            <Height>0.8125in</Height>
-            <Width>7.93665in</Width>
+            <Height>0.86458in</Height>
+            <Width>7.80123in</Width>
             <Style>
               <Border>
                 <Style>None</Style>

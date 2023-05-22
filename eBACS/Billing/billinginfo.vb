@@ -390,16 +390,29 @@
                     End If
 
                     If IsDBNull(sqldataBilling(0)("LastDayNoPen")) = True Then
+                        Dim lastDayNoPen As DateTime = Date.Parse(sqldataBilling(0)("ReadingDate")).AddDays(11)
 
-                        sqldataBilling(0)("LastDayNoPen") = Date.Parse(sqldataBilling(0)("ReadingDate")).AddDays(11)
+                        If lastDayNoPen.DayOfWeek = DayOfWeek.Saturday Then
+                            lastDayNoPen = lastDayNoPen.AddDays(2) ' Move to Monday
+                        ElseIf lastDayNoPen.DayOfWeek = DayOfWeek.Sunday Then
+                            lastDayNoPen = lastDayNoPen.AddDays(1) ' Move to Monday
+                        End If
+                        sqldataBilling(0)("LastDayNoPen") = lastDayNoPen
 
                     Else
                         sqldataBilling(0)("LastDayNoPen") = sqldataBilling(0)("LastDayNoPen")
                     End If
 
                     If IsDBNull(sqldataBilling(0)("DueDate")) = True Then
+                        Dim dueDate As DateTime = Date.Parse(sqldataBilling(0)("ReadingDate")).AddDays(11)
 
-                        sqldataBilling(0)("DueDate") = Date.Parse(sqldataBilling(0)("ReadingDate")).AddDays(11)
+                        If dueDate.DayOfWeek = DayOfWeek.Saturday Then
+                            dueDate = dueDate.AddDays(2) ' Move to Monday
+                        ElseIf dueDate.DayOfWeek = DayOfWeek.Sunday Then
+                            dueDate = dueDate.AddDays(1) ' Move to Monday
+                        End If
+
+                        sqldataBilling(0)("DueDate") = dueDate
 
                     Else
                         sqldataBilling(0)("DueDate") = sqldataBilling(0)("DueDate")
@@ -691,8 +704,16 @@
         billdatelastday.Enabled = True
         meterreader.Enabled = True
 
-        billdateduedate.Value = billdateto.Value.AddDays(11)
-        billdatelastday.Value = billdateto.Value.AddDays(11)
+        Dim date_to As DateTime = billdateto.Value.AddDays(11)
+
+        If date_to.DayOfWeek = DayOfWeek.Saturday Then
+            date_to = date_to.AddDays(2) ' Move to Monday
+        ElseIf date_to.DayOfWeek = DayOfWeek.Sunday Then
+            date_to = date_to.AddDays(1) ' Move to Monday
+        End If
+
+        billdateduedate.Value = date_to
+        billdatelastday.Value = date_to
 
         ToolTip1.RemoveAll()
 
@@ -974,9 +995,16 @@
 
             If lblMode.Text = "Update Mode" Then
 
-                billdateduedate.Value = billdateto.Value.AddDays(11)
-                billdatelastday.Value = billdateto.Value.AddDays(11)
+                Dim date_to As DateTime = billdateto.Value.AddDays(11)
 
+                If date_to.DayOfWeek = DayOfWeek.Saturday Then
+                    date_to = date_to.AddDays(2) ' Move to Monday
+                ElseIf date_to.DayOfWeek = DayOfWeek.Sunday Then
+                    date_to = date_to.AddDays(1) ' Move to Monday
+                End If
+
+                billdateduedate.Value = date_to
+                billdatelastday.Value = date_to
             Else
 
                 Dim buwan As Integer
@@ -986,11 +1014,29 @@
                 If buwan = 0 Then
 
                     billCovered.Text = MonthName(12) & " " & (Year(billdateto.Value)) - 1
-                    billdateduedate.Value = billdateto.Value.AddDays(11)
+
+                    Dim date_to As DateTime = billdateto.Value.AddDays(11)
+
+                    If date_to.DayOfWeek = DayOfWeek.Saturday Then
+                        date_to = date_to.AddDays(2) ' Move to Monday
+                    ElseIf date_to.DayOfWeek = DayOfWeek.Sunday Then
+                        date_to = date_to.AddDays(1) ' Move to Monday
+                    End If
+
+                    billdateduedate.Value = date_to
 
                 Else
                     billCovered.Text = MonthName(Month(billdateto.Value) - 1) & " " & Year(billdateto.Value)
-                    billdateduedate.Value = billdateto.Value.AddDays(11)
+
+                    Dim date_to As DateTime = billdateto.Value.AddDays(11)
+
+                    If date_to.DayOfWeek = DayOfWeek.Saturday Then
+                        date_to = date_to.AddDays(2) ' Move to Monday
+                    ElseIf date_to.DayOfWeek = DayOfWeek.Sunday Then
+                        date_to = date_to.AddDays(1) ' Move to Monday
+                    End If
+
+                    billdateduedate.Value = date_to
                 End If
 
                 'billdateduedate.Value = billdateto.Value.AddDays(14)
@@ -1149,6 +1195,14 @@
                                         totalarrears = Val(totalarrears) + Val(billpromisorry.Rows(t).Cells(2).Value)
                                     Next
 
+                                    Dim disco_date As DateTime = billdateto.Value.AddDays(11)
+
+                                    If disco_date.DayOfWeek = DayOfWeek.Saturday Then
+                                        disco_date = disco_date.AddDays(2) ' Move to Monday
+                                    ElseIf disco_date.DayOfWeek = DayOfWeek.Sunday Then
+                                        disco_date = disco_date.AddDays(1) ' Move to Monday
+                                    End If
+
                                     If acsconn.State = ConnectionState.Closed Then acsconn.Open()
                                     stracs = "insert into Bills (BillNo, AccountNumber, CustomerName, CustomerAddress, DateFrom, ReadingDate, DueDate, PreviousReading, Reading, " _
                                         & "Consumption, LastDayNOPen, BillingDate, ForTheMonthOf, BillStatus, RateSchedule, MeterSize, Zone, isSenior," _
@@ -1161,7 +1215,7 @@
                                         & Month(billdateto.Value) - 1 & "', '" & lblStatus.Text & "', '" & sqldataBilling.Rows(0)("RateSchedule") & "', '" & sqldataBilling.Rows(0)("MeterSize") & "', '" _
                                         & sqldataBilling.Rows(0)("Zone") & "', '" & issenior & "', " & Double.Parse(billamountdue.Text) & ", " & Double.Parse(billPenalty.Text) & ", 'No', '" & meterreader.Text & "', " _
                                         & Double.Parse(billadvancepayment.Text) & ", " & billaverage.Text & ", " & Double.Parse(billdiscount.Text) & ", '" & dontcharge & "', 'No', '" _
-                                        & billMeterno.Text.ToString.Replace("'", "''") & "', " & totalarrears & ", '" & Format(Date.Parse(billdateto.Value.AddDays(11)), "yyyy-MM-dd") & "', '" _
+                                        & billMeterno.Text.ToString.Replace("'", "''") & "', " & totalarrears & ", '" & Format(disco_date, "yyyy-MM-dd") & "', '" _
                                         & My.Settings.Nickname & "')"
                                     acscmd.CommandText = stracs
                                     acscmd.Connection = acsconn

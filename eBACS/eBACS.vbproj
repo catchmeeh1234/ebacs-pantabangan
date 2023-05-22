@@ -200,6 +200,12 @@
     <Compile Include="Billing\billingcreatedbills.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Billing\CancelBillCharges.Designer.vb">
+      <DependentUpon>CancelBillCharges.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billing\CancelBillCharges.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Billing\Online Billing.Designer.vb">
       <DependentUpon>Online Billing.vb</DependentUpon>
     </Compile>
@@ -527,6 +533,12 @@
     <Compile Include="Reports\SeniorCitizenDiscounts.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reports\UnpaidConcessionairesReport.Designer.vb">
+      <DependentUpon>UnpaidConcessionairesReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UnpaidConcessionairesReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reports\writeoffreport.Designer.vb">
       <DependentUpon>writeoffreport.vb</DependentUpon>
     </Compile>
@@ -616,6 +628,9 @@
     <EmbeddedResource Include="Billing\billcompute.resx">
       <DependentUpon>billcompute.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing\CancelBillCharges.resx">
+      <DependentUpon>CancelBillCharges.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Billing\Online Billing.resx">
       <DependentUpon>Online Billing.vb</DependentUpon>
@@ -801,6 +816,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\SeniorCitizenDiscounts.resx">
       <DependentUpon>SeniorCitizenDiscounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UnpaidConcessionairesBill.rdlc" />
+    <EmbeddedResource Include="Reports\UnpaidConcessionairesReport.resx">
+      <DependentUpon>UnpaidConcessionairesReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\writeoffreport.resx">
       <DependentUpon>writeoffreport.vb</DependentUpon>

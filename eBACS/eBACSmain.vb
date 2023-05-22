@@ -784,4 +784,13 @@ Public Class eBACSmain
         TempCR.ShowDialog()
         TempCR.Activate()
     End Sub
+
+    Private Sub CancelBillChargesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CancelBillChargesToolStripMenuItem.Click
+        CancelBillCharges.Show()
+    End Sub
+
+    Private Sub UnpaidConcessionairesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnpaidConcessionairesToolStripMenuItem.Click
+        UnpaidConcessionairesReport.Show()
+        UnpaidConcessionairesReport.BringToFront()
+    End Sub
 End Class
