@@ -121,7 +121,7 @@ Public Class DailyCollectionReport
                 Dim or_items_table As New DataTable
                 or_items_table.Clear()
                 Dim total_or_items As Decimal = 0.00
-                stracs = "select * FROM ORItems WHERE ORNo = '" & orData.Rows(q)("ORNo") & "' and Cancelled ='No' AND Particular LIKE '%membership%' AND Charges ='Yes'"
+                stracs = "select * FROM ORItems WHERE ORNo = '" & orData.Rows(q)("ORNo") & "' and Cancelled ='No' AND Particular LIKE '%membership%'"
                 acscmd.CommandText = stracs
                 acscmd.Connection = acsconn
                 acsda.SelectCommand = acscmd
@@ -131,8 +131,22 @@ Public Class DailyCollectionReport
                     total_or_items = total_or_items + or_items_table.Rows(f)("Total")
                 Next
 
-                dt.Rows.Add(orData.Rows(q)("ORNo"), orData.Rows(q)("AccountName"), orData.Rows(q)("AccountNo"), "0.00" _
+                Dim readingseqno As New DataTable
+                readingseqno.Clear()
+                If acsconn.State = ConnectionState.Closed Then acsconn.Open()
+                stracs = "select ReadingSeqNo FROM Customers WHERE AccountNo = '" & orData.Rows(q)("AccountNo") & "'"
+                acscmd.CommandText = stracs
+                acscmd.Connection = acsconn
+                acsda.SelectCommand = acscmd
+                acsda.Fill(readingseqno)
+
+                For Each row As DataRow In readingseqno.Rows
+                    ' Access values in each row and perform operations
+                    Dim seqNo As String = row("ReadingSeqNo")
+                    dt.Rows.Add(orData.Rows(q)("ORNo"), orData.Rows(q)("AccountName"), orData.Rows(q)("AccountNo") & "(" & seqNo & ")", "0.00" _
                             , "0.00", "0.00", "0.00", total_or_items, "0.00", "0.00", total_or_items)
+
+                Next
             Next
 
             For j = 0 To collectiondata.Rows.Count - 1
@@ -147,7 +161,7 @@ Public Class DailyCollectionReport
 
                 Else
 
-                    Dim currentbill, cyarrear, pyarrear, penalty, charges, surcharge, sundries, earlyPayment, total As Decimal
+                    Dim currentbill, cyarrear, pyarrear, penalty, charges, surcharge, sundries, earlyPayment, disc_senior, specialDisc, total As Decimal
                     currentbill = 0
                     cyarrear = 0
                     pyarrear = 0
@@ -156,6 +170,8 @@ Public Class DailyCollectionReport
                     surcharge = 0
                     sundries = 0
                     earlyPayment = 0
+                    disc_senior = 0
+                    specialDisc = 0
                     total = 0
                     Dim natitira As Double = 0
 
@@ -190,13 +206,25 @@ Public Class DailyCollectionReport
                                 earlyPayment = earlyPayment + billsdata.Rows(y)("earlyPaymentDiscount")
                             End If
 
+                            If IsDBNull(billsdata.Rows(y)("Discount")) = True Then
+                                disc_senior = disc_senior + 0
+                            Else
+                                disc_senior = disc_senior + billsdata.Rows(y)("Discount")
+                            End If
+
+                            If IsDBNull(billsdata.Rows(y)("specialDiscount")) = True Then
+                                specialDisc = specialDisc + 0
+                            Else
+                                specialDisc = specialDisc + billsdata.Rows(y)("specialDiscount")
+                            End If
+
                             If IsDBNull(billsdata.Rows(y)("Adjustment")) = True Then
                                 billsdata.Rows(y)("Adjustment") = 0
                             Else
                                 billsdata.Rows(y)("Adjustment") = billsdata.Rows(y)("Adjustment")
                             End If
 
-                            If ((billsdata.Rows(y)("AmountDue") + billsdata.Rows(y)("Adjustment")) - (billsdata.Rows(y)("Discount") + billsdata.Rows(y)("AdvancePayment"))) <= 0 Then
+                            If ((billsdata.Rows(y)("AmountDue") + billsdata.Rows(y)("Adjustment")) - (billsdata.Rows(y)("Discount") + billsdata.Rows(y)("specialDiscount") + billsdata.Rows(y)("AdvancePayment"))) <= 0 Then
 
 
                                 Dim charges2 As Double = 0
@@ -217,24 +245,24 @@ Public Class DailyCollectionReport
                                 End If
 
 
-                                natitira = (natitira + ((billsdata.Rows(y)("AmountDue") + billsdata.Rows(y)("Adjustment")) - (billsdata.Rows(y)("Discount") + billsdata.Rows(y)("AdvancePayment")))) + charges2
+                                natitira = (natitira + ((billsdata.Rows(y)("AmountDue") + billsdata.Rows(y)("Adjustment")) - (billsdata.Rows(y)("Discount") + billsdata.Rows(y)("specialDiscount") + billsdata.Rows(y)("AdvancePayment")))) + charges2
 
 
                             Else
 
                                 If Val(billdate.ToString("yyyy")) < Val(paymentdate.ToString("yyyy")) Then
                                     'pyarrears
-                                    pyarrear = pyarrear + (billsdata.Rows(y)("AmountDue") + billsdata.Rows(y)("Adjustment")) - (billsdata.Rows(y)("Discount") + billsdata.Rows(y)("AdvancePayment"))
+                                    pyarrear = pyarrear + (billsdata.Rows(y)("AmountDue") + billsdata.Rows(y)("Adjustment")) - (billsdata.Rows(y)("Discount") + billsdata.Rows(y)("specialDiscount") + billsdata.Rows(y)("AdvancePayment"))
                                     penalty = penalty + billsdata.Rows(y)("PenaltyAfterDue")
                                 Else
                                     If billdate.ToString("MM") = paymentdate.ToString("MM") AndAlso billdate.ToString("yyyy") = paymentdate.ToString("yyyy") Then
                                         'current
-                                        currentbill = (currentbill + +billsdata.Rows(y)("Adjustment") + billsdata.Rows(y)("AmountDue") + natitira) - (billsdata.Rows(y)("Discount") + billsdata.Rows(y)("AdvancePayment"))
+                                        currentbill = (currentbill + +billsdata.Rows(y)("Adjustment") + billsdata.Rows(y)("AmountDue") + natitira) - (billsdata.Rows(y)("Discount") + billsdata.Rows(y)("specialDiscount") + billsdata.Rows(y)("AdvancePayment"))
                                         penalty = penalty + billsdata.Rows(y)("PenaltyAfterDue")
 
                                     Else
                                         'cyarrear
-                                        cyarrear = cyarrear + billsdata.Rows(y)("AmountDue") + billsdata.Rows(y)("Adjustment") - (billsdata.Rows(y)("Discount") + billsdata.Rows(y)("AdvancePayment"))
+                                        cyarrear = cyarrear + billsdata.Rows(y)("AmountDue") + billsdata.Rows(y)("Adjustment") - (billsdata.Rows(y)("Discount") + billsdata.Rows(y)("specialDiscount") + billsdata.Rows(y)("AdvancePayment"))
                                         penalty = penalty + billsdata.Rows(y)("PenaltyAfterDue")
                                     End If
                                 End If
@@ -393,12 +421,25 @@ Public Class DailyCollectionReport
 
                     End If
 
+                    Dim readingseqno As New DataTable
+                    readingseqno.Clear()
+                    If acsconn.State = ConnectionState.Closed Then acsconn.Open()
+                    stracs = "select ReadingSeqNo FROM Customers WHERE AccountNo = '" & collectiondata.Rows(j)("AccountNo") & "'"
+                    acscmd.CommandText = stracs
+                    acscmd.Connection = acsconn
+                    acsda.SelectCommand = acscmd
+                    acsda.Fill(readingseqno)
+
                     sundries = collectiondata.Rows(j)("AdvancePayment")
                     total = collectiondata.Rows(j)("TotalAmountDue")
 
-                    dt.Rows.Add(collectiondata.Rows(j)("CRNo"), collectiondata.Rows(j)("AccountName"), collectiondata.Rows(j)("AccountNo") _
+                    For Each row As DataRow In readingseqno.Rows
+                        ' Access values in each row and perform operations
+                        Dim seqNo As String = row("ReadingSeqNo")
+                        dt.Rows.Add(collectiondata.Rows(j)("CRNo"), collectiondata.Rows(j)("AccountName"), collectiondata.Rows(j)("AccountNo") & "(" & seqNo & ")" _
                                     , FormatNumber(currentbill + natitira), FormatNumber(cyarrear), FormatNumber(pyarrear), FormatNumber(penalty) _
-                                    , FormatNumber(charges), FormatNumber(surcharge), FormatNumber(earlyPayment), FormatNumber(total))
+                                    , FormatNumber(charges), FormatNumber(surcharge), FormatNumber(disc_senior + earlyPayment + specialDisc), FormatNumber(total))
+                    Next
 
                     prog.Value = j / collectiondata.Rows.Count * 100
 
@@ -500,4 +541,11 @@ Public Class DailyCollectionReport
         Me.Activate() 'Or Whatever
     End Sub
 
+    Private Sub prog_Click(sender As Object, e As EventArgs) Handles prog.Click
+
+    End Sub
+
+    Private Sub ReportViewer1_Load(sender As Object, e As EventArgs) Handles ReportViewer1.Load
+
+    End Sub
 End Class

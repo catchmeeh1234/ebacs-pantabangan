@@ -60,6 +60,7 @@ Public Class DisconnectionList
             .Columns.Add("meterno")
             .Columns.Add("balance")
             .Columns.Add("noofmonths")
+            .Columns.Add("readingseqno")
 
         End With
         Dim gtotal As Decimal
@@ -101,17 +102,17 @@ Public Class DisconnectionList
             'acsda.SelectCommand = acscmd
             'acsda.Fill(bills)
 
-            stracs = "select  a.[Zone],
+            stracs = "select a.[Zone],
                   c.ZoneID,
                   a.AccountNumber,
-                  CustomerName = (SELECT ([Firstname] + ' ' + [Middlename]  + ' ' + [Lastname]) as fullname FROM [eBACS].[dbo].[Customers] WHERE AccountNo = a.AccountNumber),
-                  CompanyName = (SELECT CompanyName FROM [eBACS].[dbo].[Customers] WHERE AccountNo = a.AccountNumber),
-                  d.MeterNo,
+                  CustomerName = (SELECT ([Firstname] + ' ' + [Middlename]  + ' ' + [Lastname]) as fullname FROM [Customers] WHERE AccountNo = a.AccountNumber),
+                  CompanyName = (SELECT CompanyName FROM [Customers] WHERE AccountNo = a.AccountNumber),
+                  d.MeterNo, d.ReadingSeqNo,
                   (sum(a.AmountDue) + sum(a.PenaltyAfterDue) + sum(a.Adjustment)) - (sum(a.advancepayment) + sum(a.discount)) as amoundue,
                   billchargerss = (select sum(Amount) from billcharges b where b.AccountNumber = a.AccountNumber and IsPaid = 'No' and Cancelled = 'No'),
                   billothers =  (select sum(p.Billing) + sum(p.Penalty) from AddAdjustment p where p.AccountNumber = a.AccountNumber and p.Paid = 'No' and p.IsCollectionCreated = 'No'), 
-                  count(a.accountNumber) as bilang
-                 from Bills a join [eBACS].[dbo].[Zone] c on c.ZoneName= a.[Zone] join Customers d on d.AccountNo = a.AccountNumber where a.billStatus = 'Posted' and a.IsPaid = 'No' AND a.Cancelled = 'No' and a.isPromisorry = 'No' AND a.DiscDate <= '" & Format(dtpasof.Value, "yyyy-MM-dd") & "' and NOT d.CustomerStatus ='Disconnected' group by a.AccountNumber, a.[Zone],c.ZoneID,d.MeterNo,d.ReadingSeqNo order by c.ZoneID, d.ReadingSeqNo asc"
+                  count(a.accountNumber) as bilang, a.BillingDate as billing_date
+                 from Bills a join [Zone] c on c.ZoneName= a.[Zone] join Customers d on d.AccountNo = a.AccountNumber where a.billStatus = 'Posted' and a.IsPaid = 'No' AND a.Cancelled = 'No' and a.isPromisorry = 'No' AND a.DiscDate <= '" & Format(dtpasof.Value, "yyyy-MM-dd") & "' and NOT d.CustomerStatus ='Disconnected' group by a.AccountNumber, a.[Zone],c.ZoneID,d.MeterNo,d.ReadingSeqNo, a.BillingDate order by c.ZoneID, d.ReadingSeqNo asc"
             acscmd.CommandText = stracs
             acscmd.Connection = acsconn
             acsda.SelectCommand = acscmd
@@ -152,14 +153,14 @@ Public Class DisconnectionList
             stracs = "select  a.[Zone],
                   c.ZoneID,
                   a.AccountNumber,
-                  CustomerName = (SELECT ([Firstname] + ' ' + [Middlename]  + ' ' + [Lastname]) as fullname FROM [eBACS].[dbo].[Customers] WHERE AccountNo = a.AccountNumber),
-                  CompanyName = (SELECT CompanyName FROM [eBACS].[dbo].[Customers] WHERE AccountNo = a.AccountNumber),
-                  d.MeterNo,
+                  CustomerName = (SELECT ([Firstname] + ' ' + [Middlename]  + ' ' + [Lastname]) as fullname FROM [Customers] WHERE AccountNo = a.AccountNumber),
+                  CompanyName = (SELECT CompanyName FROM [Customers] WHERE AccountNo = a.AccountNumber),
+                  d.MeterNo, d.ReadingSeqNo,
                   (sum(a.AmountDue) + sum(a.PenaltyAfterDue) + sum(a.Adjustment)) - (sum(a.advancepayment) + sum(a.discount)) as amoundue,
                   billchargerss = (select sum(Amount) from billcharges b where b.AccountNumber = a.AccountNumber and IsPaid = 'No' and Cancelled = 'No'),
                   billothers =  (select sum(p.Billing) + sum(p.Penalty) from AddAdjustment p where p.AccountNumber = a.AccountNumber and p.Paid = 'No' and p.IsCollectionCreated = 'No'),
-                  count(a.accountNumber) as bilang
-                    from Bills a join [eBACS].[dbo].[Zone] c on c.ZoneName= a.[Zone] join Customers d on d.AccountNo = a.AccountNumber where BillStatus = 'Posted' and a.IsPaid = 'No' AND a.Cancelled = 'No' and a.isPromisorry = 'No' AND a.DiscDate <= '" & Format(dtpasof.Value, "yyyy-MM-dd") & "' and a.Zone = '" & cbzone.Text & "' and NOT d.CustomerStatus ='Disconnected' group by a.AccountNumber, a.[Zone],c.ZoneID,d.MeterNo,d.ReadingSeqNo order by c.ZoneID, d.ReadingSeqNo asc"
+                  count(a.accountNumber) as bilang, a.BillingDate as billing_date
+                    from Bills a join [Zone] c on c.ZoneName= a.[Zone] join Customers d on d.AccountNo = a.AccountNumber where BillStatus = 'Posted' and a.IsPaid = 'No' AND a.Cancelled = 'No' and a.isPromisorry = 'No' AND a.DiscDate <= '" & Format(dtpasof.Value, "yyyy-MM-dd") & "' and a.Zone = '" & cbzone.Text & "' and NOT d.CustomerStatus ='Disconnected' group by a.AccountNumber, a.[Zone],c.ZoneID,d.MeterNo,d.ReadingSeqNo, a.BillingDate order by c.ZoneID, d.ReadingSeqNo asc"
             acscmd.CommandText = stracs
             acscmd.Connection = acsconn
             acsda.SelectCommand = acscmd
@@ -197,7 +198,7 @@ Public Class DisconnectionList
                 End If
 
 
-                dt.Rows.Add(Format(bills.Rows(m)("ZoneID"), "00") & " - " & bills.Rows(m)("Zone"), bills.Rows(m)("AccountNumber"), accountname, bills.Rows(m)("MeterNo"), FormatNumber(bills.Rows(m)("amoundue") + billcharge + billothers), bills.Rows(m)("bilang"))
+                dt.Rows.Add(Format(bills.Rows(m)("ZoneID"), "00") & " - " & bills.Rows(m)("Zone"), bills.Rows(m)("AccountNumber"), accountname, bills.Rows(m)("MeterNo"), FormatNumber(bills.Rows(m)("amoundue") + billcharge + billothers), bills.Rows(m)("billing_date"), bills.Rows(m)("ReadingSeqNo"))
                 gtotal = gtotal + bills.Rows(m)("amoundue") + billcharge + billothers
 
                 prog.Value = m / bills.Rows.Count * 100

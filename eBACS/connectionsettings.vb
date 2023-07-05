@@ -46,7 +46,7 @@ Module connectionsettings
 
         stracs = "Update Bills set Bills.Reading= Billstemp.Reading, Bills.Consumption=Billstemp.Consumption, 
                   Bills.AmountDue=Billstemp.AmountDue, Bills.Discount=Billstemp.Discount, Bills.ReadingDate=Billstemp.ReadingDate, 
-                  Bills.DueDate=Billstemp.DueDate, Bills.LastDayNOPen=Billstemp.LastDayNOPen, Bills.DiscDate=Billstemp.DiscDate 
+                  Bills.DueDate=Billstemp.DueDate, Bills.LastDayNOPen=Billstemp.LastDayNOPen, Bills.DiscDate=Billstemp.DiscDate, Bills.specialDiscount=Billstemp.specialDiscount 
 				  from Bills join Billstemp on Bills.BillNo = Billstemp.BillNo 
                   where Bills.Cancelled = 'No' and Billstemp.Reading >= 0 and Billstemp.AmountDue <> 0 and Bills.BillStatus = 'Pending'"
 

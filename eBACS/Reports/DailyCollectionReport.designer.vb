@@ -23,16 +23,16 @@ Partial Class DailyCollectionReport
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.prog = New System.Windows.Forms.ProgressBar()
+        Me.billSearch = New System.Windows.Forms.Button()
+        Me.cboffice = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtdcrno = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtdate = New System.Windows.Forms.DateTimePicker()
-        Me.prog = New System.Windows.Forms.ProgressBar()
-        Me.billSearch = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.cboffice = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -56,13 +56,39 @@ Partial Class DailyCollectionReport
         Me.Panel1.Size = New System.Drawing.Size(1126, 727)
         Me.Panel1.TabIndex = 8
         '
-        'ReportViewer1
+        'prog
         '
-        Me.ReportViewer1.Location = New System.Drawing.Point(14, 61)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(1095, 586)
-        Me.ReportViewer1.TabIndex = 75
+        Me.prog.Location = New System.Drawing.Point(468, 15)
+        Me.prog.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.prog.Name = "prog"
+        Me.prog.Size = New System.Drawing.Size(271, 28)
+        Me.prog.TabIndex = 68
+        '
+        'billSearch
+        '
+        Me.billSearch.FlatAppearance.BorderSize = 0
+        Me.billSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.billSearch.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.billSearch.Location = New System.Drawing.Point(282, 13)
+        Me.billSearch.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.billSearch.Name = "billSearch"
+        Me.billSearch.Size = New System.Drawing.Size(180, 34)
+        Me.billSearch.TabIndex = 40
+        Me.billSearch.Text = "Generate"
+        Me.billSearch.UseVisualStyleBackColor = True
+        '
+        'cboffice
+        '
+        Me.cboffice.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.cboffice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboffice.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cboffice.FormattingEnabled = True
+        Me.cboffice.Location = New System.Drawing.Point(506, 20)
+        Me.cboffice.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.cboffice.Name = "cboffice"
+        Me.cboffice.Size = New System.Drawing.Size(140, 24)
+        Me.cboffice.TabIndex = 74
+        Me.cboffice.Visible = False
         '
         'Label3
         '
@@ -95,6 +121,14 @@ Partial Class DailyCollectionReport
         Me.Label1.Text = "DCR NO."
         Me.Label1.Visible = False
         '
+        'ReportViewer1
+        '
+        Me.ReportViewer1.Location = New System.Drawing.Point(14, 61)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.ServerReport.BearerToken = Nothing
+        Me.ReportViewer1.Size = New System.Drawing.Size(1095, 586)
+        Me.ReportViewer1.TabIndex = 75
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -115,27 +149,6 @@ Partial Class DailyCollectionReport
         Me.txtdate.Size = New System.Drawing.Size(166, 21)
         Me.txtdate.TabIndex = 69
         '
-        'prog
-        '
-        Me.prog.Location = New System.Drawing.Point(468, 15)
-        Me.prog.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.prog.Name = "prog"
-        Me.prog.Size = New System.Drawing.Size(271, 28)
-        Me.prog.TabIndex = 68
-        '
-        'billSearch
-        '
-        Me.billSearch.FlatAppearance.BorderSize = 0
-        Me.billSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.billSearch.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.billSearch.Location = New System.Drawing.Point(282, 13)
-        Me.billSearch.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.billSearch.Name = "billSearch"
-        Me.billSearch.Size = New System.Drawing.Size(180, 34)
-        Me.billSearch.TabIndex = 40
-        Me.billSearch.Text = "Generate"
-        Me.billSearch.UseVisualStyleBackColor = True
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -146,19 +159,6 @@ Partial Class DailyCollectionReport
         Me.Label7.Size = New System.Drawing.Size(164, 17)
         Me.Label7.TabIndex = 64
         Me.Label7.Text = "Daily Collection Report"
-        '
-        'cboffice
-        '
-        Me.cboffice.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.cboffice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboffice.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cboffice.FormattingEnabled = True
-        Me.cboffice.Location = New System.Drawing.Point(506, 20)
-        Me.cboffice.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.cboffice.Name = "cboffice"
-        Me.cboffice.Size = New System.Drawing.Size(140, 24)
-        Me.cboffice.TabIndex = 74
-        Me.cboffice.Visible = False
         '
         'DailyCollectionReport
         '

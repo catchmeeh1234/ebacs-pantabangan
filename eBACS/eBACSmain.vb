@@ -787,10 +787,21 @@ Public Class eBACSmain
 
     Private Sub CancelBillChargesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CancelBillChargesToolStripMenuItem.Click
         CancelBillCharges.Show()
+        CancelBillCharges.BringToFront()
     End Sub
 
     Private Sub UnpaidConcessionairesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnpaidConcessionairesToolStripMenuItem.Click
         UnpaidConcessionairesReport.Show()
         UnpaidConcessionairesReport.BringToFront()
+    End Sub
+
+    Private Sub ReconnectionListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReconnectionListToolStripMenuItem.Click
+        ReconnectionList.Show()
+        ReconnectionList.BringToFront()
+    End Sub
+
+    Private Sub MonthlyCollectionReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MonthlyCollectionReportToolStripMenuItem.Click
+        MonthlyCollectionReport.Show()
+        MonthlyCollectionReport.BringToFront()
     End Sub
 End Class

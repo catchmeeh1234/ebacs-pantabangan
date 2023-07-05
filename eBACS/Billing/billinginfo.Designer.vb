@@ -47,6 +47,8 @@ Partial Class billinginfo
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.billtotalamount = New System.Windows.Forms.TextBox()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.tbBillSpecialDisc = New System.Windows.Forms.TextBox()
+        Me.Label28 = New System.Windows.Forms.Label()
         Me.billAdjustment = New System.Windows.Forms.TextBox()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.billPenalty = New System.Windows.Forms.TextBox()
@@ -128,6 +130,7 @@ Partial Class billinginfo
         Me.UpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.printcrdocs = New System.Drawing.Printing.PrintDocument()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.specialDiscount = New System.Windows.Forms.CheckBox()
         Me.Panel1.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
@@ -203,7 +206,7 @@ Partial Class billinginfo
         Me.Panel1.Controls.Add(Me.Label23)
         Me.Panel1.Location = New System.Drawing.Point(1, 40)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1057, 599)
+        Me.Panel1.Size = New System.Drawing.Size(1057, 632)
         Me.Panel1.TabIndex = 52
         '
         'btnReprint
@@ -261,9 +264,9 @@ Partial Class billinginfo
         Me.GroupBox5.Controls.Add(Me.GroupBox7)
         Me.GroupBox5.Controls.Add(Me.billtotalamount)
         Me.GroupBox5.Controls.Add(Me.GroupBox6)
-        Me.GroupBox5.Location = New System.Drawing.Point(533, 338)
+        Me.GroupBox5.Location = New System.Drawing.Point(533, 345)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(522, 258)
+        Me.GroupBox5.Size = New System.Drawing.Size(522, 276)
         Me.GroupBox5.TabIndex = 137
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Billing"
@@ -271,7 +274,7 @@ Partial Class billinginfo
         'GroupBox8
         '
         Me.GroupBox8.Controls.Add(Me.billpromisorry)
-        Me.GroupBox8.Location = New System.Drawing.Point(218, 117)
+        Me.GroupBox8.Location = New System.Drawing.Point(218, 133)
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.Size = New System.Drawing.Size(296, 107)
         Me.GroupBox8.TabIndex = 33
@@ -324,7 +327,7 @@ Partial Class billinginfo
         '
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(322, 232)
+        Me.Label22.Location = New System.Drawing.Point(322, 253)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(76, 15)
         Me.Label22.TabIndex = 35
@@ -333,7 +336,7 @@ Partial Class billinginfo
         'GroupBox7
         '
         Me.GroupBox7.Controls.Add(Me.billarrears)
-        Me.GroupBox7.Location = New System.Drawing.Point(218, 20)
+        Me.GroupBox7.Location = New System.Drawing.Point(218, 34)
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.Size = New System.Drawing.Size(296, 94)
         Me.GroupBox7.TabIndex = 32
@@ -379,7 +382,7 @@ Partial Class billinginfo
         '
         Me.billtotalamount.BackColor = System.Drawing.Color.White
         Me.billtotalamount.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.billtotalamount.Location = New System.Drawing.Point(404, 229)
+        Me.billtotalamount.Location = New System.Drawing.Point(404, 250)
         Me.billtotalamount.Name = "billtotalamount"
         Me.billtotalamount.ReadOnly = True
         Me.billtotalamount.Size = New System.Drawing.Size(110, 21)
@@ -388,6 +391,8 @@ Partial Class billinginfo
         '
         'GroupBox6
         '
+        Me.GroupBox6.Controls.Add(Me.tbBillSpecialDisc)
+        Me.GroupBox6.Controls.Add(Me.Label28)
         Me.GroupBox6.Controls.Add(Me.billAdjustment)
         Me.GroupBox6.Controls.Add(Me.Label26)
         Me.GroupBox6.Controls.Add(Me.billPenalty)
@@ -401,15 +406,34 @@ Partial Class billinginfo
         Me.GroupBox6.Controls.Add(Me.Label19)
         Me.GroupBox6.Location = New System.Drawing.Point(6, 20)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(206, 232)
+        Me.GroupBox6.Size = New System.Drawing.Size(206, 255)
         Me.GroupBox6.TabIndex = 27
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Current"
         '
+        'tbBillSpecialDisc
+        '
+        Me.tbBillSpecialDisc.BackColor = System.Drawing.Color.White
+        Me.tbBillSpecialDisc.Location = New System.Drawing.Point(118, 78)
+        Me.tbBillSpecialDisc.Name = "tbBillSpecialDisc"
+        Me.tbBillSpecialDisc.ReadOnly = True
+        Me.tbBillSpecialDisc.Size = New System.Drawing.Size(80, 21)
+        Me.tbBillSpecialDisc.TabIndex = 34
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(36, 81)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(76, 15)
+        Me.Label28.TabIndex = 35
+        Me.Label28.Text = "Special Disc."
+        '
         'billAdjustment
         '
         Me.billAdjustment.BackColor = System.Drawing.Color.White
-        Me.billAdjustment.Location = New System.Drawing.Point(118, 134)
+        Me.billAdjustment.Location = New System.Drawing.Point(118, 157)
         Me.billAdjustment.Name = "billAdjustment"
         Me.billAdjustment.ReadOnly = True
         Me.billAdjustment.Size = New System.Drawing.Size(80, 21)
@@ -419,7 +443,7 @@ Partial Class billinginfo
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(46, 137)
+        Me.Label26.Location = New System.Drawing.Point(46, 160)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(66, 15)
         Me.Label26.TabIndex = 33
@@ -428,7 +452,7 @@ Partial Class billinginfo
         'billPenalty
         '
         Me.billPenalty.BackColor = System.Drawing.Color.White
-        Me.billPenalty.Location = New System.Drawing.Point(118, 80)
+        Me.billPenalty.Location = New System.Drawing.Point(118, 103)
         Me.billPenalty.Name = "billPenalty"
         Me.billPenalty.ReadOnly = True
         Me.billPenalty.Size = New System.Drawing.Size(80, 21)
@@ -438,7 +462,7 @@ Partial Class billinginfo
         '
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(65, 83)
+        Me.Label24.Location = New System.Drawing.Point(65, 106)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(47, 15)
         Me.Label24.TabIndex = 31
@@ -451,7 +475,7 @@ Partial Class billinginfo
         Me.billcharges.BackgroundColor = System.Drawing.Color.White
         Me.billcharges.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.billcharges.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column10, Me.Column11, Me.Column12, Me.Column4, Me.Column7})
-        Me.billcharges.Location = New System.Drawing.Point(7, 161)
+        Me.billcharges.Location = New System.Drawing.Point(7, 188)
         Me.billcharges.Name = "billcharges"
         Me.billcharges.ReadOnly = True
         Me.billcharges.RowHeadersVisible = False
@@ -495,7 +519,7 @@ Partial Class billinginfo
         'billadvancepayment
         '
         Me.billadvancepayment.BackColor = System.Drawing.Color.White
-        Me.billadvancepayment.Location = New System.Drawing.Point(118, 107)
+        Me.billadvancepayment.Location = New System.Drawing.Point(118, 130)
         Me.billadvancepayment.Name = "billadvancepayment"
         Me.billadvancepayment.ReadOnly = True
         Me.billadvancepayment.Size = New System.Drawing.Size(80, 21)
@@ -505,7 +529,7 @@ Partial Class billinginfo
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(7, 110)
+        Me.Label21.Location = New System.Drawing.Point(7, 133)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(105, 15)
         Me.Label21.TabIndex = 29
@@ -561,7 +585,7 @@ Partial Class billinginfo
         Me.GroupBox4.Controls.Add(Me.billprevious)
         Me.GroupBox4.Controls.Add(Me.Label14)
         Me.GroupBox4.Controls.Add(Me.billcurrent)
-        Me.GroupBox4.Location = New System.Drawing.Point(544, 176)
+        Me.GroupBox4.Location = New System.Drawing.Point(544, 179)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(238, 160)
         Me.GroupBox4.TabIndex = 136
@@ -693,7 +717,7 @@ Partial Class billinginfo
         Me.GroupBox3.Controls.Add(Me.Label7)
         Me.GroupBox3.Controls.Add(Me.Label6)
         Me.GroupBox3.Controls.Add(Me.billCovered)
-        Me.GroupBox3.Location = New System.Drawing.Point(788, 176)
+        Me.GroupBox3.Location = New System.Drawing.Point(788, 178)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(257, 160)
         Me.GroupBox3.TabIndex = 134
@@ -797,13 +821,14 @@ Partial Class billinginfo
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.specialDiscount)
         Me.GroupBox2.Controls.Add(Me.lblStatus)
         Me.GroupBox2.Controls.Add(Me.billcancelled)
         Me.GroupBox2.Controls.Add(Me.billdontcharge)
         Me.GroupBox2.Controls.Add(Me.billsenior)
         Me.GroupBox2.Location = New System.Drawing.Point(883, 40)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(162, 130)
+        Me.GroupBox2.Size = New System.Drawing.Size(162, 132)
         Me.GroupBox2.TabIndex = 133
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Status"
@@ -822,7 +847,7 @@ Partial Class billinginfo
         '
         Me.billcancelled.AutoSize = True
         Me.billcancelled.Enabled = False
-        Me.billcancelled.Location = New System.Drawing.Point(38, 52)
+        Me.billcancelled.Location = New System.Drawing.Point(38, 50)
         Me.billcancelled.Name = "billcancelled"
         Me.billcancelled.Size = New System.Drawing.Size(84, 20)
         Me.billcancelled.TabIndex = 21
@@ -833,7 +858,7 @@ Partial Class billinginfo
         '
         Me.billdontcharge.AutoSize = True
         Me.billdontcharge.Enabled = False
-        Me.billdontcharge.Location = New System.Drawing.Point(38, 104)
+        Me.billdontcharge.Location = New System.Drawing.Point(38, 90)
         Me.billdontcharge.Name = "billdontcharge"
         Me.billdontcharge.Size = New System.Drawing.Size(99, 20)
         Me.billdontcharge.TabIndex = 23
@@ -844,7 +869,7 @@ Partial Class billinginfo
         '
         Me.billsenior.AutoSize = True
         Me.billsenior.Enabled = False
-        Me.billsenior.Location = New System.Drawing.Point(38, 78)
+        Me.billsenior.Location = New System.Drawing.Point(38, 70)
         Me.billsenior.Name = "billsenior"
         Me.billsenior.Size = New System.Drawing.Size(98, 20)
         Me.billsenior.TabIndex = 22
@@ -863,7 +888,7 @@ Partial Class billinginfo
         Me.GroupBox1.Controls.Add(Me.billAddress)
         Me.GroupBox1.Location = New System.Drawing.Point(544, 40)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(333, 130)
+        Me.GroupBox1.Size = New System.Drawing.Size(333, 132)
         Me.GroupBox1.TabIndex = 132
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Account Details"
@@ -1151,39 +1176,50 @@ Partial Class billinginfo
         '
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.NewToolStripMenuItem.Text = "New"
         '
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
         Me.SaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'RefreshToolStripMenuItem
         '
         Me.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem"
         Me.RefreshToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
-        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.RefreshToolStripMenuItem.Text = "Refresh"
         '
         'UpdateToolStripMenuItem
         '
         Me.UpdateToolStripMenuItem.Name = "UpdateToolStripMenuItem"
         Me.UpdateToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
-        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.UpdateToolStripMenuItem.Text = "Update"
         '
         'printcrdocs
         '
+        '
+        'specialDiscount
+        '
+        Me.specialDiscount.AutoSize = True
+        Me.specialDiscount.Enabled = False
+        Me.specialDiscount.Location = New System.Drawing.Point(38, 109)
+        Me.specialDiscount.Name = "specialDiscount"
+        Me.specialDiscount.Size = New System.Drawing.Size(94, 20)
+        Me.specialDiscount.TabIndex = 24
+        Me.specialDiscount.Text = "Special Disc."
+        Me.specialDiscount.UseVisualStyleBackColor = True
         '
         'billinginfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1060, 641)
+        Me.ClientSize = New System.Drawing.Size(1060, 673)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label5)
@@ -1327,4 +1363,7 @@ Partial Class billinginfo
     Friend WithEvents Label27 As Label
     Friend WithEvents meterreader As ComboBox
     Friend WithEvents ToolTip1 As ToolTip
+    Public WithEvents tbBillSpecialDisc As TextBox
+    Friend WithEvents Label28 As Label
+    Friend WithEvents specialDiscount As CheckBox
 End Class

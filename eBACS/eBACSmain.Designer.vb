@@ -52,6 +52,7 @@ Partial Class eBACSmain
         Me.MasterlistOfServiceConnectionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConcessionaireBreakdownByTypeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LedgerReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReconnectionListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.contextCR = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ToolStripMenuItem24 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
@@ -66,6 +67,7 @@ Partial Class eBACSmain
         Me.OpenCRAndORWCalcToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CalculatorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TempCRToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UnpaidConcessionairesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btnConcessionaire = New System.Windows.Forms.Button()
@@ -111,6 +113,7 @@ Partial Class eBACSmain
         Me.CancelledBillsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WriteOffReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MonthlyPromissoryAndOtherAdjustmentReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CancelBillChargesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmsSettings = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ToolStripMenuItem17 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem18 = New System.Windows.Forms.ToolStripMenuItem()
@@ -128,8 +131,7 @@ Partial Class eBACSmain
         Me.ToolStripSeparator19 = New System.Windows.Forms.ToolStripSeparator()
         Me.UpdatePasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.CancelBillChargesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UnpaidConcessionairesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MonthlyCollectionReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.imageSettings, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.contextSettings.SuspendLayout()
         Me.cmsConcessionaire.SuspendLayout()
@@ -241,9 +243,9 @@ Partial Class eBACSmain
         'cmsConcessionaire
         '
         Me.cmsConcessionaire.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmsConcessionaire.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.ToolStripSeparator1, Me.ToolStripMenuItem2, Me.ToolStripMenuItem3, Me.ToolStripSeparator2, Me.ToolStripMenuItem4, Me.ToolStripMenuItem5, Me.ToolStripSeparator3, Me.DisconnectionListToolStripMenuItem, Me.ListOfDisconnectedAccountsToolStripMenuItem, Me.ToolStripSeparator4, Me.ListOfActiveConnectionsToolStripMenuItem, Me.MasterlistOfServiceConnectionToolStripMenuItem, Me.ConcessionaireBreakdownByTypeToolStripMenuItem, Me.LedgerReportToolStripMenuItem})
+        Me.cmsConcessionaire.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.ToolStripSeparator1, Me.ToolStripMenuItem2, Me.ToolStripMenuItem3, Me.ToolStripSeparator2, Me.ToolStripMenuItem4, Me.ToolStripMenuItem5, Me.ToolStripSeparator3, Me.DisconnectionListToolStripMenuItem, Me.ListOfDisconnectedAccountsToolStripMenuItem, Me.ToolStripSeparator4, Me.ListOfActiveConnectionsToolStripMenuItem, Me.MasterlistOfServiceConnectionToolStripMenuItem, Me.ConcessionaireBreakdownByTypeToolStripMenuItem, Me.LedgerReportToolStripMenuItem, Me.ReconnectionListToolStripMenuItem})
         Me.cmsConcessionaire.Name = "cmsConcessionaire"
-        Me.cmsConcessionaire.Size = New System.Drawing.Size(284, 270)
+        Me.cmsConcessionaire.Size = New System.Drawing.Size(284, 292)
         '
         'ToolStripMenuItem1
         '
@@ -336,87 +338,99 @@ Partial Class eBACSmain
         Me.LedgerReportToolStripMenuItem.Size = New System.Drawing.Size(283, 22)
         Me.LedgerReportToolStripMenuItem.Text = "Ledger Report"
         '
+        'ReconnectionListToolStripMenuItem
+        '
+        Me.ReconnectionListToolStripMenuItem.Name = "ReconnectionListToolStripMenuItem"
+        Me.ReconnectionListToolStripMenuItem.Size = New System.Drawing.Size(283, 22)
+        Me.ReconnectionListToolStripMenuItem.Text = "Reconnection List"
+        '
         'contextCR
         '
         Me.contextCR.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.contextCR.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem24, Me.ToolStripSeparator12, Me.ToolStripMenuItem26, Me.UploadOnlinePaymentToolStripMenuItem, Me.ToolStripSeparator13, Me.ToolStripMenuItem29, Me.ToolStripSeparator14, Me.CancelledToolStripMenuItem, Me.ToolStripSeparator17, Me.DailyCollectionReportToolStripMenuItem, Me.OpenCRAndORWCalcToolStripMenuItem, Me.CalculatorToolStripMenuItem, Me.TempCRToolStripMenuItem, Me.UnpaidConcessionairesToolStripMenuItem})
+        Me.contextCR.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem24, Me.ToolStripSeparator12, Me.ToolStripMenuItem26, Me.UploadOnlinePaymentToolStripMenuItem, Me.ToolStripSeparator13, Me.ToolStripMenuItem29, Me.ToolStripSeparator14, Me.CancelledToolStripMenuItem, Me.ToolStripSeparator17, Me.DailyCollectionReportToolStripMenuItem, Me.OpenCRAndORWCalcToolStripMenuItem, Me.CalculatorToolStripMenuItem, Me.TempCRToolStripMenuItem, Me.UnpaidConcessionairesToolStripMenuItem, Me.MonthlyCollectionReportToolStripMenuItem})
         Me.contextCR.Name = "cmsConcessionaire"
-        Me.contextCR.Size = New System.Drawing.Size(227, 270)
+        Me.contextCR.Size = New System.Drawing.Size(232, 292)
         '
         'ToolStripMenuItem24
         '
         Me.ToolStripMenuItem24.Name = "ToolStripMenuItem24"
-        Me.ToolStripMenuItem24.Size = New System.Drawing.Size(226, 22)
+        Me.ToolStripMenuItem24.Size = New System.Drawing.Size(231, 22)
         Me.ToolStripMenuItem24.Text = "Create OR"
         '
         'ToolStripSeparator12
         '
         Me.ToolStripSeparator12.Name = "ToolStripSeparator12"
-        Me.ToolStripSeparator12.Size = New System.Drawing.Size(223, 6)
+        Me.ToolStripSeparator12.Size = New System.Drawing.Size(228, 6)
         '
         'ToolStripMenuItem26
         '
         Me.ToolStripMenuItem26.Name = "ToolStripMenuItem26"
-        Me.ToolStripMenuItem26.Size = New System.Drawing.Size(226, 22)
+        Me.ToolStripMenuItem26.Size = New System.Drawing.Size(231, 22)
         Me.ToolStripMenuItem26.Text = "Collected Payments"
         '
         'UploadOnlinePaymentToolStripMenuItem
         '
         Me.UploadOnlinePaymentToolStripMenuItem.Name = "UploadOnlinePaymentToolStripMenuItem"
-        Me.UploadOnlinePaymentToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.UploadOnlinePaymentToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
         Me.UploadOnlinePaymentToolStripMenuItem.Text = "Upload Online Payment"
         '
         'ToolStripSeparator13
         '
         Me.ToolStripSeparator13.Name = "ToolStripSeparator13"
-        Me.ToolStripSeparator13.Size = New System.Drawing.Size(223, 6)
+        Me.ToolStripSeparator13.Size = New System.Drawing.Size(228, 6)
         '
         'ToolStripMenuItem29
         '
         Me.ToolStripMenuItem29.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripMenuItem29.Name = "ToolStripMenuItem29"
-        Me.ToolStripMenuItem29.Size = New System.Drawing.Size(226, 22)
+        Me.ToolStripMenuItem29.Size = New System.Drawing.Size(231, 22)
         Me.ToolStripMenuItem29.Text = "Post OR"
         '
         'ToolStripSeparator14
         '
         Me.ToolStripSeparator14.Name = "ToolStripSeparator14"
-        Me.ToolStripSeparator14.Size = New System.Drawing.Size(223, 6)
+        Me.ToolStripSeparator14.Size = New System.Drawing.Size(228, 6)
         '
         'CancelledToolStripMenuItem
         '
         Me.CancelledToolStripMenuItem.Name = "CancelledToolStripMenuItem"
-        Me.CancelledToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.CancelledToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
         Me.CancelledToolStripMenuItem.Text = "Cancelled OR"
         '
         'ToolStripSeparator17
         '
         Me.ToolStripSeparator17.Name = "ToolStripSeparator17"
-        Me.ToolStripSeparator17.Size = New System.Drawing.Size(223, 6)
+        Me.ToolStripSeparator17.Size = New System.Drawing.Size(228, 6)
         '
         'DailyCollectionReportToolStripMenuItem
         '
         Me.DailyCollectionReportToolStripMenuItem.Name = "DailyCollectionReportToolStripMenuItem"
-        Me.DailyCollectionReportToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.DailyCollectionReportToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
         Me.DailyCollectionReportToolStripMenuItem.Text = "Daily Collection Report"
         '
         'OpenCRAndORWCalcToolStripMenuItem
         '
         Me.OpenCRAndORWCalcToolStripMenuItem.Name = "OpenCRAndORWCalcToolStripMenuItem"
-        Me.OpenCRAndORWCalcToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.OpenCRAndORWCalcToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
         Me.OpenCRAndORWCalcToolStripMenuItem.Text = "Open CR and OR W/ Calc"
         '
         'CalculatorToolStripMenuItem
         '
         Me.CalculatorToolStripMenuItem.Name = "CalculatorToolStripMenuItem"
-        Me.CalculatorToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.CalculatorToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
         Me.CalculatorToolStripMenuItem.Text = "Calculator"
         '
         'TempCRToolStripMenuItem
         '
         Me.TempCRToolStripMenuItem.Name = "TempCRToolStripMenuItem"
-        Me.TempCRToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.TempCRToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
         Me.TempCRToolStripMenuItem.Text = "Edit OR Number"
+        '
+        'UnpaidConcessionairesToolStripMenuItem
+        '
+        Me.UnpaidConcessionairesToolStripMenuItem.Name = "UnpaidConcessionairesToolStripMenuItem"
+        Me.UnpaidConcessionairesToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
+        Me.UnpaidConcessionairesToolStripMenuItem.Text = "Unpaid Concessionaires"
         '
         'MenuStrip1
         '
@@ -745,7 +759,7 @@ Partial Class eBACSmain
         '
         Me.CancelledBillsToolStripMenuItem.Name = "CancelledBillsToolStripMenuItem"
         Me.CancelledBillsToolStripMenuItem.Size = New System.Drawing.Size(364, 22)
-        Me.CancelledBillsToolStripMenuItem.Text = "Cancelled Bills Report"
+        Me.CancelledBillsToolStripMenuItem.Text = "Cancel Membership"
         '
         'WriteOffReportToolStripMenuItem
         '
@@ -759,6 +773,12 @@ Partial Class eBACSmain
         Me.MonthlyPromissoryAndOtherAdjustmentReportToolStripMenuItem.Name = "MonthlyPromissoryAndOtherAdjustmentReportToolStripMenuItem"
         Me.MonthlyPromissoryAndOtherAdjustmentReportToolStripMenuItem.Size = New System.Drawing.Size(364, 22)
         Me.MonthlyPromissoryAndOtherAdjustmentReportToolStripMenuItem.Text = "Monthly Promissory and Other Adjustment Report"
+        '
+        'CancelBillChargesToolStripMenuItem
+        '
+        Me.CancelBillChargesToolStripMenuItem.Name = "CancelBillChargesToolStripMenuItem"
+        Me.CancelBillChargesToolStripMenuItem.Size = New System.Drawing.Size(364, 22)
+        Me.CancelBillChargesToolStripMenuItem.Text = "Cancel Bill Charges"
         '
         'cmsSettings
         '
@@ -868,17 +888,11 @@ Partial Class eBACSmain
         Me.Label2.TabIndex = 22
         Me.Label2.Text = "Welcome"
         '
-        'CancelBillChargesToolStripMenuItem
+        'MonthlyCollectionReportToolStripMenuItem
         '
-        Me.CancelBillChargesToolStripMenuItem.Name = "CancelBillChargesToolStripMenuItem"
-        Me.CancelBillChargesToolStripMenuItem.Size = New System.Drawing.Size(364, 22)
-        Me.CancelBillChargesToolStripMenuItem.Text = "Cancel Bill Charges"
-        '
-        'UnpaidConcessionairesToolStripMenuItem
-        '
-        Me.UnpaidConcessionairesToolStripMenuItem.Name = "UnpaidConcessionairesToolStripMenuItem"
-        Me.UnpaidConcessionairesToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
-        Me.UnpaidConcessionairesToolStripMenuItem.Text = "Unpaid Concessionaires"
+        Me.MonthlyCollectionReportToolStripMenuItem.Name = "MonthlyCollectionReportToolStripMenuItem"
+        Me.MonthlyCollectionReportToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
+        Me.MonthlyCollectionReportToolStripMenuItem.Text = "Monthly Collection Report"
         '
         'eBACSmain
         '
@@ -1019,4 +1033,6 @@ Partial Class eBACSmain
     Friend WithEvents EditORNumberToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CancelBillChargesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UnpaidConcessionairesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReconnectionListToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MonthlyCollectionReportToolStripMenuItem As ToolStripMenuItem
 End Class

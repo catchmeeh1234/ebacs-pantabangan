@@ -244,7 +244,7 @@
                                             "", "", billzone(y)("LastMeterReading"), 0,
                                             0, "", createReadingDate.Text, "Pending", billzone(y)("RateSchedule"),
                                             billzone(y)("MeterSize"), billzone(y)("Zone"), billzone(y)("IsSenior"), 0, 0, "No", createReader.Text.ToString.Replace("'", "''"),
-                                            billzone(y)("AdvancePayment"), billzone(y)("Averagee"), 0, billzone(y)("DontCharge"), "No", billzone(y)("MeterNo"), arrearsbill + otherarrears, arrearscharge, "", "")
+                                            billzone(y)("AdvancePayment"), billzone(y)("Averagee"), 0, billzone(y)("DontCharge"), "No", billzone(y)("MeterNo"), arrearsbill + otherarrears, arrearscharge, "", "", billzone(y)("isSpecialDiscount"))
 
                                 Else
                                     'MsgBox("meron")
@@ -310,7 +310,7 @@
                 stracs = "insert into Bills ([BillNo], [AccountNumber], [CustomerName],[CustomerAddress],[DateFrom],[PreviousReading]
                     ,[Reading],[Consumption],[BillingDate],[BillStatus],[RateSchedule],[MeterSize],[Zone],[isSenior]
                     ,[AmountDue],[PenaltyAfterDue],[IsPaid],[MeterReader],[AdvancePayment],[AverageCons],[Discount],[DontCharge],[Cancelled],[MeterNumber]
-                    ,[ArrearsBill],[ArrearsCharges],[CreatedBy],[DateCreated], [ArrearsInterest]) values (" _
+                    ,[ArrearsBill],[ArrearsCharges],[CreatedBy],[DateCreated], [ArrearsInterest], [isSpecialDiscount]) values (" _
                    & billno & ", " _
                    & "'" & createPreparedBills.Rows(x).Cells(0).Value & "', " _
                    & "'" & createPreparedBills.Rows(x).Cells(1).Value.ToString.Replace("'", "''") & "', " _
@@ -337,7 +337,7 @@
                    & "'" & createPreparedBills.Rows(x).Cells(25).Value.ToString.Replace("'", "''") & "', " _
                    & Val(createPreparedBills.Rows(x).Cells(26).Value) & ", " _
                    & Val(createPreparedBills.Rows(x).Cells(27).Value) & ", '" _
-                   & My.Settings.Nickname & "', '" & Format(Now, "yyyy-MM-dd") & "', " & Val(createPreparedBills.Rows(x).Cells(29).Value) & ")"
+                   & My.Settings.Nickname & "', '" & Format(Now, "yyyy-MM-dd") & "', " & Val(createPreparedBills.Rows(x).Cells(29).Value) & ", '" & createPreparedBills.Rows(x).Cells(30).Value & "')"
 
                 acscmd.CommandText = stracs
                 acscmd.Connection = acsconn
@@ -463,12 +463,12 @@
                        BILLID,BillNo,AccountNumber,CustomerName,CustomerAddress,DateFrom,ReadingDate,DueDate,LastDayNOPen,DiscDate 
                       ,PreviousReading,Reading,BillingDate,ForTheMonthOf,BillStatus,RateSchedule,MeterSize,Zone,isSenior,Consumption,AmountDue 
                       ,PenaltyAfterDue,IsPaid,MeterReader,AdvancePayment,AverageCons,LastCons,Discount,Adjustment,DontCharge,Cancelled,MeterNumber 
-                      ,ArrearsBill,ArrearsCharges,CRNo,IsCollectionCreated,isPromisorry,PromisorryNo,CreatedBy,PostedBy,DateCreated,DatePaid,Writeoffref) 
+                      ,ArrearsBill,ArrearsCharges,CRNo,IsCollectionCreated,isPromisorry,PromisorryNo,CreatedBy,PostedBy,DateCreated,DatePaid,Writeoffref, isSpecialDiscount) 
                       SELECT 
                        BILLID,BillNo,AccountNumber,CustomerName,CustomerAddress,DateFrom,ReadingDate,DueDate,LastDayNOPen,DiscDate 
                       ,PreviousReading,Reading,BillingDate,ForTheMonthOf,BillStatus,RateSchedule,MeterSize,Zone,isSenior,Consumption,AmountDue 
                       ,PenaltyAfterDue,IsPaid,MeterReader,AdvancePayment,AverageCons,LastCons,Discount,Adjustment,DontCharge,Cancelled,MeterNumber 
-                      ,ArrearsBill,ArrearsCharges,CRNo,IsCollectionCreated,isPromisorry,PromisorryNo,CreatedBy,PostedBy,DateCreated,DatePaid,Writeoffref 
+                      ,ArrearsBill,ArrearsCharges,CRNo,IsCollectionCreated,isPromisorry,PromisorryNo,CreatedBy,PostedBy,DateCreated,DatePaid,Writeoffref, isSpecialDiscount 
                       FROM Bills where BillStatus = 'Pending' and Zone in (" & zones & ") and BillingDate = '" & createReadingDate.Text & "'"
 
             acscmd.CommandText = stracs

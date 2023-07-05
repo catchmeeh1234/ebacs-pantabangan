@@ -15,13 +15,13 @@
 
         If billZone.Text = "All" Then
 
-            stracs = "select BillNo,ReadingDate,AccountNumber,CustomerName,Reading,Consumption,Discount,AdvancePayment,AmountDue,BillStatus,PenaltyAfterDue,AverageCons 
+            stracs = "select BillNo,ReadingDate,AccountNumber,CustomerName,Reading,Consumption,Discount,AdvancePayment,AmountDue,BillStatus,PenaltyAfterDue,AverageCons,specialDiscount 
                     from Bills where Cancelled = 'No' and Consumption >= 0 and AmountDue <> 0 and Reading >= 0 and 
                     BIllingDate = '" & billMonth.Text & " " & billYear.Text & "' and BillStatus = 'Pending' order by BILLID"
 
         Else
 
-            stracs = "select BillNo,ReadingDate,AccountNumber,CustomerName,Reading,Consumption,Discount,AdvancePayment,AmountDue,BillStatus,PenaltyAfterDue,AverageCons 
+            stracs = "select BillNo,ReadingDate,AccountNumber,CustomerName,Reading,Consumption,Discount,AdvancePayment,AmountDue,BillStatus,PenaltyAfterDue,AverageCons,specialDiscount 
                     from Bills where Cancelled = 'No' and Consumption >= 0 and AmountDue <> 0 and Reading >= 0 and BillStatus = 'Pending' and 
                     Zone = '" & billZone.Text.ToString.Replace("'", "''") & "' and BIllingDate = '" & billMonth.Text & " " & billYear.Text & "' order by BILLID"
 
@@ -39,14 +39,14 @@
             If i Mod 2 = 0 Then
                 billList.Rows.Add(sqldataZone(i)("BillNo"), Format(sqldataZone(i)("ReadingDate"), "short date"), sqldataZone(i)("AccountNumber"),
                               sqldataZone(i)("CustomerName"), sqldataZone(i)("Reading"), sqldataZone(i)("Consumption"),
-                              Format(Val(sqldataZone(i)("Discount")) + Val(sqldataZone(i)("AdvancePayment")), "standard"),
+                              Format(Val(sqldataZone(i)("Discount")) + Val(sqldataZone(i)("AdvancePayment")) + Val(sqldataZone(i)("specialDiscount")), "standard"),
                               Format(Val(sqldataZone(i)("AmountDue")), "Standard"), sqldataZone(i)("BillStatus"), 0, sqldataZone(i)("PenaltyAfterDue"), sqldataZone(i)("AverageCons"), 0, Format(Val(sqldataZone(i)("AdvancePayment")), "standard"))
                 billList.Rows(i).DefaultCellStyle.BackColor = Color.Gainsboro
 
             Else
                 billList.Rows.Add(sqldataZone(i)("BillNo"), Format(sqldataZone(i)("ReadingDate"), "short date"), sqldataZone(i)("AccountNumber"),
                               sqldataZone(i)("CustomerName"), sqldataZone(i)("Reading"), sqldataZone(i)("Consumption"),
-                              Format(Val(sqldataZone(i)("Discount")) + Val(sqldataZone(i)("AdvancePayment")), "standard"),
+                              Format(Val(sqldataZone(i)("Discount")) + Val(sqldataZone(i)("AdvancePayment")) + Val(sqldataZone(i)("specialDiscount")), "standard"),
                               Format(Val(sqldataZone(i)("AmountDue")), "Standard"), sqldataZone(i)("BillStatus"), 0, sqldataZone(i)("PenaltyAfterDue"), sqldataZone(i)("AverageCons"), 0, Format(Val(sqldataZone(i)("AdvancePayment")), "standard"))
                 billList.Rows(i).DefaultCellStyle.BackColor = Color.White
             End If
@@ -78,8 +78,8 @@
 
         loadzones()
 
-
-
+        Cursor = Cursors.Default
+        prog.Visible = False
     End Sub
 
     Sub loadzones()
@@ -168,7 +168,12 @@
     End Sub
 
     Private Sub billSearch_Click(sender As Object, e As EventArgs) Handles billPost.Click
+        billPost.Enabled = False
+
         Cursor = Cursors.WaitCursor
+        prog.Visible = True
+        prog.Value = 0
+
         Try
             If acsconn.State = ConnectionState.Closed Then acsconn.Open()
         Catch ex As Exception
@@ -178,6 +183,8 @@
         If billList.Rows.Count > 0 Then
 
             For x = 0 To billList.Rows.Count - 1
+                prog.Minimum = 0
+                prog.Maximum = billList.Rows.Count
 
                 If billList.Rows(x).Cells(9).Value = -1 Then
 
@@ -223,7 +230,7 @@
                     gettotalbillbalance.Clear()
                     If acsconn.State = ConnectionState.Closed Then acsconn.Open()
                     'stracs = "select SUM(AmountDue), S from Bills where AccountNumber = '" & billList.Rows(x).Cells(2).Value & "' and BillStatus = 'Posted' and Cancelled = 'No' and IsPaid = 'No'"
-                    stracs = "select SUM(AmountDue) as amountdue, SUm(AdvancePayment) as advance, Sum(Discount) as discount, SUm(PenaltyAfterDue) as penalty, SUm(Adjustment) as Adjustment from Bills where AccountNumber = '" & billList.Rows(x).Cells(2).Value & "' and BillStatus = 'Posted' and Cancelled = 'No' and IsPaid = 'No' and isPromisorry = 'No'"
+                    stracs = "select SUM(AmountDue) as amountdue, SUm(AdvancePayment) as advance, SUM(specialDiscount) as specialDisc, Sum(Discount) as discount, SUm(PenaltyAfterDue) as penalty, SUm(Adjustment) as Adjustment from Bills where AccountNumber = '" & billList.Rows(x).Cells(2).Value & "' and BillStatus = 'Posted' and Cancelled = 'No' and IsPaid = 'No' and isPromisorry = 'No'"
                     acscmd.Connection = acsconn
                     acscmd.CommandText = stracs
                     acsda.SelectCommand = acscmd
@@ -232,7 +239,7 @@
                     If gettotalbillbalance.Rows.Count = 0 Then
                         totalbillbalance = 0
                     Else
-                        totalbillbalance = Val(gettotalbillbalance(0)("amountdue") + gettotalbillbalance(0)("penalty") + gettotalbillbalance(0)("Adjustment")) - (Val(gettotalbillbalance(0)("advance") + gettotalbillbalance(0)("discount")))
+                        totalbillbalance = Val(gettotalbillbalance(0)("amountdue") + gettotalbillbalance(0)("penalty") + gettotalbillbalance(0)("Adjustment")) - (Val(gettotalbillbalance(0)("advance") + gettotalbillbalance(0)("specialDisc") + gettotalbillbalance(0)("discount")))
 
                     End If
 
@@ -418,7 +425,7 @@
                 Else
 
                 End If
-
+                prog.Value = x
             Next
 
             searchbyzonedate()
@@ -429,6 +436,9 @@
 
         End If
         Cursor = Cursors.Default
+        prog.Visible = False
+        billPost.Enabled = True
+
     End Sub
 
     Public MoveFormbillingpost As Boolean

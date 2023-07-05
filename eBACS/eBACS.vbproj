@@ -503,10 +503,22 @@
     <Compile Include="Reports\MasterListofServiceConnections.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reports\MonthlyCollectionReport.Designer.vb">
+      <DependentUpon>MonthlyCollectionReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MonthlyCollectionReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reports\OtherAdjustmentReport.Designer.vb">
       <DependentUpon>OtherAdjustmentReport.vb</DependentUpon>
     </Compile>
     <Compile Include="Reports\OtherAdjustmentReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReconnectionList.Designer.vb">
+      <DependentUpon>ReconnectionList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReconnectionList.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reports\ReportofCollectionsandDeposits.designer.vb">
@@ -635,6 +647,7 @@
     <EmbeddedResource Include="Billing\Online Billing.resx">
       <DependentUpon>Online Billing.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\MonthlyCollectionReport.rdlc" />
     <EmbeddedResource Include="Collections\uploadpayment.resx">
       <DependentUpon>uploadpayment.vb</DependentUpon>
     </EmbeddedResource>
@@ -802,8 +815,15 @@
     <EmbeddedResource Include="Reports\MasterListofServiceConnections.resx">
       <DependentUpon>MasterListofServiceConnections.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MonthlyCollectionReport.resx">
+      <DependentUpon>MonthlyCollectionReport.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\OtherAdjustmentReport.resx">
       <DependentUpon>OtherAdjustmentReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\ReconnectionList.rdlc" />
+    <EmbeddedResource Include="Reports\ReconnectionList.resx">
+      <DependentUpon>ReconnectionList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ReportofCollectionsandDeposits.resx">
       <DependentUpon>ReportofCollectionsandDeposits.vb</DependentUpon>
@@ -817,7 +837,7 @@
     <EmbeddedResource Include="Reports\SeniorCitizenDiscounts.resx">
       <DependentUpon>SeniorCitizenDiscounts.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\UnpaidConcessionairesBill.rdlc" />
+    <EmbeddedResource Include="bin\Debug\UnpaidConcessionairesBill.rdlc" />
     <EmbeddedResource Include="Reports\UnpaidConcessionairesReport.resx">
       <DependentUpon>UnpaidConcessionairesReport.vb</DependentUpon>
     </EmbeddedResource>

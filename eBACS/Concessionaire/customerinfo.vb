@@ -145,6 +145,7 @@ Public Class customerinfo
 
         chkSenior.Enabled = False
         chkDontCharge.Enabled = False
+        isSpecialDiscount.Enabled = False
 
     End Sub
 
@@ -169,6 +170,7 @@ Public Class customerinfo
 
         chkSenior.Enabled = True
         chkDontCharge.Enabled = True
+        isSpecialDiscount.Enabled = True
 
     End Sub
 
@@ -392,49 +394,56 @@ Public Class customerinfo
 
                 txtContactNo.Text = sqldataAccounts.Rows(0)("ContactNo")
 
-                    txtMeterNo.Text = sqldataAccounts.Rows(0)("MeterNo")
-                    txtSequenceNo.Text = sqldataAccounts.Rows(0)("ReadingSeqNo")
-                    cmbZone.Text = sqldataAccounts.Rows(0)("Zone")
-                    cmbClass.Text = sqldataAccounts.Rows(0)("RateSchedule")
+                txtMeterNo.Text = sqldataAccounts.Rows(0)("MeterNo")
+                txtSequenceNo.Text = sqldataAccounts.Rows(0)("ReadingSeqNo")
+                cmbZone.Text = sqldataAccounts.Rows(0)("Zone")
+                cmbClass.Text = sqldataAccounts.Rows(0)("RateSchedule")
 
-                    cmbMeterSize.Text = sqldataAccounts.Rows(0)("MeterSize")
-                    dateCreated.Text = Format(sqldataAccounts.Rows(0)("DateCreated"), "short date")
+                cmbMeterSize.Text = sqldataAccounts.Rows(0)("MeterSize")
+                dateCreated.Text = Format(sqldataAccounts.Rows(0)("DateCreated"), "short date")
 
-                    If sqldataAccounts.Rows(0)("DateInstalled") Is DBNull.Value Then
-                        txtLandMark.Text = Now
-                    Else
-                        dateInstalled.Text = Format(sqldataAccounts.Rows(0)("DateInstalled"), "short date")
-                    End If
+                If sqldataAccounts.Rows(0)("DateInstalled") Is DBNull.Value Then
+                    txtLandMark.Text = Now
+                Else
+                    dateInstalled.Text = Format(sqldataAccounts.Rows(0)("DateInstalled"), "short date")
+                End If
 
-                    lblStatus.Text = sqldataAccounts.Rows(0)("CustomerStatus")
+                lblStatus.Text = sqldataAccounts.Rows(0)("CustomerStatus")
 
-                    Select Case sqldataAccounts.Rows(0)("CustomerStatus")
-                        Case "Active"
-                            lblStatus.ForeColor = Color.Green
-                        Case "Don't Bill"
-                            lblStatus.ForeColor = Color.Orange
-                        Case "Disconnected"
-                            lblStatus.ForeColor = Color.Red
-                        Case "Closed"
-                            lblStatus.ForeColor = Color.Black
-                    End Select
+                Select Case sqldataAccounts.Rows(0)("CustomerStatus")
+                    Case "Active"
+                        lblStatus.ForeColor = Color.Green
+                    Case "Don't Bill"
+                        lblStatus.ForeColor = Color.Orange
+                    Case "Disconnected"
+                        lblStatus.ForeColor = Color.Red
+                    Case "Closed"
+                        lblStatus.ForeColor = Color.Black
+                End Select
 
-                    If sqldataAccounts.Rows(0)("IsSenior") = "Yes" Then
+                If sqldataAccounts.Rows(0)("IsSenior") = "Yes" Then
 
-                        chkSenior.CheckState = CheckState.Checked
-                    Else
-                        chkSenior.CheckState = CheckState.Unchecked
+                    chkSenior.CheckState = CheckState.Checked
+                Else
+                    chkSenior.CheckState = CheckState.Unchecked
 
-                    End If
+                End If
 
-                    If sqldataAccounts.Rows(0)("DontCharge") = "Yes" Then
+                If sqldataAccounts.Rows(0)("DontCharge") = "Yes" Then
 
-                        chkDontCharge.CheckState = CheckState.Checked
-                    Else
-                        chkDontCharge.CheckState = CheckState.Unchecked
-                    End If
+                    chkDontCharge.CheckState = CheckState.Checked
+                Else
+                    chkDontCharge.CheckState = CheckState.Unchecked
+                End If
 
-                    txtLastReading.Text = sqldataAccounts.Rows(0)("LastMeterReading")
+                If sqldataAccounts.Rows(0)("isSpecialDiscount") = "Yes" Then
+
+                    isSpecialDiscount.CheckState = CheckState.Checked
+                Else
+                    isSpecialDiscount.CheckState = CheckState.Unchecked
+                End If
+
+                txtLastReading.Text = sqldataAccounts.Rows(0)("LastMeterReading")
                     txtAveCons.Text = sqldataAccounts.Rows(0)("Averagee")
                 txtAdvance.Text = sqldataAccounts.Rows(0)("AdvancePayment")
 
@@ -902,7 +911,7 @@ Public Class customerinfo
                     Dim intValue As Integer
                     If Integer.TryParse(txtSequenceNo.Text, intValue) AndAlso intValue > 0 Then
 
-                        Dim senioryn, dontcharge As String
+                        Dim senioryn, dontcharge, specialyn As String
 
                         If chkSenior.CheckState = CheckState.Checked Then
                             senioryn = "Yes"
@@ -914,6 +923,12 @@ Public Class customerinfo
                             dontcharge = "Yes"
                         Else
                             dontcharge = "No"
+                        End If
+
+                        If isSpecialDiscount.CheckState = CheckState.Checked Then
+                            specialyn = "Yes"
+                        Else
+                            specialyn = "No"
                         End If
 
                         If concespic.Image Is Nothing Then
@@ -934,7 +949,8 @@ Public Class customerinfo
                                 & "[CompanyName] = '" & txtCompany.Text.ToString.Replace("'", "''").ToUpper & "', " _
                                 & "[LandMark] = '" & txtLandMark.Text.ToString.Replace("'", "''").ToUpper & "', " _
                                 & "[MeterSize] = '" & cmbMeterSize.Text.ToString.Replace("'", "''").ToUpper & "', " _
-                                & "PicturePath = '" & picpath & "' " _
+                                & "PicturePath = '" & picpath & "', " _
+                                & "[isSpecialDiscount] = '" & specialyn & "' " _
                                 & "where AccountNo = '" & txtAccountNo.Text.ToString.Replace("'", "''") & "'"
 
                             acscmd.Connection = acsconn
@@ -963,7 +979,8 @@ Public Class customerinfo
                                 & "[LandMark] = '" & txtLandMark.Text.ToString.Replace("'", "''").ToUpper & "', " _
                                 & "[MeterSize] = '" & cmbMeterSize.Text.ToString.Replace("'", "''").ToUpper & "', " _
                                 & "PicturePath = '" & picpath & "', " _
-                                & "ConsImage = @ConsImages " _
+                                & "ConsImage = @ConsImages, " _
+                                & "[isSpecialDiscount] = '" & specialyn & "' " _
                                 & "where AccountNo = '" & txtAccountNo.Text.ToString.Replace("'", "''") & "'"
 
                             Dim ms As New MemoryStream()

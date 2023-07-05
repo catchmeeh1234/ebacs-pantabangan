@@ -35,14 +35,6 @@ Partial Class billingpostbills
         Me.Label11 = New System.Windows.Forms.Label()
         Me.billMonth = New System.Windows.Forms.ComboBox()
         Me.billList = New System.Windows.Forms.DataGridView()
-        Me.billTotalbill = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.chkHighCons = New System.Windows.Forms.CheckBox()
-        Me.chkZero = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Column1 = New System.Windows.Forms.DataGridViewLinkColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -57,6 +49,15 @@ Partial Class billingpostbills
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column12 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.billTotalbill = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.chkHighCons = New System.Windows.Forms.CheckBox()
+        Me.chkZero = New System.Windows.Forms.CheckBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.prog = New System.Windows.Forms.ProgressBar()
         CType(Me.billList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -156,96 +157,6 @@ Partial Class billingpostbills
         Me.billList.RowHeadersVisible = False
         Me.billList.Size = New System.Drawing.Size(887, 404)
         Me.billList.TabIndex = 30
-        '
-        'billTotalbill
-        '
-        Me.billTotalbill.AutoSize = True
-        Me.billTotalbill.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.billTotalbill.Location = New System.Drawing.Point(762, 474)
-        Me.billTotalbill.Name = "billTotalbill"
-        Me.billTotalbill.Size = New System.Drawing.Size(0, 15)
-        Me.billTotalbill.TabIndex = 39
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(697, 474)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(59, 15)
-        Me.Label23.TabIndex = 38
-        Me.Label23.Text = "Total Bills:"
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.GroupBox1)
-        Me.Panel1.Controls.Add(Me.CheckBox1)
-        Me.Panel1.Controls.Add(Me.Label11)
-        Me.Panel1.Controls.Add(Me.billList)
-        Me.Panel1.Controls.Add(Me.billTotalbill)
-        Me.Panel1.Controls.Add(Me.billMonth)
-        Me.Panel1.Controls.Add(Me.Label23)
-        Me.Panel1.Controls.Add(Me.billYear)
-        Me.Panel1.Controls.Add(Me.billPost)
-        Me.Panel1.Controls.Add(Me.Label12)
-        Me.Panel1.Controls.Add(Me.billZone)
-        Me.Panel1.Location = New System.Drawing.Point(1, 38)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(909, 504)
-        Me.Panel1.TabIndex = 40
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.chkHighCons)
-        Me.GroupBox1.Controls.Add(Me.chkZero)
-        Me.GroupBox1.Location = New System.Drawing.Point(646, 3)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(252, 48)
-        Me.GroupBox1.TabIndex = 41
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Exclude from Posting"
-        '
-        'chkHighCons
-        '
-        Me.chkHighCons.AutoSize = True
-        Me.chkHighCons.Location = New System.Drawing.Point(120, 20)
-        Me.chkHighCons.Name = "chkHighCons"
-        Me.chkHighCons.Size = New System.Drawing.Size(126, 20)
-        Me.chkHighCons.TabIndex = 1
-        Me.chkHighCons.Text = "High Consumption"
-        Me.chkHighCons.UseVisualStyleBackColor = True
-        '
-        'chkZero
-        '
-        Me.chkZero.AutoSize = True
-        Me.chkZero.Location = New System.Drawing.Point(6, 20)
-        Me.chkZero.Name = "chkZero"
-        Me.chkZero.Size = New System.Drawing.Size(108, 20)
-        Me.chkZero.TabIndex = 0
-        Me.chkZero.Text = "0 Consumption"
-        Me.chkZero.UseVisualStyleBackColor = True
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(541, 23)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(76, 20)
-        Me.CheckBox1.TabIndex = 40
-        Me.CheckBox1.Text = "Check All"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(12, 11)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(65, 17)
-        Me.Label1.TabIndex = 41
-        Me.Label1.Text = "Post Bills"
         '
         'Column1
         '
@@ -349,6 +260,104 @@ Partial Class billingpostbills
         Me.Column14.HeaderText = "advancepayment"
         Me.Column14.Name = "Column14"
         '
+        'billTotalbill
+        '
+        Me.billTotalbill.AutoSize = True
+        Me.billTotalbill.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.billTotalbill.Location = New System.Drawing.Point(762, 474)
+        Me.billTotalbill.Name = "billTotalbill"
+        Me.billTotalbill.Size = New System.Drawing.Size(0, 15)
+        Me.billTotalbill.TabIndex = 39
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(697, 474)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(59, 15)
+        Me.Label23.TabIndex = 38
+        Me.Label23.Text = "Total Bills:"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.prog)
+        Me.Panel1.Controls.Add(Me.GroupBox1)
+        Me.Panel1.Controls.Add(Me.CheckBox1)
+        Me.Panel1.Controls.Add(Me.Label11)
+        Me.Panel1.Controls.Add(Me.billList)
+        Me.Panel1.Controls.Add(Me.billTotalbill)
+        Me.Panel1.Controls.Add(Me.billMonth)
+        Me.Panel1.Controls.Add(Me.Label23)
+        Me.Panel1.Controls.Add(Me.billYear)
+        Me.Panel1.Controls.Add(Me.billPost)
+        Me.Panel1.Controls.Add(Me.Label12)
+        Me.Panel1.Controls.Add(Me.billZone)
+        Me.Panel1.Location = New System.Drawing.Point(1, 38)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(909, 504)
+        Me.Panel1.TabIndex = 40
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.chkHighCons)
+        Me.GroupBox1.Controls.Add(Me.chkZero)
+        Me.GroupBox1.Location = New System.Drawing.Point(646, 3)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(252, 48)
+        Me.GroupBox1.TabIndex = 41
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Exclude from Posting"
+        '
+        'chkHighCons
+        '
+        Me.chkHighCons.AutoSize = True
+        Me.chkHighCons.Location = New System.Drawing.Point(120, 20)
+        Me.chkHighCons.Name = "chkHighCons"
+        Me.chkHighCons.Size = New System.Drawing.Size(126, 20)
+        Me.chkHighCons.TabIndex = 1
+        Me.chkHighCons.Text = "High Consumption"
+        Me.chkHighCons.UseVisualStyleBackColor = True
+        '
+        'chkZero
+        '
+        Me.chkZero.AutoSize = True
+        Me.chkZero.Location = New System.Drawing.Point(6, 20)
+        Me.chkZero.Name = "chkZero"
+        Me.chkZero.Size = New System.Drawing.Size(108, 20)
+        Me.chkZero.TabIndex = 0
+        Me.chkZero.Text = "0 Consumption"
+        Me.chkZero.UseVisualStyleBackColor = True
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(541, 23)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(76, 20)
+        Me.CheckBox1.TabIndex = 40
+        Me.CheckBox1.Text = "Check All"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(12, 11)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(65, 17)
+        Me.Label1.TabIndex = 41
+        Me.Label1.Text = "Post Bills"
+        '
+        'prog
+        '
+        Me.prog.Location = New System.Drawing.Point(236, 470)
+        Me.prog.Name = "prog"
+        Me.prog.Size = New System.Drawing.Size(430, 23)
+        Me.prog.TabIndex = 42
+        '
         'billingpostbills
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -404,4 +413,5 @@ Partial Class billingpostbills
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
     Friend WithEvents Column12 As DataGridViewCheckBoxColumn
     Friend WithEvents Column14 As DataGridViewTextBoxColumn
+    Friend WithEvents prog As ProgressBar
 End Class

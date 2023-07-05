@@ -1235,7 +1235,6 @@ D:\miguel\pant\eBACS\eBACS\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resource
 D:\miguel\pant\eBACS\eBACS\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 D:\miguel\pant\eBACS\eBACS\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\miguel\pant\eBACS\eBACS\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.vbprojAssemblyReference.cache
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.vbproj.ResolveComReference.cache
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.billcompute.resources
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.CancelBillCharges.resources
@@ -1294,7 +1293,9 @@ D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.LedgerReport.resources
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.ListofActiveConnection.resources
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.ListofPenaltyCharges.resources
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.MasterListofServiceConnections.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.MonthlyCollectionReport.resources
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.OtherAdjustmentReport.resources
+D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.ReconnectionList.resources
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.ReportofCollectionsandDeposits.resources
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.reprintBIllsReport.resources
 D:\miguel\pant\eBACS\eBACS\obj\Debug\eBACS.ScheduleOfAR.resources

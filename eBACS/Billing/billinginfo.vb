@@ -390,7 +390,7 @@
                     End If
 
                     If IsDBNull(sqldataBilling(0)("LastDayNoPen")) = True Then
-                        Dim lastDayNoPen As DateTime = Date.Parse(sqldataBilling(0)("ReadingDate")).AddDays(11)
+                        Dim lastDayNoPen As DateTime = Date.Parse(sqldataBilling(0)("ReadingDate")).AddDays(10)
 
                         If lastDayNoPen.DayOfWeek = DayOfWeek.Saturday Then
                             lastDayNoPen = lastDayNoPen.AddDays(2) ' Move to Monday
@@ -404,7 +404,7 @@
                     End If
 
                     If IsDBNull(sqldataBilling(0)("DueDate")) = True Then
-                        Dim dueDate As DateTime = Date.Parse(sqldataBilling(0)("ReadingDate")).AddDays(11)
+                        Dim dueDate As DateTime = Date.Parse(sqldataBilling(0)("ReadingDate")).AddDays(10)
 
                         If dueDate.DayOfWeek = DayOfWeek.Saturday Then
                             dueDate = dueDate.AddDays(2) ' Move to Monday
@@ -442,6 +442,12 @@
                         billdontcharge.CheckState = CheckState.Unchecked
                     End If
 
+                    If sqldataBilling(0)("isSpecialDiscount") = "Yes" Then
+                        specialDiscount.CheckState = CheckState.Checked
+                    Else
+                        specialDiscount.CheckState = CheckState.Unchecked
+                    End If
+
                     If sqldataBilling(0)("Cancelled") = "Yes" Then
                         billcancelled.CheckState = CheckState.Checked
                     Else
@@ -450,6 +456,8 @@
 
                     billamountdue.Text = Format(sqldataBilling(0)("AmountDue"), "standard")
                     billdiscount.Text = Format(sqldataBilling(0)("Discount"), "standard")
+                    tbBillSpecialDisc.Text = Format(sqldataBilling(0)("specialDiscount"), "standard")
+
                     billPenalty.Text = Format(sqldataBilling(0)("PenaltyAfterDue"), "standard")
                     billadvancepayment.Text = Format(sqldataBilling(0)("AdvancePayment"), "standard")
 
@@ -704,7 +712,7 @@
         billdatelastday.Enabled = True
         meterreader.Enabled = True
 
-        Dim date_to As DateTime = billdateto.Value.AddDays(11)
+        Dim date_to As DateTime = billdateto.Value.AddDays(10)
 
         If date_to.DayOfWeek = DayOfWeek.Saturday Then
             date_to = date_to.AddDays(2) ' Move to Monday
@@ -791,6 +799,13 @@
                                 billdontcharge.CheckState = CheckState.Checked
                             Else
                                 billdontcharge.CheckState = CheckState.Unchecked
+                            End If
+
+                            If sqldataBilling.Rows(0)("isSpecialDiscount") = "Yes" Then
+
+                                specialDiscount.CheckState = CheckState.Checked
+                            Else
+                                specialDiscount.CheckState = CheckState.Unchecked
                             End If
 
                             loadreadersnew()
@@ -995,7 +1010,7 @@
 
             If lblMode.Text = "Update Mode" Then
 
-                Dim date_to As DateTime = billdateto.Value.AddDays(11)
+                Dim date_to As DateTime = billdateto.Value.AddDays(10)
 
                 If date_to.DayOfWeek = DayOfWeek.Saturday Then
                     date_to = date_to.AddDays(2) ' Move to Monday
@@ -1015,7 +1030,7 @@
 
                     billCovered.Text = MonthName(12) & " " & (Year(billdateto.Value)) - 1
 
-                    Dim date_to As DateTime = billdateto.Value.AddDays(11)
+                    Dim date_to As DateTime = billdateto.Value.AddDays(10)
 
                     If date_to.DayOfWeek = DayOfWeek.Saturday Then
                         date_to = date_to.AddDays(2) ' Move to Monday
@@ -1028,7 +1043,7 @@
                 Else
                     billCovered.Text = MonthName(Month(billdateto.Value) - 1) & " " & Year(billdateto.Value)
 
-                    Dim date_to As DateTime = billdateto.Value.AddDays(11)
+                    Dim date_to As DateTime = billdateto.Value.AddDays(10)
 
                     If date_to.DayOfWeek = DayOfWeek.Saturday Then
                         date_to = date_to.AddDays(2) ' Move to Monday
@@ -1095,9 +1110,7 @@
 
         Next
 
-
-
-        totalamountdue = (Double.Parse(totalarrear) + Double.Parse(totalcharges) + Double.Parse(billamountdue.Text) + Double.Parse(billPenalty.Text) + Double.Parse(billAdjustment.Text) + Double.Parse(totalothers)) - (Double.Parse(billdiscount.Text) + Double.Parse(billadvancepayment.Text))
+        totalamountdue = (Double.Parse(totalarrear) + Double.Parse(totalcharges) + Double.Parse(billamountdue.Text) + Double.Parse(billPenalty.Text) + Double.Parse(billAdjustment.Text) + Double.Parse(totalothers)) - (Double.Parse(billdiscount.Text) + Double.Parse(tbBillSpecialDisc.Text) + Double.Parse(billadvancepayment.Text))
 
         billtotalamount.Text = Format(totalamountdue, "Standard")
 
@@ -1171,7 +1184,7 @@
 
                                     billBillno.Text = sqldataBillno.Rows(0)("number") + 1
 
-                                    Dim issenior, dontcharge As String
+                                    Dim issenior, dontcharge, specialdiscYN As String
 
                                     If billsenior.CheckState = CheckState.Checked Then
                                         issenior = "Yes"
@@ -1185,6 +1198,12 @@
                                         dontcharge = "No"
                                     End If
 
+                                    If specialDiscount.CheckState = CheckState.Checked Then
+                                        specialdiscYN = "Yes"
+                                    Else
+                                        specialdiscYN = "No"
+                                    End If
+
                                     Dim totalarrears As Double = 0
 
                                     For t = 0 To billarrears.Rows.Count - 1
@@ -1195,7 +1214,7 @@
                                         totalarrears = Val(totalarrears) + Val(billpromisorry.Rows(t).Cells(2).Value)
                                     Next
 
-                                    Dim disco_date As DateTime = billdateto.Value.AddDays(11)
+                                    Dim disco_date As DateTime = billdateto.Value.AddDays(10)
 
                                     If disco_date.DayOfWeek = DayOfWeek.Saturday Then
                                         disco_date = disco_date.AddDays(2) ' Move to Monday
@@ -1207,7 +1226,7 @@
                                     stracs = "insert into Bills (BillNo, AccountNumber, CustomerName, CustomerAddress, DateFrom, ReadingDate, DueDate, PreviousReading, Reading, " _
                                         & "Consumption, LastDayNOPen, BillingDate, ForTheMonthOf, BillStatus, RateSchedule, MeterSize, Zone, isSenior," _
                                         & "AmountDue, PenaltyAfterDue, IsPaid, MeterReader, AdvancePayment, AverageCons, Discount, DontCharge, " _
-                                        & "Cancelled, MeterNumber, ArrearsBill, DiscDate, CreatedBy) values (" _
+                                        & "Cancelled, MeterNumber, ArrearsBill, DiscDate, CreatedBy, isSpecialDiscount, specialDiscount) values (" _
                                         & billBillno.Text & ", '" & billAccountNo.Text & "', '" & billName.Text.ToString.Replace("'", "''") & "', '" _
                                         & billAddress.Text.ToString.Replace("'", "''") & "', '" & Format(Date.Parse(billdatefrom.Value), "yyyy-MM-dd") & "', '" _
                                         & Format(Date.Parse(billdateto.Value), "yyyy-MM-dd") & "', '" & Format(Date.Parse(billdateduedate.Value), "yyyy-MM-dd") & "', " & billprevious.Text & ", " _
@@ -1216,7 +1235,7 @@
                                         & sqldataBilling.Rows(0)("Zone") & "', '" & issenior & "', " & Double.Parse(billamountdue.Text) & ", " & Double.Parse(billPenalty.Text) & ", 'No', '" & meterreader.Text & "', " _
                                         & Double.Parse(billadvancepayment.Text) & ", " & billaverage.Text & ", " & Double.Parse(billdiscount.Text) & ", '" & dontcharge & "', 'No', '" _
                                         & billMeterno.Text.ToString.Replace("'", "''") & "', " & totalarrears & ", '" & Format(disco_date, "yyyy-MM-dd") & "', '" _
-                                        & My.Settings.Nickname & "')"
+                                        & My.Settings.Nickname & "', '" & specialdiscYN & "', " & Double.Parse(tbBillSpecialDisc.Text) & ")"
                                     acscmd.CommandText = stracs
                                     acscmd.Connection = acsconn
                                     acscmd.ExecuteNonQuery()
@@ -1327,6 +1346,7 @@
                                 & "AmountDue = " & Double.Parse(billamountdue.Text) & ", " _
                                 & "PenaltyAfterDue = " & Double.Parse(billPenalty.Text) & ", " _
                                 & "Discount = " & Double.Parse(billdiscount.Text) & ", " _
+                                & "specialDiscount = " & Double.Parse(tbBillSpecialDisc.Text) & ", " _
                                 & "MeterReader = '" & meterreader.Text & "', " _
                                 & "DiscDate = '" & Format(Date.Parse(billdateduedate.Value), "yyyy-MM-dd") & "', " _
                                 & "DontCharge = '" & dontcharge & "' where BillNo = " & billBillno.Text
@@ -1565,6 +1585,15 @@
                 acsda.SelectCommand = acscmd
                 acsda.Fill(sqldataSenior)
 
+                Dim specialDiscount_dt As New DataTable
+                specialDiscount_dt.Clear()
+                If acsconn.State = ConnectionState.Closed Then acsconn.Open()
+                stracs = "select DiscountPercent, DiscountLimit from Discounts where DiscountName = 'Special Discount'"
+                acscmd.Connection = acsconn
+                acscmd.CommandText = stracs
+                acsda.SelectCommand = acscmd
+                acsda.Fill(specialDiscount_dt)
+
                 If billconsumption.Text > 50 Then
 
                     sqldatacons.Clear()
@@ -1588,6 +1617,11 @@
                         billdiscount.Text = "0.00"
                     End If
 
+                    If specialDiscount.CheckState = CheckState.Checked Then
+                        tbBillSpecialDisc.Text = Format(billamountdue.Text * specialDiscount_dt(0)("DiscountPercent"), "standard")
+                    Else
+                        tbBillSpecialDisc.Text = "0.00"
+                    End If
                     computetotalamount()
 
                 Else
@@ -1617,6 +1651,11 @@
                             billdiscount.Text = "0.00"
                         End If
 
+                        If specialDiscount.CheckState = CheckState.Checked Then
+                            tbBillSpecialDisc.Text = Format(billamountdue.Text * specialDiscount_dt(0)("DiscountPercent"), "standard")
+                        Else
+                            tbBillSpecialDisc.Text = "0.00"
+                        End If
                         computetotalamount()
                     End If
 
@@ -1645,6 +1684,11 @@
                             billdiscount.Text = "0.00"
                         End If
 
+                        If specialDiscount.CheckState = CheckState.Checked Then
+                            tbBillSpecialDisc.Text = Format(billamountdue.Text * specialDiscount_dt(0)("DiscountPercent"), "standard")
+                        Else
+                            tbBillSpecialDisc.Text = "0.00"
+                        End If
                         computetotalamount()
                     End If
 
@@ -1671,6 +1715,11 @@
                             billdiscount.Text = "0.00"
                         End If
 
+                        If specialDiscount.CheckState = CheckState.Checked Then
+                            tbBillSpecialDisc.Text = Format(billamountdue.Text * specialDiscount_dt(0)("DiscountPercent"), "standard")
+                        Else
+                            tbBillSpecialDisc.Text = "0.00"
+                        End If
                         computetotalamount()
 
                     End If
@@ -1699,6 +1748,11 @@
                             billdiscount.Text = "0.00"
                         End If
 
+                        If specialDiscount.CheckState = CheckState.Checked Then
+                            tbBillSpecialDisc.Text = Format(billamountdue.Text * specialDiscount_dt(0)("DiscountPercent"), "standard")
+                        Else
+                            tbBillSpecialDisc.Text = "0.00"
+                        End If
                         computetotalamount()
 
                     End If
@@ -1726,6 +1780,11 @@
                             billdiscount.Text = "0.00"
                         End If
 
+                        If specialDiscount.CheckState = CheckState.Checked Then
+                            tbBillSpecialDisc.Text = Format(billamountdue.Text * specialDiscount_dt(0)("DiscountPercent"), "standard")
+                        Else
+                            tbBillSpecialDisc.Text = "0.00"
+                        End If
                         computetotalamount()
 
                     End If
@@ -2149,7 +2208,7 @@
                 gettotalbillbalance.Clear()
                 If acsconn.State = ConnectionState.Closed Then acsconn.Open()
                 'stracs = "select SUM(AmountDue), S from Bills where AccountNumber = '" & billList.Rows(x).Cells(2).Value & "' and BillStatus = 'Posted' and Cancelled = 'No' and IsPaid = 'No'"
-                stracs = "select SUM(AmountDue) as amountdue, SUm(AdvancePayment) as advance, Sum(Discount) as discount, SUm(PenaltyAfterDue) as penalty from Bills where AccountNumber = '" & billAccountNo.Text & "' and BillStatus = 'Posted' and Cancelled = 'No' and IsPaid = 'No' and isPromisorry = 'No'"
+                stracs = "select SUM(AmountDue) as amountdue, SUm(AdvancePayment) as advance, Sum(specialDiscount) as specialdisc, Sum(Discount) as discount, SUm(PenaltyAfterDue) as penalty from Bills where AccountNumber = '" & billAccountNo.Text & "' and BillStatus = 'Posted' and Cancelled = 'No' and IsPaid = 'No' and isPromisorry = 'No'"
                 acscmd.Connection = acsconn
                 acscmd.CommandText = stracs
                 acsda.SelectCommand = acscmd
@@ -2158,7 +2217,7 @@
                 If gettotalbillbalance.Rows.Count = 0 Then
                     totalbillbalance = 0
                 Else
-                    totalbillbalance = Val(gettotalbillbalance(0)("amountdue") + gettotalbillbalance(0)("penalty")) - Val(gettotalbillbalance(0)("advance") + gettotalbillbalance(0)("discount"))
+                    totalbillbalance = Val(gettotalbillbalance(0)("amountdue") + gettotalbillbalance(0)("penalty")) - (Val(gettotalbillbalance(0)("advance") + gettotalbillbalance(0)("discount") + gettotalbillbalance(0)("specialdisc")))
 
                 End If
 
@@ -2209,7 +2268,7 @@
                         & "Billing', '" _
                         & billcurrent.Text & "', '" _
                         & billconsumption.Text & "', '" _
-                        & Format(Val(billdiscount.Text) + Val(billadvancepayment.Text), "standard") & "', '" _
+                        & Format(Val(billdiscount.Text) + Val(billadvancepayment.Text) + Val(tbBillSpecialDisc.Text), "standard") & "', '" _
                         & billamountdue.Text & "', '" _
                         & FormatNumber((Val(totalbillbalance) + Val(totalbillchargebalance) + Val(totalpn)) - Val(billPenalty.Text), UseParensForNegativeNumbers:=TriState.True) & "')"
 
@@ -2248,7 +2307,7 @@
                         & "Billing', '" _
                         & billcurrent.Text & "', '" _
                         & billconsumption.Text & "', '" _
-                        & Format(Val(billdiscount.Text) + Val(billadvancepayment.Text), "standard") & "', '" _
+                        & Format(Val(billdiscount.Text) + Val(billadvancepayment.Text) + Val(tbBillSpecialDisc.Text), "standard") & "', '" _
                         & billamountdue.Text & "', '" _
                         & FormatNumber(Val(totalbillbalance) + Val(totalbillchargebalance + Val(totalpn)), UseParensForNegativeNumbers:=TriState.True) & "')"
 
@@ -2677,43 +2736,87 @@
 
                 locationv = locationv + 15
 
-                e.Graphics.DrawString(reprintdata(0)("DateFrom"), headsubFont, Brushes.Black, 20, locationv)
+                'e.Graphics.DrawString(reprintdata(0)("DateFrom"), headsubFont, Brushes.Black, 20, locationv)
+                'e.Graphics.DrawString("|", headsubFont, Brushes.Black, 130, locationv)
+                'e.Graphics.DrawString(reprintdata(0)("ReadingDate"), headsubFont, Brushes.Black, 180, locationv)
+
+                Dim currentDate As DateTime = DateTime.Today
+                Dim currentMonth As Integer = currentDate.Month
+                Dim currentYear As Integer = currentDate.Year
+
+                Dim currentSched As DateTime
+                Dim prevSched As DateTime
+
+                Dim reading_schedule As New DataTable
+                reading_schedule.Rows.Clear()
+                stracs = "select * from Zone where ZoneName = '" & reprintdata(0)("Zone") & "' "
+                acscmd.CommandText = stracs
+                acscmd.Connection = acsconn
+                'acsdr = acscmd.ExecuteReader
+                acsda.SelectCommand = acscmd
+                acsda.Fill(reading_schedule)
+
+                currentSched = New DateTime(currentYear, currentMonth, reading_schedule(0)("reading_date"))
+                prevSched = New DateTime(currentYear, currentMonth, reading_schedule(0)("reading_date")).AddMonths(-1)
+
+                e.Graphics.DrawString(prevSched.ToString("MM/dd/yyyy"), headsubFont, Brushes.Black, 20, locationv)
                 e.Graphics.DrawString("|", headsubFont, Brushes.Black, 130, locationv)
-                e.Graphics.DrawString(reprintdata(0)("ReadingDate"), headsubFont, Brushes.Black, 180, locationv)
+                e.Graphics.DrawString(currentSched.ToString("MM/dd/yyyy"), headsubFont, Brushes.Black, 180, locationv)
+                Console.WriteLine(prevSched)
+                Console.WriteLine(currentSched)
 
                 locationv = locationv + 30
 
+                'e.Graphics.DrawString("Please Pay Before", headFont, Brushes.Black, 20, locationv)
+
+                'locationv = locationv + 15
+
                 e.Graphics.DrawString("Due Date", headsubFont, Brushes.Black, 20, locationv)
                 e.Graphics.DrawString("|", headsubFont, Brushes.Black, 130, locationv)
-                e.Graphics.DrawString("Discon Date", headsubFont, Brushes.Black, 180, locationv)
+                e.Graphics.DrawString("Disconnection Date", headsubFont, Brushes.Black, 145, locationv)
 
                 locationv = locationv + 15
 
+
+                Dim dt_duedate As DateTime = reprintdata(0)("DueDate")
+                Dim dt_discdate As DateTime = reprintdata(0)("DiscDate")
+
+                Dim print_duedate As String = dt_duedate.ToString("MM/dd/yyyy")
+                Dim print_discdate As String = dt_discdate.ToString("MM/dd/yyyy")
+
+                Console.WriteLine(print_duedate)
+                Console.WriteLine(print_discdate)
+
                 If reprintdata(0)("IsPaid") = "Yes" Then
 
-                    e.Graphics.DrawString(reprintdata(0)("DueDate"), headsubFont, Brushes.Black, 20, locationv)
+                    e.Graphics.DrawString(print_duedate, headsubFont, Brushes.Black, 20, locationv)
                     e.Graphics.DrawString("|", headsubFont, Brushes.Black, 130, locationv)
-                    e.Graphics.DrawString(reprintdata(0)("DiscDate"), headsubFont, Brushes.Black, 180, locationv)
+                    e.Graphics.DrawString(print_discdate, headsubFont, Brushes.Black, 180, locationv)
 
                 Else
 
                     If reprintdata(0)("DueDate") < Now Then
 
-                        e.Graphics.DrawString("Immediately", headsubFont, Brushes.Black, 20, locationv)
+                        e.Graphics.DrawString(print_duedate, headsubFont, Brushes.Black, 20, locationv)
                         e.Graphics.DrawString("|", headsubFont, Brushes.Black, 130, locationv)
-                        e.Graphics.DrawString("Immediately", headsubFont, Brushes.Black, 180, locationv)
+                        e.Graphics.DrawString(print_discdate, headsubFont, Brushes.Black, 180, locationv)
+                        'e.Graphics.DrawString("Immediately", headsubFont, Brushes.Black, 20, locationv)
+                        'e.Graphics.DrawString("|", headsubFont, Brushes.Black, 130, locationv)
+                        'e.Graphics.DrawString("Immediately", headsubFont, Brushes.Black, 180, locationv)
 
                     Else
 
                         If billarrears.Rows.Count = 0 Then
-                            e.Graphics.DrawString(reprintdata(0)("DueDate"), headsubFont, Brushes.Black, 20, locationv)
+                            e.Graphics.DrawString(print_duedate, headsubFont, Brushes.Black, 20, locationv)
                             e.Graphics.DrawString("|", headsubFont, Brushes.Black, 130, locationv)
-                            e.Graphics.DrawString(reprintdata(0)("DiscDate"), headsubFont, Brushes.Black, 180, locationv)
+                            e.Graphics.DrawString(print_discdate, headsubFont, Brushes.Black, 180, locationv)
                         Else
-
-                            e.Graphics.DrawString("Immediately", headsubFont, Brushes.Black, 20, locationv)
+                            e.Graphics.DrawString(print_duedate, headsubFont, Brushes.Black, 20, locationv)
                             e.Graphics.DrawString("|", headsubFont, Brushes.Black, 130, locationv)
-                            e.Graphics.DrawString("Immediately", headsubFont, Brushes.Black, 180, locationv)
+                            e.Graphics.DrawString(print_discdate, headsubFont, Brushes.Black, 180, locationv)
+                            'e.Graphics.DrawString("Immediately", headsubFont, Brushes.Black, 20, locationv)
+                            'e.Graphics.DrawString("|", headsubFont, Brushes.Black, 130, locationv)
+                            'e.Graphics.DrawString("Immediately", headsubFont, Brushes.Black, 180, locationv)
 
                         End If
 
@@ -2794,6 +2897,25 @@
 
                 End If
 
+                If reprintdata(0)("specialDiscount") = 0 Then
+                Else
+
+                    Dim cellRectSenior As RectangleF
+                    cellRectSenior = New RectangleF()
+                    cellRectSenior.Location = New Point(0, locationv)
+                    cellRectSenior.Size = New Size(100, 15)
+
+                    e.Graphics.DrawString("Special Discount", headsubFont, Brushes.Black, cellRectSenior, nearnear)
+                    e.Graphics.DrawString("|", headsubFont, Brushes.Black, 130, locationv)
+
+                    cellRectSenior.Location = New Point(150, locationv)
+
+                    e.Graphics.DrawString(reprintdata(0)("specialDiscount"), headsubFont, Brushes.Black, cellRectSenior, nearfar)
+
+                    locationv = locationv + 15
+
+                End If
+
                 If billarrears.Rows.Count = 0 Then
                 Else
 
@@ -2831,12 +2953,12 @@
                     Dim cellRectArrears As RectangleF
                     cellRectArrears = New RectangleF()
                     cellRectArrears.Location = New Point(0, locationv)
-                    cellRectArrears.Size = New Size(100, 15)
+                    cellRectArrears.Size = New Size(110, 15)
 
-                    e.Graphics.DrawString("Arrears", headsubFont, Brushes.Black, cellRectArrears, nearnear)
+                    e.Graphics.DrawString("Previous Unpaid Bill", headsubFont, Brushes.Black, cellRectArrears, nearnear)
                     e.Graphics.DrawString("|", headsubFont, Brushes.Black, 130, locationv)
 
-                    cellRectArrears.Location = New Point(150, locationv)
+                    cellRectArrears.Location = New Point(140, locationv)
 
                     e.Graphics.DrawString(Format(arrears + pns, "standard"), headsubFont, Brushes.Black, cellRectArrears, nearfar)
 
@@ -2858,9 +2980,9 @@
 
                 Dim totalamountdue As Double
 
-                totalamountdue = (reprintdata(0)("AmountDue") - (reprintdata(0)("AdvancePayment") + reprintdata(0)("Discount"))) + chargess + arrears + pns
+                totalamountdue = (reprintdata(0)("AmountDue") - (reprintdata(0)("AdvancePayment") + reprintdata(0)("specialDiscount") + reprintdata(0)("Discount"))) + chargess + arrears + pns
 
-                    e.Graphics.DrawString(Format(totalamountdue, "standard"), headsubFont, Brushes.Black, cellRectTotal, nearfar)
+                e.Graphics.DrawString(Format(totalamountdue, "standard"), headsubFont, Brushes.Black, cellRectTotal, nearfar)
 
                     locationv = locationv + 15
 
@@ -2957,7 +3079,8 @@
 
                     locationv = locationv + 30
 
-                    Dim getancon As New DataTable
+
+                Dim getancon As New DataTable
 
                     Try
                         If acsconn.State = ConnectionState.Closed Then acsconn.Open()
@@ -2978,21 +3101,36 @@
                         locationv = locationv + 20
 
 
-                        Dim cellRectAnouncement As RectangleF
+                    Dim cellRectAnouncement As RectangleF
                         cellRectAnouncement = New RectangleF()
                         cellRectAnouncement.Location = New Point(0, locationv)
                         cellRectAnouncement.Size = New Size(280, cellRectAnouncement.Height)
 
-                        Dim TotalStringHeight As Single = e.Graphics.MeasureString(getancon.Rows(0)("Announce"), headsubFont, New SizeF(cellRectAnouncement.Width, cellRectAnouncement.Height), MidCenterhead).Height
+                    locationv = locationv + 10
+                    Dim TotalStringHeight As Single = e.Graphics.MeasureString(getancon.Rows(0)("Announce"), headsubFont, New SizeF(cellRectAnouncement.Width, cellRectAnouncement.Height), MidCenterhead).Height
                         Dim SingleLineHeight As Single = e.Graphics.MeasureString("T", headsubFont, New SizeF(cellRectAnouncement.Width, cellRectAnouncement.Height), MidCenterhead).Height
 
-                        Dim NumberOfLines As Integer = Convert.ToInt32(TotalStringHeight / SingleLineHeight)
+                    Dim NumberOfLines As Integer = Convert.ToInt32(TotalStringHeight / SingleLineHeight)
 
-                        e.Graphics.DrawString(getancon.Rows(0)("Announce"), headsubFont, Brushes.Black, cellRectAnouncement, MidCenterhead)
+                    Dim current_now As DateTime = DateTime.Now
+                    Dim previousMonth As DateTime = current_now.AddMonths(-1)
 
-                        locationv = locationv + 10
+                    Dim previousMonthYearString As String = "(" & previousMonth.ToString("MMMM yyyy") & ")"
 
-                    End If
+                    e.Graphics.DrawString("PLEASE PAY BEFORE" & vbCrLf & "DUE DATE", headsubFontbold, Brushes.Black, cellRectAnouncement, MidCenterhead)
+
+                    locationv = locationv + 20
+
+                    Dim cellRectAnouncement1 As RectangleF
+                    cellRectAnouncement1 = New RectangleF()
+                    cellRectAnouncement1.Location = New Point(0, locationv)
+                    cellRectAnouncement1.Size = New Size(280, cellRectAnouncement1.Height)
+
+                    e.Graphics.DrawString(getancon.Rows(0)("Announce") & previousMonthYearString, headsubFont, Brushes.Black, cellRectAnouncement1, MidCenterhead)
+
+                    locationv = locationv + 10
+
+                End If
 
                     If reprintdata(0)("MeterReader") = "Manual" Then
 

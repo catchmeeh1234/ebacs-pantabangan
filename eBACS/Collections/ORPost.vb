@@ -144,12 +144,19 @@
                                         End If
 
                                     End If
-
                                     'update membership fee balance
                                     If acsconn.State = ConnectionState.Closed Then acsconn.Open()
-                                    stracs = "Update Customers 
-                                                set Membership_balance = IIF(Membership_balance - " & FormatNumber(CRList.Rows(i).Cells(5).Value) & " < 0, 0, Membership_balance - " & FormatNumber(CRList.Rows(i).Cells(5).Value) & ")
-                                                WHERE AccountNo = '" & CRList.Rows(i).Cells(2).Value & "'"
+                                    Dim valueToSubtract As Double = FormatNumber(CRList.Rows(i).Cells(5).Value)
+
+                                    stracs = "UPDATE Customers
+                                                SET Membership_balance = CASE
+                                                    WHEN (Membership_balance - " & valueToSubtract & ") < 0 THEN 0
+                                                    ELSE (Membership_balance - " & valueToSubtract & ")
+                                                END
+                                                Where AccountNo='" & CRList.Rows(i).Cells(2).Value & "'"
+                                    'stracs = "Update Customers 
+                                    '            set Membership_balance = IIF(Membership_balance - " & FormatNumber(CRList.Rows(i).Cells(5).Value) & " < " & 0.00 & ", " & 0.00 & ", Membership_balance - " & FormatNumber(CRList.Rows(i).Cells(5).Value) & ")
+                                    '            WHERE AccountNo = '" & CRList.Rows(i).Cells(2).Value & "'"
                                     acscmd.CommandText = stracs
                                     acscmd.Connection = acsconn
                                     acscmd.ExecuteNonQuery()

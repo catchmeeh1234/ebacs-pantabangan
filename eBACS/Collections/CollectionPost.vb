@@ -3,6 +3,9 @@
         loaddata()
         Me.MdiParent = eBACSmain
         CRList.Columns(11).ReadOnly = False
+
+        prog.Visible = False
+        Cursor = Cursors.Default
     End Sub
 
     Sub loaddata()
@@ -67,7 +70,9 @@
     End Sub
 
     Private Sub billSearch_Click(sender As Object, e As EventArgs) Handles billSearch.Click
-
+        billSearch.Enabled = False
+        prog.Value = 0
+        prog.Visible = True
         Cursor = Cursors.WaitCursor
         If My.Settings.Admin = "Yes" Or My.Settings.Cashier = "Yes" Then
 
@@ -90,8 +95,12 @@
 
 
                 For i = 0 To CRList.Rows.Count - 1
-                    If CRList.Rows(i).Cells(11).Value = True Then
+                    prog.Minimum = 0
+                    prog.Maximum = CRList.Rows.Count
 
+
+                    If CRList.Rows(i).Cells(11).Value = True Then
+                        'MsgBox(CRList.Rows(i).Cells(2).Value)
                         Dim getadvance As New DataTable
                         stracs = "select AdvancePayment from Customers where AccountNo = '" & CRList.Rows(i).Cells(2).Value & "'"
                         acscmd.CommandText = stracs
@@ -154,7 +163,7 @@
                         If acsconn.State = ConnectionState.Closed Then acsconn.Open()
 
                         sqlData1.Clear()
-                        stracs = "select (SUM(AmountDue) + SUM(PenaltyAfterDue) + SUM(Adjustment)) - (SUM(Discount) + SUM(AdvancePayment)) AS BILLTOTAL from Bills where BillStatus = 'Posted' and Cancelled = 'No' and IsCollectionCreated = 'No' and IsPaid = 'No' AND NOT isPromisorry = 'YesPosted' AND AccountNumber = '" & CRList.Rows(i).Cells(2).Value & "'"
+                        stracs = "select (SUM(AmountDue) + SUM(PenaltyAfterDue) + SUM(Adjustment)) - (SUM(Discount) + SUM(specialDiscount) + SUM(AdvancePayment)) AS BILLTOTAL from Bills where BillStatus = 'Posted' and Cancelled = 'No' and IsCollectionCreated = 'No' and IsPaid = 'No' AND NOT isPromisorry = 'YesPosted' AND AccountNumber = '" & CRList.Rows(i).Cells(2).Value & "'"
                         acscmd.CommandText = stracs
                         acscmd.Connection = acsconn
                         acsda.SelectCommand = acscmd
@@ -241,7 +250,7 @@
 
 
                         sqlData1.Clear()
-                        stracs = "select (SUM(AmountDue) + SUM(PenaltyAfterDue) + SUM(Adjustment)) - (SUM(Discount) + SUM(AdvancePayment)) AS BILLTOTAL from Bills where CRNo = '" & CRList.Rows(i).Cells(1).Value & "'"
+                        stracs = "select (SUM(AmountDue) + SUM(PenaltyAfterDue) + SUM(Adjustment)) - (SUM(Discount) + SUM(specialDiscount) + SUM(AdvancePayment)) AS BILLTOTAL from Bills where CRNo = '" & CRList.Rows(i).Cells(1).Value & "'"
                         acscmd.CommandText = stracs
                         acscmd.Connection = acsconn
                         acsda.SelectCommand = acscmd
@@ -343,15 +352,17 @@
                         'PAID ZERO ON LEDGER'
                         If acsconn.State = ConnectionState.Closed Then acsconn.Open()
 
-                            stracs = "INSERT INTO AccountLedger (ledgerAccountNo,ledgerDate,ledgerRefNo,ledgerParticulars,ledgerReading,ledgerConsumption,ledgerAmount,ledgerDiscount,ledgerBalance)
+                        stracs = "INSERT INTO AccountLedger (ledgerAccountNo,ledgerDate,ledgerRefNo,ledgerParticulars,ledgerReading,ledgerConsumption,ledgerAmount,ledgerDiscount,ledgerBalance)
                         Values ('" & CRList.Rows(i).Cells(2).Value & "','" & Format(Date.Parse(CRList.Rows(i).Cells(8).Value), "yyyy-MM-dd") & "',
                         '" & CRList.Rows(i).Cells(1).Value & "','Collection', '', '', '',
                         '" & Format(Double.Parse(CRList.Rows(i).Cells(6).Value), "Standard") & "','" & FormatNumber(ledgertotal, UseParensForNegativeNumbers:=TriState.True) & "')"
-                            acscmd.CommandText = stracs
-                            acscmd.Connection = acsconn
-                            acscmd.ExecuteNonQuery()
+                        acscmd.CommandText = stracs
+                        acscmd.Connection = acsconn
+                        acscmd.ExecuteNonQuery()
 
-                        End If
+                    End If
+
+                    prog.Value = i
 
                 Next
 
@@ -364,8 +375,9 @@
         Else
             MsgBox("Your account cannot perform this process.")
         End If
-
+        prog.Visible = False
         Cursor = Cursors.Default
+        billSearch.Enabled = True
     End Sub
 
     Private Sub CollectionPost_Click(sender As Object, e As EventArgs) Handles Me.Click

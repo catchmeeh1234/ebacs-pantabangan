@@ -85,4 +85,37 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Close()
     End Sub
+
+    Public MoveFormCancelBillCharges As Boolean
+    Public MoveFormCancelBillCharges_MousePosition As Point
+
+    Public Sub MoveForm_MouseDown(sender As Object, e As MouseEventArgs) Handles _
+    MyBase.MouseDown ' Add more handles here (Example: PictureBox1.MouseDown)
+
+        If e.Button = MouseButtons.Left Then
+            MoveFormCancelBillCharges = True
+            Me.Cursor = Cursors.NoMove2D
+            MoveFormCancelBillCharges_MousePosition = e.Location
+        End If
+
+    End Sub
+
+    Public Sub MoveForm_MouseMove(sender As Object, e As MouseEventArgs) Handles _
+    MyBase.MouseMove ' Add more handles here (Example: PictureBox1.MouseMove)
+
+        If MoveFormCancelBillCharges Then
+            Me.Location = Me.Location + (e.Location - MoveFormCancelBillCharges_MousePosition)
+        End If
+
+    End Sub
+
+    Public Sub MoveForm_MouseUp(sender As Object, e As MouseEventArgs) Handles _
+    MyBase.MouseUp ' Add more handles here (Example: PictureBox1.MouseUp)
+
+        If e.Button = MouseButtons.Left Then
+            MoveFormCancelBillCharges = False
+            Me.Cursor = Cursors.Default
+        End If
+
+    End Sub
 End Class

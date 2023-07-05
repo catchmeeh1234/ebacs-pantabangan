@@ -1,6 +1,13 @@
 ﻿
 
 Partial Public Class DataSet2
+    Partial Public Class UnpaidConcessionaireReportBillDataTable
+    End Class
+
+    Partial Public Class MonthlyCollectionReportDataTable
+
+    End Class
+
     Partial Public Class cancelledbillDataTable
     End Class
 

@@ -47,6 +47,7 @@ Partial Class CollectionPost
         Me.Column6 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.prog = New System.Windows.Forms.ProgressBar()
         Me.Panel1.SuspendLayout()
         CType(Me.CRList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -54,6 +55,7 @@ Partial Class CollectionPost
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.prog)
         Me.Panel1.Controls.Add(Me.totalcollection)
         Me.Panel1.Controls.Add(Me.Label23)
         Me.Panel1.Controls.Add(Me.billSearch)
@@ -240,6 +242,13 @@ Partial Class CollectionPost
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'prog
+        '
+        Me.prog.Location = New System.Drawing.Point(43, 468)
+        Me.prog.Name = "prog"
+        Me.prog.Size = New System.Drawing.Size(646, 23)
+        Me.prog.TabIndex = 46
+        '
         'CollectionPost
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -283,4 +292,5 @@ Partial Class CollectionPost
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewCheckBoxColumn
     Friend WithEvents totalcollection As Label
+    Friend WithEvents prog As ProgressBar
 End Class

@@ -36,7 +36,7 @@ Public Class login
 
             If acc.Rows(0)("ActiveSession") = 1 Then
 
-                If acc.Rows(0)("cashier") = "Yes" Then
+                If acc.Rows(0)("cashier") = "Yes" Or acc.Rows(0)("viewer") = "Yes" Then
 
                     My.Settings.Office_Name = acc.Rows(0)("office")
                     My.Settings.Office_Code = acc.Rows(0)("officeletter")

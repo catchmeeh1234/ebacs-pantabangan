@@ -80,6 +80,7 @@
         billcharges.Rows.Clear()
         billdiscount.Text = "0.00"
         billEarlyDisc.Text = "0.00"
+        tbSpecialDisc.Text = "0.00"
         billPenalty.Text = "0.00"
         billTotalamountdue.Text = "0.00"
         billcheckno.Clear()
@@ -148,6 +149,7 @@
                 billamountdue.Text = "0.00"
                 billPenalty.Text = "0.00"
                 billdiscount.Text = "0.00"
+                tbSpecialDisc.Text = "0.00"
                 billadvancepayment.Text = "0.00"
             Else
 
@@ -155,6 +157,7 @@
                 discdate.Text = Format(Date.Parse(billdata(0)("DiscDate")), "short date")
                 billamountdue.Text = Format(billdata(0)("AmountDue"), "standard")
                 billdiscount.Text = Format(billdata(0)("Discount"), "standard")
+                tbSpecialDisc.Text = Format(billdata(0)("specialDiscount"), "standard")
                 billPenalty.Text = Format(billdata(0)("PenaltyAfterDue"), "standard")
                 billadvancepayment.Text = Format(billdata(0)("AdvancePayment"), "standard")
                 billbillingmonth.Text = billdata(0)("BillingDate")
@@ -162,30 +165,39 @@
                 Dim d As DateTime = Now
                 Dim earlyPaymentDate As DateTime
 
-                If (Date.Parse(billdata(0)("ReadingDate")).ToString("dddd") = "Monday") Then
-                    earlyPaymentDate = Date.Parse(billdata(0)("ReadingDate")).AddDays(4)
-                Else
-                    earlyPaymentDate = Date.Parse(billdata(0)("ReadingDate")).AddDays(6)
-                End If
-
-                'If (earlyPaymentDate >= d.ToShortDateString) Then
-                '    Select Case MsgBox("Add early payment discount to this bill?", MsgBoxStyle.YesNo)
-                '        Case MsgBoxResult.No
-                '            billEarlyDisc.Text = 0.00
-                '        Case MsgBoxResult.Yes
-                '            billEarlyDisc.Text = Math.Round(billamountdue.Text * 0.05, 2).ToString("0.00")
-                '    End Select
-
+                'If (Date.Parse(billdata(0)("ReadingDate")).ToString("dddd") = "Monday") Then
+                '    earlyPaymentDate = Date.Parse(billdata(0)("ReadingDate")).AddDays(4)
                 'Else
-                '    billEarlyDisc.Text = 0.00
+                '    earlyPaymentDate = Date.Parse(billdata(0)("ReadingDate")).AddDays(6)
                 'End If
 
-                Select Case MsgBox("Add early payment discount to this bill?", MsgBoxStyle.YesNo)
-                    Case MsgBoxResult.No
-                        billEarlyDisc.Text = 0.00
-                    Case MsgBoxResult.Yes
-                        billEarlyDisc.Text = Math.Round(billamountdue.Text * 0.05, 2).ToString("0.00")
-                End Select
+                If (Date.Parse(billdata(0)("ReadingDate")).AddDays(8).ToString("dddd") = "Sunday") Then
+                    earlyPaymentDate = Date.Parse(billdata(0)("ReadingDate")).AddDays(1)
+
+                ElseIf (Date.Parse(billdata(0)("ReadingDate")).AddDays(8).ToString("dddd") = "Saturday") Then
+                    earlyPaymentDate = Date.Parse(billdata(0)("ReadingDate")).AddDays(2)
+                Else
+                    earlyPaymentDate = Date.Parse(billdata(0)("ReadingDate")).AddDays(8)
+                End If
+
+                If (earlyPaymentDate >= d.ToShortDateString) Then
+                    Select Case MsgBox("Add early payment discount to this bill?", MsgBoxStyle.YesNo)
+                        Case MsgBoxResult.No
+                            billEarlyDisc.Text = 0.00
+                        Case MsgBoxResult.Yes
+                            billEarlyDisc.Text = Math.Round(billamountdue.Text * 0.05, 2).ToString("0.00")
+                    End Select
+
+                Else
+                    billEarlyDisc.Text = 0.00
+                End If
+
+                'Select Case MsgBox("Add early payment discount to this bill?", MsgBoxStyle.YesNo)
+                '    Case MsgBoxResult.No
+                '        billEarlyDisc.Text = 0.00
+                '    Case MsgBoxResult.Yes
+                '        billEarlyDisc.Text = Math.Round(billamountdue.Text * 0.05, 2).ToString("0.00")
+                'End Select
 
                 'If (Format(Date.Parse(billdata(0)("DiscDate")).AddDays(10) == "") Then
                 Dim disc_date As DateTime
@@ -248,13 +260,18 @@
                 Else
                     Create_OR.clearallfields()
                     Create_OR.AccountNo.Text = membershipfeecharge(0)("AccountNumber")
+                    Create_OR.bill_number = ""
+                    Create_OR.bill_number = CRBillno.Text
                     Create_OR.loadinfo()
 
                     Create_OR.Show()
                     Create_OR.BringToFront()
 
                     'Create_OR.Location = New Point(0 + Me.Width, ((My.Computer.Screen.WorkingArea.Height / 2) - (Me.Width / 2)) / 4)
-                    Create_OR.dgvitems.Rows.Add("1", membershipfeecharge(0)("Particulars"), membershipfeecharge(0)("Amount"), membershipfeecharge(0)("Amount"), membershipfeecharge(0)("BillChargesID"), membershipfeecharge(0)("Category"), membershipfeecharge(0)("Entry"), "Yes")
+                    For z = 0 To membershipfeecharge.Rows.Count - 1
+                        Create_OR.dgvitems.Rows.Add("1", membershipfeecharge(z)("Particulars"), membershipfeecharge(z)("Amount"), membershipfeecharge(z)("Amount"), membershipfeecharge(z)("BillChargesID"), membershipfeecharge(z)("Category"), membershipfeecharge(z)("Entry"), "Yes")
+                    Next
+
 
                     Create_OR.compute()
 
@@ -292,7 +309,7 @@
 
 
 
-                        billcharges.Rows.Add(sqldataBilling(i)("Particulars"), Format(sqldataBilling(i)("Amount"), "standard"), sqldataBilling(i)("BillChargesID"))
+                        billcharges.Rows.Add(sqldataBilling(i)("Particulars"), Format(sqldataBilling(i)("Amount"), "standard"), sqldataBilling(i)("ChargeID"))
 
 
                     Next
@@ -300,52 +317,52 @@
                 End If
 
                 'auto ask for reconnection fee
-                Select Case MsgBox("Reconnection fee should be added to this bill. Add to payment?", MsgBoxStyle.YesNo)
-                    Case MsgBoxResult.Yes
-                        If acsconn.State = ConnectionState.Closed Then acsconn.Open()
-                        billdatacharges.Clear()
+                'Select Case MsgBox("Reconnection fee should be added to this bill. Add to payment?", MsgBoxStyle.YesNo)
+                '    Case MsgBoxResult.Yes
+                '        If acsconn.State = ConnectionState.Closed Then acsconn.Open()
+                '        billdatacharges.Clear()
 
-                        stracs = "select * from Charges where Particular = 'Reconnection Fee'"
-                        acscmd.CommandText = stracs
-                        acscmd.Connection = acsconn
-                        acsda.SelectCommand = acscmd
-                        acsda.Fill(billdatacharges)
-
-
-                        If billdatacharges.Rows.Count = 0 Then
-
-                        Else
-                            reconnectionFee = Math.Round(billdatacharges(0)("Amount"), 2)
-                            Dim reconnectionFeeString As String = reconnectionFee.ToString("0.00")
-
-                            For i = 0 To billdatacharges.Rows.Count - 1
-                                billcharges.Rows.Add(billdatacharges(i)("Particular"), reconnectionFeeString, billdatacharges(i)("ChargeID"))
-                            Next
+                '        stracs = "select * from Charges where Particular = 'Reconnection Fee'"
+                '        acscmd.CommandText = stracs
+                '        acscmd.Connection = acsconn
+                '        acsda.SelectCommand = acscmd
+                '        acsda.Fill(billdatacharges)
 
 
+                '        If billdatacharges.Rows.Count = 0 Then
+
+                '        Else
+                '            reconnectionFee = Math.Round(billdatacharges(0)("Amount"), 2)
+                '            Dim reconnectionFeeString As String = reconnectionFee.ToString("0.00")
+
+                '            For i = 0 To billdatacharges.Rows.Count - 1
+                '                billcharges.Rows.Add(billdatacharges(i)("Particular"), reconnectionFeeString, billdatacharges(i)("ChargeID"))
+                '            Next
 
 
-                        End If
 
-                    Case MsgBoxResult.No
-                        reconnectionFee = 0.00
-                        'billcharges.Rows.Clear()
 
-                End Select
+                '        End If
 
-                If maxbill.Rows.Count = 1 And searchbill(0)("CustomerStatus") <> "Disconnected" And 1 = 2 Then
+                '    Case MsgBoxResult.No
+                '        reconnectionFee = 0.00
+                '        'billcharges.Rows.Clear()
+
+                'End Select
+
+                If acsconn.State = ConnectionState.Closed Then acsconn.Open()
+                billdatacharges.Clear()
+
+                stracs = "select * from Charges where Particular = 'Reconnection Fee'"
+                acscmd.CommandText = stracs
+                acscmd.Connection = acsconn
+                acsda.SelectCommand = acscmd
+                acsda.Fill(billdatacharges)
+
+                If maxbill.Rows.Count = 1 And searchbill(0)("CustomerStatus") <> "Disconnected" Then
                     If Format(Date.Parse(billdata(0)("DiscDate")), "yyyy-MM-dd") < Format(Date.Parse(Now), "yyyy-MM-dd") Then
-                        Select Case MsgBox("Reconnection fee should be added to this bill. Add to payment?", MsgBoxStyle.YesNo)
+                        Select Case MsgBox("CUSTOMER HAS 1 OUTSTANDING BALANCE. Reconnection fee should be added to this bill. Add to payment?", MsgBoxStyle.YesNo)
                             Case MsgBoxResult.Yes
-                                If acsconn.State = ConnectionState.Closed Then acsconn.Open()
-                                billdatacharges.Clear()
-
-                                stracs = "select * from Charges where Particular = 'Reconnection Fee'"
-                                acscmd.CommandText = stracs
-                                acscmd.Connection = acsconn
-                                acsda.SelectCommand = acscmd
-                                acsda.Fill(billdatacharges)
-
 
                                 If billdatacharges.Rows.Count = 0 Then
 
@@ -356,10 +373,6 @@
                                     For i = 0 To billdatacharges.Rows.Count - 1
                                         billcharges.Rows.Add(billdatacharges(i)("Particular"), reconnectionFeeString, billdatacharges(i)("ChargeID"))
                                     Next
-
-
-
-
                                 End If
 
                             Case MsgBoxResult.No
@@ -368,21 +381,24 @@
 
                         End Select
 
+                        'If billdatacharges.Rows.Count = 0 Then
+
+                        'Else
+                        '    reconnectionFee = Math.Round(billdatacharges(0)("Amount"), 2)
+                        '    Dim reconnectionFeeString As String = reconnectionFee.ToString("0.00")
+
+                        '    For i = 0 To billdatacharges.Rows.Count - 1
+                        '        billcharges.Rows.Add(billdatacharges(i)("Particular"), reconnectionFeeString, billdatacharges(i)("ChargeID"))
+                        '    Next
+                        'End If
+
                     End If
 
                 End If
 
-                If maxbill.Rows.Count > 1 And searchbill(0)("CustomerStatus") <> "Disconnected" And 1 = 2 Then
-                    Select Case MsgBox("Reconnection fee should be added to this bill. Add to payment?", MsgBoxStyle.YesNo)
+                If maxbill.Rows.Count > 1 And searchbill(0)("CustomerStatus") <> "Disconnected" Then
+                    Select Case MsgBox("CUSTOMER HAS 2+ OUTSTANDING BALANCE. Reconnection fee should be added to this bill. Add to payment?", MsgBoxStyle.YesNo)
                         Case MsgBoxResult.Yes
-                            If acsconn.State = ConnectionState.Closed Then acsconn.Open()
-                            billdatacharges.Clear()
-
-                            stracs = "select * from Charges where Particular = 'Reconnection Fee'"
-                            acscmd.CommandText = stracs
-                            acscmd.Connection = acsconn
-                            acsda.SelectCommand = acscmd
-                            acsda.Fill(billdatacharges)
 
                             If billdatacharges.Rows.Count = 0 Then
 
@@ -393,10 +409,6 @@
                                 For i = 0 To billdatacharges.Rows.Count - 1
                                     billcharges.Rows.Add(billdatacharges(i)("Particular"), reconnectionFeeString, billdatacharges(i)("ChargeID"))
                                 Next
-
-
-
-
                             End If
 
                         Case MsgBoxResult.No
@@ -404,7 +416,49 @@
                             'billcharges.Rows.Clear()
 
                     End Select
+                    'If billdatacharges.Rows.Count = 0 Then
 
+                    'Else
+                    '    reconnectionFee = Math.Round(billdatacharges(0)("Amount"), 2)
+                    '    Dim reconnectionFeeString As String = reconnectionFee.ToString("0.00")
+
+                    '    For i = 0 To billdatacharges.Rows.Count - 1
+                    '        billcharges.Rows.Add(billdatacharges(i)("Particular"), reconnectionFeeString, billdatacharges(i)("ChargeID"))
+                    '    Next
+                    'End If
+
+                End If
+
+                If searchbill(0)("CustomerStatus") = "Disconnected" Then
+                    Select Case MsgBox("CUSTOMER IS DISCONNECTED. Reconnection fee should be added to this bill. Add to payment?", MsgBoxStyle.YesNo)
+                        Case MsgBoxResult.Yes
+
+                            If billdatacharges.Rows.Count = 0 Then
+
+                            Else
+                                reconnectionFee = Math.Round(billdatacharges(0)("Amount"), 2)
+                                Dim reconnectionFeeString As String = reconnectionFee.ToString("0.00")
+
+                                For i = 0 To billdatacharges.Rows.Count - 1
+                                    billcharges.Rows.Add(billdatacharges(i)("Particular"), reconnectionFeeString, billdatacharges(i)("ChargeID"))
+                                Next
+                            End If
+
+                        Case MsgBoxResult.No
+                            reconnectionFee = 0.00
+                            'billcharges.Rows.Clear()
+
+                    End Select
+                    'If billdatacharges.Rows.Count = 0 Then
+
+                    'Else
+                    '    reconnectionFee = Math.Round(billdatacharges(0)("Amount"), 2)
+                    '    Dim reconnectionFeeString As String = reconnectionFee.ToString("0.00")
+
+                    '    For i = 0 To billdatacharges.Rows.Count - 1
+                    '        billcharges.Rows.Add(billdatacharges(i)("Particular"), reconnectionFeeString, billdatacharges(i)("ChargeID"))
+                    '    Next
+                    'End If
                 End If
 
 
@@ -412,7 +466,7 @@
 
             End If
 
-            End If
+        End If
 
     End Sub
 
@@ -724,6 +778,7 @@
                     billamountdue.Text = "0.00"
                     billPenalty.Text = "0.00"
                     billdiscount.Text = "0.00"
+                    tbSpecialDisc.Text = "0.00"
                     billadvancepayment.Text = "0.00"
 
                     currentBilling.Enabled = False
@@ -1258,7 +1313,7 @@
             Next
         End If
 
-        totalamountdue = Double.Parse(totalcharges + Double.Parse(billamountdue.Text) + Double.Parse(billPenalty.Text) + Double.Parse(totalothers) + Double.Parse(totalotherchargee) + +Double.Parse(billAdjustment.Text)) - (Double.Parse(billdiscount.Text) + Double.Parse(billEarlyDisc.Text) + Double.Parse(billadvancepayment.Text))
+        totalamountdue = Double.Parse(totalcharges + Double.Parse(billamountdue.Text) + Double.Parse(billPenalty.Text) + Double.Parse(totalothers) + Double.Parse(totalotherchargee) + +Double.Parse(billAdjustment.Text)) - (Double.Parse(billdiscount.Text) + Double.Parse(tbSpecialDisc.Text) + Double.Parse(billEarlyDisc.Text) + Double.Parse(billadvancepayment.Text))
 
         billTotalamountdue.Text = Format(totalamountdue, "Standard")
         amountpaid.Text = Format(totalamountdue, "Standard")
@@ -1360,7 +1415,14 @@
                         acsda.SelectCommand = acscmd
                         acsda.Fill(searchcrno)
 
-                        If searchcrno.Rows.Count = 0 Then
+                        Dim searchorno As New DataTable
+                        stracs = "select ORNo from OR_Details where ORNo = '" & crno.Text & "'"
+                        acscmd.CommandText = stracs
+                        acscmd.Connection = acsconn
+                        acsda.SelectCommand = acscmd
+                        acsda.Fill(searchorno)
+
+                        If searchcrno.Rows.Count = 0 And searchorno.Rows.Count = 0 Then
 
                             Dim currentbill As String = ""
                             Dim arrearbill As String = ""
@@ -1524,10 +1586,10 @@
                                         If acsconn.State = ConnectionState.Closed Then acsconn.Open()
                                     End Try
 
-                                    stracs = "INSERT INTO CollectionBilling (CRNo,AccountNo,AccountName,Address,Zone,BillingDate,PaymentDate,BillType,BillNo,AmountDue,Discount, earlyPaymentDiscount, Penalty, AdvancePayment, CollectionBillingStatus,Adjustment)
+                                    stracs = "INSERT INTO CollectionBilling (CRNo,AccountNo,AccountName,Address,Zone,BillingDate,PaymentDate,BillType,BillNo,AmountDue,Discount, earlyPaymentDiscount, Penalty, AdvancePayment, CollectionBillingStatus,Adjustment, specialDiscount)
                     Values ('" & crno.Text & "','" & billAccountNo.Text & "','" & billName.Text.ToString.Replace("'", "''") & "','" & billAddress.Text.ToString.Replace("'", "''") & "',
                     '" & billZone.Text & "','" & billbillingmonth.Text & "','" & Format(Date.Now, "yyyy-MM-dd hh:mm:ss tt") & "','BillCurrent','" & CRBillno.Text & "','" & Double.Parse(billamountdue.Text) & "',
-                    '" & Double.Parse(billdiscount.Text) & "','" & Double.Parse(billEarlyDisc.Text) & "','" & Double.Parse(billPenalty.Text) & "','" & Double.Parse(billadvancepayment.Text) & "','Pending','" & Double.Parse(billAdjustment.Text) & "')"
+                    '" & Double.Parse(billdiscount.Text) & "','" & Double.Parse(billEarlyDisc.Text) & "','" & Double.Parse(billPenalty.Text) & "','" & Double.Parse(billadvancepayment.Text) & "','Pending','" & Double.Parse(billAdjustment.Text) & "', '" & Double.Parse(tbSpecialDisc.Text) & "')"
                                     acscmd.CommandText = stracs
                                     acscmd.Connection = acsconn
                                     acscmd.ExecuteNonQuery()
@@ -1576,7 +1638,7 @@
 
                                                 stracs = "INSERT INTO CollectionCharges (CRNo,BillNo,Particulars,Amount,ChargeID,Category,Entry,CollectionChargesStatus) Values
                                                     ('" & crno.Text & "', '" & CRBillno.Text & "', '" & billcharges.Rows(x).Cells(0).Value & "', 
-                                                    '" & billcharges.Rows(x).Cells(1).Value & "', '" & billcharges.Rows(x).Cells(2).Value & "', '" & sqlSurCharge.Rows(0)("Category") & "', '" & sqlSurCharge.Rows(0)("Category") & "', 'Pending')"
+                                                    '" & billcharges.Rows(x).Cells(1).Value & "', '" & billcharges.Rows(x).Cells(2).Value & "', '" & sqlSurCharge.Rows(0)("Category") & "', '" & sqlSurCharge.Rows(0)("Entry") & "', 'Pending')"
                                                 acscmd.CommandText = stracs
                                                 acscmd.Connection = acsconn
                                                 acscmd.ExecuteNonQuery()
@@ -1592,7 +1654,6 @@
                                                 acscmd.Connection = acsconn
                                                 acsda.SelectCommand = acscmd
                                                 acsda.Fill(sqlData1)
-
 
                                                 Try
                                                     If acsconn.State = ConnectionState.Closed Then acsconn.Open()
@@ -1646,7 +1707,7 @@
                                             Catch ex As Exception
                                                 If acsconn.State = ConnectionState.Closed Then acsconn.Open()
                                             End Try
-                                            stracs = "select BillNo,AmountDue,PenaltyAfterDue,Discount,AdvancePayment,BillingDate,Adjustment, earlyPaymentDiscount from Bills WHERE BillNo = " & billarrears.Rows(k).Cells(1).Value
+                                            stracs = "select BillNo,AmountDue,PenaltyAfterDue,Discount,AdvancePayment,BillingDate,Adjustment, earlyPaymentDiscount, specialDiscount from Bills WHERE BillNo = " & billarrears.Rows(k).Cells(1).Value
                                             acscmd.Connection = acsconn
                                             acscmd.CommandText = stracs
                                             acsda.SelectCommand = acscmd
@@ -1664,10 +1725,10 @@
                                                     Catch ex As Exception
                                                         If acsconn.State = ConnectionState.Closed Then acsconn.Open()
                                                     End Try
-                                                    stracs = "INSERT INTO CollectionBilling (CRNo,AccountNo,AccountName,Address,Zone,BillingDate,PaymentDate,BillType,BillNo,AmountDue,Discount,earlyPaymentDiscount,Penalty,AdvancePayment,CollectionBillingStatus,Adjustment)
+                                                    stracs = "INSERT INTO CollectionBilling (CRNo,AccountNo,AccountName,Address,Zone,BillingDate,PaymentDate,BillType,BillNo,AmountDue,Discount,earlyPaymentDiscount,Penalty,AdvancePayment,CollectionBillingStatus,Adjustment, specialDiscount)
                                     Values ('" & crno.Text & "','" & billAccountNo.Text & "','" & billName.Text.ToString.Replace("'", "''") & "','" & billAddress.Text.ToString.Replace("'", "''") & "',
                                     '" & billZone.Text & "','" & arrearsbill.Rows(x)("BillingDate") & "','" & Format(Date.Now, "yyyy-MM-dd hh:mm:ss tt") & "','Bill','" & arrearsbill.Rows(x)("BillNo") & "','" & Double.Parse(arrearsbill.Rows(x)("AmountDue")) & "',
-                                    '" & Double.Parse(arrearsbill.Rows(x)("Discount")) & "','" & Double.Parse(arrearsbill.Rows(x)("earlyPaymentDiscount")) & "','" & Double.Parse(arrearsbill.Rows(x)("PenaltyAfterDue")) & "','" & Double.Parse(arrearsbill.Rows(x)("AdvancePayment")) & "','Pending', " & Double.Parse(arrearsbill.Rows(x)("Adjustment")) & ")"
+                                    '" & Double.Parse(arrearsbill.Rows(x)("Discount")) & "','" & Double.Parse(arrearsbill.Rows(x)("earlyPaymentDiscount")) & "','" & Double.Parse(arrearsbill.Rows(x)("PenaltyAfterDue")) & "','" & Double.Parse(arrearsbill.Rows(x)("AdvancePayment")) & "','Pending', " & Double.Parse(arrearsbill.Rows(x)("Adjustment")) & ", '" & Double.Parse(arrearsbill.Rows(x)("specialDiscount")) & "')"
                                                     acscmd.CommandText = stracs
                                                     acscmd.Connection = acsconn
                                                     acscmd.ExecuteNonQuery()
@@ -2091,6 +2152,7 @@
                         billarrears.Rows.Clear()
                         billcharges.Rows.Clear()
                         billdiscount.Text = "0.00"
+                        tbSpecialDisc.Text = "0.00"
                         billEarlyDisc.Text = "0.00"
                         billPenalty.Text = "0.00"
                         billTotalamountdue.Text = "0.00"
@@ -2114,7 +2176,8 @@
 
                         billamountdue.Text = Format(billdata(0)("AmountDue"), "standard")
                         billdiscount.Text = Format(billdata(0)("Discount"), "standard")
-                            billEarlyDisc.Text = Format(billdata(0)("earlyPaymentDiscount"), "standard")
+                        tbSpecialDisc.Text = Format(billdata(0)("specialDiscount"), "standard")
+                        billEarlyDisc.Text = Format(billdata(0)("earlyPaymentDiscount"), "standard")
                             billPenalty.Text = Format(billdata(0)("Penalty"), "standard")
                             billadvancepayment.Text = Format(billdata(0)("AdvancePayment"), "standard")
 
@@ -2205,8 +2268,8 @@
 
 
                     billarrears.Rows.Add(True, loadbillarrears.Rows(0)("BillNo"), loadbillarrears.Rows(0)("BillingDate"),
-                                        Format(Val((loadbillarrears.Rows(0)("AmountDue")) + Val(arrearscharge) + Val(loadbillarrears.Rows(0)("Penalty")) + Val(loadbillarrears.Rows(0)("Adjustment"))) - (Val(loadbillarrears.Rows(0)("Discount")) + Val(loadbillarrears.Rows(0)("AdvancePayment"))), "standard"),
-                                        Format(Val(loadbillarrears.Rows(0)("AmountDue") + Val(loadbillarrears.Rows(0)("Penalty"))) - (Val(loadbillarrears.Rows(0)("Discount")) + Val(loadbillarrears.Rows(0)("AdvancePayment"))), "standard"), chargepart, Val(arrearscharge))
+                                        Format(Val((loadbillarrears.Rows(0)("AmountDue")) + Val(arrearscharge) + Val(loadbillarrears.Rows(0)("Penalty")) + Val(loadbillarrears.Rows(0)("Adjustment"))) - (Val(loadbillarrears.Rows(0)("Discount")) + Val(loadbillarrears.Rows(0)("specialDiscount")) + Val(loadbillarrears.Rows(0)("AdvancePayment"))), "standard"),
+                                        Format(Val(loadbillarrears.Rows(0)("AmountDue") + Val(loadbillarrears.Rows(0)("Penalty"))) - (Val(loadbillarrears.Rows(0)("Discount")) + Val(loadbillarrears.Rows(0)("specialDiscount")) + Val(loadbillarrears.Rows(0)("AdvancePayment"))), "standard"), chargepart, Val(arrearscharge))
 
                 Next
 
@@ -2596,12 +2659,19 @@
             acsda.SelectCommand = acscmd
             acsda.Fill(datetimecashier)
 
+            Dim collecting_officer() As String = {datetimecashier.Rows(0)("Collector"), "Acting Mun-Treasurer", "By: Ruby L. Palting"}
+            Dim loc_y = 716
             Dim cellRectCashier As RectangleF
             cellRectCashier = New RectangleF()
-            cellRectCashier.Location = New Point(240, 735)
-            cellRectCashier.Size = New Size(250, 14)
 
-            e.Graphics.DrawString(datetimecashier.Rows(0)("Collector"), headsubFont, Brushes.Black, cellRectCashier, MidLeft)
+            For Each item As String In collecting_officer
+                cellRectCashier.Location = New Point(240, loc_y)
+                cellRectCashier.Size = New Size(250, 14)
+
+                e.Graphics.DrawString(item, headsubFont, Brushes.Black, cellRectCashier, MidLeft)
+
+                loc_y += 10
+            Next
 
             'e.Graphics.DrawString(datetimecashier.Rows(0)("Collector"), headsubFont, Brushes.Black, 200, 700)
 
@@ -2610,13 +2680,19 @@
         End If
 
         If reprintcr = "No" Then
-
+            Dim collecting_officer() As String = {My.Settings.Nickname, "Acting Mun-Treasurer", "By: Ruby L. Palting"}
+            Dim loc_y = 716
             Dim cellRectCashier As RectangleF
             cellRectCashier = New RectangleF()
-            cellRectCashier.Location = New Point(240, 735)
-            cellRectCashier.Size = New Size(250, 14)
 
-            e.Graphics.DrawString(My.Settings.Nickname, headsubFont, Brushes.Black, cellRectCashier, MidLeft)
+            For Each item As String In collecting_officer
+                cellRectCashier.Location = New Point(240, loc_y)
+                cellRectCashier.Size = New Size(250, 14)
+
+                e.Graphics.DrawString(item, headsubFont, Brushes.Black, cellRectCashier, MidLeft)
+
+                loc_y += 10
+            Next
 
             'e.Graphics.DrawString(My.Settings.Nickname, headsubFont, Brushes.Black, 200, 700)
 
@@ -2624,7 +2700,7 @@
 
         End If
 
-        'e.Graphics.DrawString("Pantabangan", headsubFont, Brushes.Black, 400, 30)
+        e.Graphics.DrawString("Pantabangan", headsubFont, Brushes.Black, 150, 90)
 
 
         e.Graphics.DrawString(crno.Text, headsubFont, Brushes.Black, 250, 175)
@@ -2632,6 +2708,11 @@
         e.Graphics.DrawString(billName.Text, headsubFont, Brushes.Black, 60, 230)
         e.Graphics.DrawString(billAccountNo.Text, headsubFont, Brushes.Black, 60, 245)
         e.Graphics.DrawString(billZone.Text, headsubFont, Brushes.Black, 60, 260)
+
+        If billcheckno.Text <> "" And billcheckdate.Text <> "" Then
+            e.Graphics.DrawString(billcheckno.Text, headsubFont, Brushes.Black, 20, 680)
+            e.Graphics.DrawString(billcheckdate.Text, headsubFont, Brushes.Black, 20, 746)
+        End If
 
         'start pangalan
 
@@ -2779,7 +2860,7 @@
                 cellRectamount.Location = New Point(20, locationv)
                 cellRectamount.Size = New Size(320, 12)
 
-                e.Graphics.DrawString(billbillingmonth.Text, headsubFont, Brushes.Black, cellRectamount, MidLeft)
+                e.Graphics.DrawString("PMWS Bill " & billbillingmonth.Text, headsubFont, Brushes.Black, cellRectamount, MidLeft)
                 e.Graphics.DrawString(billamountdue.Text, headsubFont, Brushes.Black, cellRectamount, MidRight)
 
                 'old
@@ -2896,7 +2977,7 @@
         If billarrears.Rows.Count > 0 Then
 
             locationv = locationv + 24
-            e.Graphics.DrawString("Arrears:", headsubFont, Brushes.Black, 20, locationv)
+            e.Graphics.DrawString("Previous Unpaid Bill:", headsubFont, Brushes.Black, 20, locationv)
 
             For v = 0 To billarrears.Rows.Count - 1
 
@@ -3769,7 +3850,42 @@
 
             totalcurrent = Double.Parse(billamountdue.Text) + Double.Parse(billPenalty.Text + totalcharges) - (Double.Parse(billdiscount.Text) + Double.Parse(billadvancepayment.Text))
 
+            'Select Case MsgBox("Apply RECONNECTION FEE to the previous bill?", MsgBoxStyle.YesNo)
+            '    Case MsgBoxResult.Yes
+            '        Dim reconFeePrevBill As New DataTable
+            '        If acsconn.State = ConnectionState.Closed Then acsconn.Open()
+            '        reconFeePrevBill.Clear()
+
+            '        stracs = "select * from Charges where Particular = 'Reconnection Fee'"
+            '        acscmd.CommandText = stracs
+            '        acscmd.Connection = acsconn
+            '        acsda.SelectCommand = acscmd
+            '        acsda.Fill(reconFeePrevBill)
+
+            '        grouparrears.Hide()
+            '        dgvothers.Show()
+            '        dgvotherchages.Show()
+
+            '        dgvothers.Location = New Point(8, 375)
+            '        dgvotherchages.Location = New Point(267, 375)
+
+            '        cashcheck.Location = New Point(8, 483)
+            '        paymentgroup.Location = New Point(214, 483)
+
+            '        Panel1.Size = New Size(512, 623)
+            '        Me.Size = New Size(515, 669)
+
+            '        For a = 0 To reconFeePrevBill.Rows.Count - 1
+            '            dgvotherchages.Rows.Add(reconFeePrevBill.Rows(a)("Particular"), reconFeePrevBill.Rows(a)("Amount"), reconFeePrevBill.Rows(a)("ChargeID"))
+            '        Next
+            '    Case MsgBoxResult.No
+            '        'reconnectionFee = 0.00
+            '        'billcharges.Rows.Clear()
+
+            'End Select
+
             billTotalamountdue.Text = Format(billTotalamountdue.Text - totalcurrent, "Standard")
+
             amountpaid.Text = Format(billTotalamountdue.Text, "Standard")
 
 
@@ -3823,6 +3939,8 @@
         billarrears.Rows.Clear()
         billcharges.Rows.Clear()
         billdiscount.Text = "0.00"
+        billEarlyDisc.Text = "0.00"
+        tbSpecialDisc.Text = "0.00"
         billName.Clear()
         billZone.Clear()
         CRBillno.Clear()

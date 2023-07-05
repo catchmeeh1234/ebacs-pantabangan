@@ -79,6 +79,7 @@ Partial Class billingcreatebills
         Me.Column25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column30 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ArrearsInterest = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column31 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.createPreparedBills, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -153,7 +154,7 @@ Partial Class billingcreatebills
         Me.createPreparedBills.AllowUserToDeleteRows = False
         Me.createPreparedBills.BackgroundColor = System.Drawing.Color.White
         Me.createPreparedBills.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.createPreparedBills.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column14, Me.Column15, Me.Column16, Me.Column17, Me.Column18, Me.Column19, Me.Column20, Me.Column21, Me.Column22, Me.Column23, Me.Column24, Me.Column26, Me.Column27, Me.Column28, Me.Column29, Me.Column13, Me.Column25, Me.Column30, Me.ArrearsInterest})
+        Me.createPreparedBills.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column14, Me.Column15, Me.Column16, Me.Column17, Me.Column18, Me.Column19, Me.Column20, Me.Column21, Me.Column22, Me.Column23, Me.Column24, Me.Column26, Me.Column27, Me.Column28, Me.Column29, Me.Column13, Me.Column25, Me.Column30, Me.ArrearsInterest, Me.Column31})
         Me.createPreparedBills.Location = New System.Drawing.Point(10, 326)
         Me.createPreparedBills.Name = "createPreparedBills"
         Me.createPreparedBills.ReadOnly = True
@@ -558,6 +559,12 @@ Partial Class billingcreatebills
         Me.ArrearsInterest.Name = "ArrearsInterest"
         Me.ArrearsInterest.ReadOnly = True
         '
+        'Column31
+        '
+        Me.Column31.HeaderText = "isSpecialDiscount"
+        Me.Column31.Name = "Column31"
+        Me.Column31.ReadOnly = True
+        '
         'billingcreatebills
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -642,4 +649,5 @@ Partial Class billingcreatebills
     Friend WithEvents Column25 As DataGridViewTextBoxColumn
     Friend WithEvents Column30 As DataGridViewTextBoxColumn
     Friend WithEvents ArrearsInterest As DataGridViewTextBoxColumn
+    Friend WithEvents Column31 As DataGridViewTextBoxColumn
 End Class

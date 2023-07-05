@@ -114,6 +114,8 @@ Partial Class Collection_CR
         Me.Label6 = New System.Windows.Forms.Label()
         Me.billcheckno = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.tbSpecialDisc = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.cmsCR.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
@@ -214,6 +216,8 @@ Partial Class Collection_CR
         '
         'GroupBox6
         '
+        Me.GroupBox6.Controls.Add(Me.tbSpecialDisc)
+        Me.GroupBox6.Controls.Add(Me.Label17)
         Me.GroupBox6.Controls.Add(Me.billEarlyDisc)
         Me.GroupBox6.Controls.Add(Me.Label16)
         Me.GroupBox6.Controls.Add(Me.billAdjustment)
@@ -242,7 +246,7 @@ Partial Class Collection_CR
         'billEarlyDisc
         '
         Me.billEarlyDisc.BackColor = System.Drawing.Color.White
-        Me.billEarlyDisc.Location = New System.Drawing.Point(116, 125)
+        Me.billEarlyDisc.Location = New System.Drawing.Point(116, 143)
         Me.billEarlyDisc.Name = "billEarlyDisc"
         Me.billEarlyDisc.ReadOnly = True
         Me.billEarlyDisc.Size = New System.Drawing.Size(100, 21)
@@ -254,7 +258,7 @@ Partial Class Collection_CR
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(3, 125)
+        Me.Label16.Location = New System.Drawing.Point(3, 143)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(107, 15)
         Me.Label16.TabIndex = 45
@@ -263,7 +267,7 @@ Partial Class Collection_CR
         'billAdjustment
         '
         Me.billAdjustment.BackColor = System.Drawing.Color.White
-        Me.billAdjustment.Location = New System.Drawing.Point(116, 179)
+        Me.billAdjustment.Location = New System.Drawing.Point(116, 194)
         Me.billAdjustment.Name = "billAdjustment"
         Me.billAdjustment.ReadOnly = True
         Me.billAdjustment.Size = New System.Drawing.Size(100, 21)
@@ -275,7 +279,7 @@ Partial Class Collection_CR
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(44, 179)
+        Me.Label13.Location = New System.Drawing.Point(44, 194)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(66, 15)
         Me.Label13.TabIndex = 45
@@ -293,7 +297,7 @@ Partial Class Collection_CR
         'billPenalty
         '
         Me.billPenalty.BackColor = System.Drawing.Color.White
-        Me.billPenalty.Location = New System.Drawing.Point(116, 71)
+        Me.billPenalty.Location = New System.Drawing.Point(116, 67)
         Me.billPenalty.Name = "billPenalty"
         Me.billPenalty.ReadOnly = True
         Me.billPenalty.Size = New System.Drawing.Size(100, 21)
@@ -315,7 +319,7 @@ Partial Class Collection_CR
         '
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(63, 71)
+        Me.Label24.Location = New System.Drawing.Point(63, 67)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(47, 15)
         Me.Label24.TabIndex = 31
@@ -341,7 +345,7 @@ Partial Class Collection_CR
         Me.billcharges.Name = "billcharges"
         Me.billcharges.ReadOnly = True
         Me.billcharges.RowHeadersVisible = False
-        Me.billcharges.Size = New System.Drawing.Size(264, 181)
+        Me.billcharges.Size = New System.Drawing.Size(264, 198)
         Me.billcharges.TabIndex = 13
         '
         'Column4
@@ -370,7 +374,7 @@ Partial Class Collection_CR
         'billadvancepayment
         '
         Me.billadvancepayment.BackColor = System.Drawing.Color.White
-        Me.billadvancepayment.Location = New System.Drawing.Point(116, 152)
+        Me.billadvancepayment.Location = New System.Drawing.Point(116, 168)
         Me.billadvancepayment.Name = "billadvancepayment"
         Me.billadvancepayment.ReadOnly = True
         Me.billadvancepayment.Size = New System.Drawing.Size(100, 21)
@@ -382,7 +386,7 @@ Partial Class Collection_CR
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(70, 152)
+        Me.Label21.Location = New System.Drawing.Point(70, 168)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(39, 15)
         Me.Label21.TabIndex = 29
@@ -391,7 +395,7 @@ Partial Class Collection_CR
         'billdiscount
         '
         Me.billdiscount.BackColor = System.Drawing.Color.White
-        Me.billdiscount.Location = New System.Drawing.Point(116, 98)
+        Me.billdiscount.Location = New System.Drawing.Point(116, 93)
         Me.billdiscount.Name = "billdiscount"
         Me.billdiscount.ReadOnly = True
         Me.billdiscount.Size = New System.Drawing.Size(100, 21)
@@ -403,7 +407,7 @@ Partial Class Collection_CR
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(37, 98)
+        Me.Label20.Location = New System.Drawing.Point(37, 93)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(73, 15)
         Me.Label20.TabIndex = 27
@@ -412,7 +416,7 @@ Partial Class Collection_CR
         'billamountdue
         '
         Me.billamountdue.BackColor = System.Drawing.Color.White
-        Me.billamountdue.Location = New System.Drawing.Point(116, 44)
+        Me.billamountdue.Location = New System.Drawing.Point(116, 42)
         Me.billamountdue.Name = "billamountdue"
         Me.billamountdue.ReadOnly = True
         Me.billamountdue.Size = New System.Drawing.Size(100, 21)
@@ -424,7 +428,7 @@ Partial Class Collection_CR
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(37, 44)
+        Me.Label19.Location = New System.Drawing.Point(37, 42)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(73, 15)
         Me.Label19.TabIndex = 25
@@ -1035,6 +1039,27 @@ Partial Class Collection_CR
         Me.Panel1.Size = New System.Drawing.Size(512, 728)
         Me.Panel1.TabIndex = 38
         '
+        'tbSpecialDisc
+        '
+        Me.tbSpecialDisc.BackColor = System.Drawing.Color.White
+        Me.tbSpecialDisc.Location = New System.Drawing.Point(116, 118)
+        Me.tbSpecialDisc.Name = "tbSpecialDisc"
+        Me.tbSpecialDisc.ReadOnly = True
+        Me.tbSpecialDisc.Size = New System.Drawing.Size(100, 21)
+        Me.tbSpecialDisc.TabIndex = 46
+        Me.tbSpecialDisc.Text = "0.00"
+        Me.tbSpecialDisc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(37, 118)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(73, 15)
+        Me.Label17.TabIndex = 47
+        Me.Label17.Text = "Special Disc"
+        '
         'Collection_CR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -1165,4 +1190,6 @@ Partial Class Collection_CR
     Friend WithEvents Label6 As Label
     Public WithEvents billcheckno As TextBox
     Friend WithEvents Panel1 As Panel
+    Public WithEvents tbSpecialDisc As TextBox
+    Friend WithEvents Label17 As Label
 End Class

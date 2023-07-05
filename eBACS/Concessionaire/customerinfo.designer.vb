@@ -126,6 +126,7 @@ Partial Class customerinfo
         Me.btnCancelShortcut = New System.Windows.Forms.Button()
         Me.btnCreateShortcut = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.isSpecialDiscount = New System.Windows.Forms.CheckBox()
         Me.conspanel.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -165,12 +166,13 @@ Partial Class customerinfo
         '
         'assocacc
         '
-        Me.assocacc.Location = New System.Drawing.Point(877, 247)
+        Me.assocacc.Location = New System.Drawing.Point(625, 247)
         Me.assocacc.Name = "assocacc"
-        Me.assocacc.Size = New System.Drawing.Size(185, 23)
+        Me.assocacc.Size = New System.Drawing.Size(234, 23)
         Me.assocacc.TabIndex = 60
         Me.assocacc.Text = "Associated Accounts"
         Me.assocacc.UseVisualStyleBackColor = True
+        Me.assocacc.Visible = False
         '
         'GroupBox3
         '
@@ -558,6 +560,7 @@ Partial Class customerinfo
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.isSpecialDiscount)
         Me.GroupBox4.Controls.Add(Me.lblmemfeebal)
         Me.GroupBox4.Controls.Add(Me.tbMembershipfee)
         Me.GroupBox4.Controls.Add(Me.Label19)
@@ -571,7 +574,7 @@ Partial Class customerinfo
         Me.GroupBox4.Controls.Add(Me.txtLastReading)
         Me.GroupBox4.Location = New System.Drawing.Point(877, 6)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(185, 235)
+        Me.GroupBox4.Size = New System.Drawing.Size(185, 264)
         Me.GroupBox4.TabIndex = 57
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Status"
@@ -580,7 +583,7 @@ Partial Class customerinfo
         '
         Me.lblmemfeebal.AutoSize = True
         Me.lblmemfeebal.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblmemfeebal.Location = New System.Drawing.Point(10, 202)
+        Me.lblmemfeebal.Location = New System.Drawing.Point(10, 237)
         Me.lblmemfeebal.Name = "lblmemfeebal"
         Me.lblmemfeebal.Size = New System.Drawing.Size(74, 15)
         Me.lblmemfeebal.TabIndex = 32
@@ -589,7 +592,7 @@ Partial Class customerinfo
         'tbMembershipfee
         '
         Me.tbMembershipfee.BackColor = System.Drawing.Color.White
-        Me.tbMembershipfee.Location = New System.Drawing.Point(102, 199)
+        Me.tbMembershipfee.Location = New System.Drawing.Point(102, 234)
         Me.tbMembershipfee.Name = "tbMembershipfee"
         Me.tbMembershipfee.ReadOnly = True
         Me.tbMembershipfee.Size = New System.Drawing.Size(77, 21)
@@ -599,7 +602,7 @@ Partial Class customerinfo
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(10, 174)
+        Me.Label19.Location = New System.Drawing.Point(10, 209)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(80, 15)
         Me.Label19.TabIndex = 32
@@ -608,7 +611,7 @@ Partial Class customerinfo
         'txtAdvance
         '
         Me.txtAdvance.BackColor = System.Drawing.Color.White
-        Me.txtAdvance.Location = New System.Drawing.Point(102, 171)
+        Me.txtAdvance.Location = New System.Drawing.Point(102, 206)
         Me.txtAdvance.Name = "txtAdvance"
         Me.txtAdvance.ReadOnly = True
         Me.txtAdvance.Size = New System.Drawing.Size(77, 21)
@@ -628,7 +631,7 @@ Partial Class customerinfo
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(10, 147)
+        Me.Label17.Location = New System.Drawing.Point(10, 182)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(64, 15)
         Me.Label17.TabIndex = 30
@@ -637,7 +640,7 @@ Partial Class customerinfo
         'txtAveCons
         '
         Me.txtAveCons.BackColor = System.Drawing.Color.White
-        Me.txtAveCons.Location = New System.Drawing.Point(102, 144)
+        Me.txtAveCons.Location = New System.Drawing.Point(102, 179)
         Me.txtAveCons.Name = "txtAveCons"
         Me.txtAveCons.ReadOnly = True
         Me.txtAveCons.Size = New System.Drawing.Size(77, 21)
@@ -647,7 +650,7 @@ Partial Class customerinfo
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(10, 120)
+        Me.Label16.Location = New System.Drawing.Point(10, 155)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(75, 15)
         Me.Label16.TabIndex = 27
@@ -677,7 +680,7 @@ Partial Class customerinfo
         'txtLastReading
         '
         Me.txtLastReading.BackColor = System.Drawing.Color.White
-        Me.txtLastReading.Location = New System.Drawing.Point(102, 117)
+        Me.txtLastReading.Location = New System.Drawing.Point(102, 152)
         Me.txtLastReading.Name = "txtLastReading"
         Me.txtLastReading.ReadOnly = True
         Me.txtLastReading.Size = New System.Drawing.Size(77, 21)
@@ -1067,6 +1070,16 @@ Partial Class customerinfo
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'isSpecialDiscount
+        '
+        Me.isSpecialDiscount.Enabled = False
+        Me.isSpecialDiscount.Location = New System.Drawing.Point(43, 114)
+        Me.isSpecialDiscount.Name = "isSpecialDiscount"
+        Me.isSpecialDiscount.Size = New System.Drawing.Size(117, 36)
+        Me.isSpecialDiscount.TabIndex = 33
+        Me.isSpecialDiscount.Text = "Special Discount"
+        Me.isSpecialDiscount.UseVisualStyleBackColor = True
+        '
         'customerinfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -1215,4 +1228,5 @@ Partial Class customerinfo
     Friend WithEvents btnCancelShortcut As Button
     Friend WithEvents lblmemfeebal As Label
     Public WithEvents tbMembershipfee As TextBox
+    Friend WithEvents isSpecialDiscount As CheckBox
 End Class

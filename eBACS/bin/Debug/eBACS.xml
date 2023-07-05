@@ -367,7 +367,17 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:eBACS.DataSet1.UnpaidConcessionaireReportDataTable">
+<member name="T:eBACS.DataSet1.ReconnectionListDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.MonthlyCollectionReportDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.UnpaidConcessionaireReportBillDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -497,7 +507,17 @@ Represents strongly named DataRow class.
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:eBACS.DataSet1.UnpaidConcessionaireReportRow">
+<member name="T:eBACS.DataSet1.ReconnectionListRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.MonthlyCollectionReportRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.UnpaidConcessionaireReportBillRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -627,7 +647,17 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
-<member name="T:eBACS.DataSet1.UnpaidConcessionaireReportRowChangeEvent">
+<member name="T:eBACS.DataSet1.ReconnectionListRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.MonthlyCollectionReportRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:eBACS.DataSet1.UnpaidConcessionaireReportBillRowChangeEvent">
 <summary>
 Row event argument class
 </summary>

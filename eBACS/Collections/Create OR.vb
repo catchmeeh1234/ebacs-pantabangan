@@ -33,6 +33,8 @@ Public Class Create_OR
 
     Public convertedamout As String
 
+    Public bill_number As String = ""
+
     Private Sub Create_OR_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MdiParent = eBACSmain
         autoprint.CheckState = CheckState.Checked
@@ -282,28 +284,31 @@ Public Class Create_OR
     Private Sub billsave_Click(sender As Object, e As EventArgs) Handles billsave.Click
 
         loadornumber()
-        reprintor = "No"
-        If AccName.Text = "" Then
 
-            lblName.ForeColor = Color.Red
+        Dim searchcrno As New DataTable
+        stracs = "select CrNo from Collection_Details where CrNo = '" & orno.Text & "'"
+        acscmd.CommandText = stracs
+        acscmd.Connection = acsconn
+        acsda.SelectCommand = acscmd
+        acsda.Fill(searchcrno)
 
-        Else
+        Dim searchorno As New DataTable
+        stracs = "select ORNo from OR_Details where ORNo = '" & orno.Text & "'"
+        acscmd.CommandText = stracs
+        acscmd.Connection = acsconn
+        acsda.SelectCommand = acscmd
+        acsda.Fill(searchorno)
 
-            If AccountNo.Text = "No Account" Then
+        If searchcrno.Rows.Count = 0 And searchorno.Rows.Count = 0 Then
 
-                If paymentfor.Text = "" Then
-                    MsgBox("Please add items.")
-                Else
-                    If dgvitems.Rows.Count = 0 Then
-                        MsgBox("Please add items")
-                    Else
-                        save()
-                    End If
-                End If
+            reprintor = "No"
+            If AccName.Text = "" Then
+
+                lblName.ForeColor = Color.Red
 
             Else
 
-                If AccountNo.Text = "" And Address.Text = "" And Zone.Text = "" Then
+                If AccountNo.Text = "No Account" Then
 
                     If paymentfor.Text = "" Then
                         MsgBox("Please add items.")
@@ -317,7 +322,7 @@ Public Class Create_OR
 
                 Else
 
-                    If (accoundetails(0)("AccountNo") = AccountNo.Text And accoundetails.Rows(0)("Firstname") & " " & accoundetails.Rows(0)("Middlename") & " " & accoundetails.Rows(0)("Lastname") = AccName.Text) Or (accoundetails(0)("AccountNo") = AccountNo.Text And accoundetails.Rows(0)("CompanyName") = AccName.Text) Then
+                    If AccountNo.Text = "" And Address.Text = "" And Zone.Text = "" Then
 
                         If paymentfor.Text = "" Then
                             MsgBox("Please add items.")
@@ -331,18 +336,32 @@ Public Class Create_OR
 
                     Else
 
-                        MsgBox("Account Number and Account Name did not match.")
+                        If (accoundetails(0)("AccountNo") = AccountNo.Text And accoundetails.Rows(0)("Firstname") & " " & accoundetails.Rows(0)("Middlename") & " " & accoundetails.Rows(0)("Lastname") = AccName.Text) Or (accoundetails(0)("AccountNo") = AccountNo.Text And accoundetails.Rows(0)("CompanyName") = AccName.Text) Then
+
+                            If paymentfor.Text = "" Then
+                                MsgBox("Please add items.")
+                            Else
+                                If dgvitems.Rows.Count = 0 Then
+                                    MsgBox("Please add items")
+                                Else
+                                    save()
+                                End If
+                            End If
+
+                        Else
+
+                            MsgBox("Account Number and Account Name did not match.")
+
+                        End If
 
                     End If
 
                 End If
-
             End If
 
-
-
+        Else
+            MsgBox("Duplicated OR NUMBER please contact admin")
         End If
-
     End Sub
 
     Sub save()
@@ -446,6 +465,8 @@ Public Class Create_OR
 
         clearallfields()
 
+        bill_number = ""
+
         My.Settings.orfrom = My.Settings.orfrom + 1
         My.Settings.Save()
 
@@ -491,7 +512,35 @@ Public Class Create_OR
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Close()
+        If bill_number = "" Then
+            Me.Close()
+        Else
+            Select Case MsgBox("Do you want to cancel MEMBERSHIP FEE/charges to this account?", MsgBoxStyle.YesNo)
+                Case MsgBoxResult.Yes
+                    If acsconn.State = ConnectionState.Closed Then acsconn.Open()
+
+                    stracs = "DELETE FROM BillCharges WHERE BillNumber = " & bill_number & " AND Particulars LIKE '%membership%'"
+                    acscmd.CommandText = stracs
+                    acscmd.Connection = acsconn
+                    acscmd.ExecuteNonQuery()
+                    acscmd.Dispose()
+
+                    If acsconn.State = ConnectionState.Closed Then acsconn.Open()
+
+                    stracs = "DELETE FROM AccountLedger WHERE ledgerRefNo = " & bill_number & " AND ledgerParticulars LIKE '%membership%'"
+                    acscmd.CommandText = stracs
+                    acscmd.Connection = acsconn
+                    acscmd.ExecuteNonQuery()
+                    acscmd.Dispose()
+
+                    MsgBox("Bill charges cancelled.")
+                    bill_number = ""
+                    Me.Close()
+                Case MsgBoxResult.No
+                    bill_number = ""
+                    Me.Close()
+            End Select
+        End If
     End Sub
 
     Private Sub AccName_DoubleClick(sender As Object, e As EventArgs) Handles AccName.DoubleClick
@@ -519,7 +568,6 @@ Public Class Create_OR
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles reprint.Click
-
         reprint.Hide()
         reprintor = "Yes"
         Try
@@ -529,6 +577,7 @@ Public Class Create_OR
         Catch ex As Exception
 
         End Try
+        bill_number = ""
 
     End Sub
 
@@ -1185,13 +1234,22 @@ Public Class Create_OR
         'End If
 
         'If reprintcr = "No" Then
+        e.Graphics.DrawString("Pantabangan", headsubFont, Brushes.Black, 150, 90)
 
+        Dim collecting_officer() As String = {My.Settings.Nickname, "Acting Mun-Treasurer", "By: Ruby L. Palting"}
+        Dim loc_y = 716
         Dim cellRectCashier As RectangleF
         cellRectCashier = New RectangleF()
-        cellRectCashier.Location = New Point(240, 735)
-        cellRectCashier.Size = New Size(250, 14)
 
-        e.Graphics.DrawString(My.Settings.Nickname, headsubFont, Brushes.Black, cellRectCashier, MidLeft)
+        For Each item As String In collecting_officer
+            cellRectCashier.Location = New Point(240, loc_y)
+            cellRectCashier.Size = New Size(250, 14)
+
+            e.Graphics.DrawString(item, headsubFont, Brushes.Black, cellRectCashier, MidLeft)
+
+            Console.WriteLine(item)
+            loc_y += 10
+        Next
 
         e.Graphics.DrawString(Format(Now, "MM/dd/yyyy hh:mm tt"), headsubFont, Brushes.Black, 30, 175)
 
