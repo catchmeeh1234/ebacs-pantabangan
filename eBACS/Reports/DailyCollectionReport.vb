@@ -117,6 +117,10 @@ Public Class DailyCollectionReport
             acsda.SelectCommand = acscmd
             acsda.Fill(orData)
 
+
+            prog.Minimum = 0
+            prog.Maximum = collectiondata.Rows.Count + orData.Rows.Count
+
             For q = 0 To orData.Rows.Count - 1
                 Dim or_items_table As New DataTable
                 or_items_table.Clear()
@@ -140,13 +144,18 @@ Public Class DailyCollectionReport
                 acsda.SelectCommand = acscmd
                 acsda.Fill(readingseqno)
 
+
+                Dim seqNo As String = ""
+
                 For Each row As DataRow In readingseqno.Rows
                     ' Access values in each row and perform operations
-                    Dim seqNo As String = row("ReadingSeqNo")
-                    dt.Rows.Add(orData.Rows(q)("ORNo"), orData.Rows(q)("AccountName"), orData.Rows(q)("AccountNo") & "(" & seqNo & ")", "0.00" _
-                            , "0.00", "0.00", "0.00", total_or_items, "0.00", "0.00", total_or_items)
-
+                    seqNo = row("ReadingSeqNo")
                 Next
+                dt.Rows.Add(orData.Rows(q)("ORNo"), orData.Rows(q)("AccountName"), orData.Rows(q)("AccountNo") & "(" & seqNo & ")", "0.00" _
+                                , "0.00", "0.00", "0.00", total_or_items, "0.00", "0.00", total_or_items)
+
+                prog.Value = q
+
             Next
 
             For j = 0 To collectiondata.Rows.Count - 1
@@ -441,11 +450,11 @@ Public Class DailyCollectionReport
                                     , FormatNumber(charges), FormatNumber(surcharge), FormatNumber(disc_senior + earlyPayment + specialDisc), FormatNumber(total))
                     Next
 
-                    prog.Value = j / collectiondata.Rows.Count * 100
+                    'prog.Value = j / collectiondata.Rows.Count * 100
+                    prog.Value = orData.Rows.Count + j
 
                 End If
             Next
-
         End If
 
         dt.DefaultView.Sort = "crno ASC"
@@ -454,7 +463,7 @@ Public Class DailyCollectionReport
 
         ' prog.Value = t / bills.Rows.Count * 100
 
-        prog.Value = 100
+        'prog.Value = 100
 
         Dim Curdi As String = My.Application.Info.DirectoryPath
         Dim g As String

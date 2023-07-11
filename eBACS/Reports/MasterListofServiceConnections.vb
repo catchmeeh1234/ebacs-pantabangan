@@ -173,9 +173,9 @@ Public Class MasterListofServiceConnections
         End If
 
         If sqlstring.Contains("WHERE") Then
-            sqlstring = sqlstring & " AND Zone.ZoneName = Customers.Zone ORDER by Customers.Lastname, Customers.Firstname, Customers.Middlename, Cast(Zone.ZoneID AS INT), Customers.ReadingSeqNo"
+            sqlstring = sqlstring & " AND Zone.ZoneName = Customers.Zone ORDER by Customers.ReadingSeqNo, Customers.Lastname, Customers.Firstname, Customers.Middlename, Cast(Zone.ZoneID AS INT)"
         Else
-            sqlstring = sqlstring & " WHERE Zone.ZoneName = Customers.Zone ORDER by Customers.Lastname, Customers.Firstname, Customers.Middlename, Cast(Zone.ZoneID AS INT), Customers.ReadingSeqNo"
+            sqlstring = sqlstring & " WHERE Zone.ZoneName = Customers.Zone ORDER by Customers.ReadingSeqNo, Customers.Lastname, Customers.Firstname, Customers.Middlename, Cast(Zone.ZoneID AS INT)"
         End If
 
         Dim masterlist As New DataTable
@@ -284,6 +284,9 @@ Public Class MasterListofServiceConnections
             Next
 
         End If
+
+        'dt.DefaultView.Sort = "seqno ASC"
+        'dt = dt.DefaultView.ToTable
 
         Dim Curdi As String = My.Application.Info.DirectoryPath
         Dim g As String

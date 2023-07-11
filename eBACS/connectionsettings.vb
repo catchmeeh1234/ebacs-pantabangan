@@ -15,8 +15,8 @@ Module connectionsettings
         'acsconn.ConnectionString = "Data source = " & My.Settings.dbServerIp & "; database=eBACS; user id=sa;password = p@$$w0rd;"
         'acsconn.ConnectionString = "Data source = 192.168.1.79; database=eBACS; user id=sa;password = p@$$w0rd;"
 
-        acsconn.ConnectionString = "Data source = " & My.Settings.dbServerIp & "; database=eBACS; user id=sa;password = p@$$w0rd;"
-        'acsconn.ConnectionString = "Data source = " & My.Settings.dbServerIp & "; database=pantabangan; user id=sa;password = p@$$w0rd;"
+        'acsconn.ConnectionString = "Data source = " & My.Settings.dbServerIp & "; database=eBACS; user id=sa;password = p@$$w0rd;"
+        acsconn.ConnectionString = "Data source = " & My.Settings.dbServerIp & "; database=pantabangan; user id=sa;password = p@$$w0rd;"
         'acsconn.ConnectionString = "Data source = " & My.Settings.dbServerIp & "; database=eBACS; user id=" & My.Settings.dbID & ";password = " & My.Settings.dbPassword & ";"
 
         Try
@@ -43,7 +43,7 @@ Module connectionsettings
     End Sub
 
     Public Sub transferreading()
-
+        MsgBox("test")
         stracs = "Update Bills set Bills.Reading= Billstemp.Reading, Bills.Consumption=Billstemp.Consumption, 
                   Bills.AmountDue=Billstemp.AmountDue, Bills.Discount=Billstemp.Discount, Bills.ReadingDate=Billstemp.ReadingDate, 
                   Bills.DueDate=Billstemp.DueDate, Bills.LastDayNOPen=Billstemp.LastDayNOPen, Bills.DiscDate=Billstemp.DiscDate, Bills.specialDiscount=Billstemp.specialDiscount 

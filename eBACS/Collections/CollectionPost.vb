@@ -94,10 +94,10 @@
                 Dim ledgertotal As Decimal = 0
 
 
-                For i = 0 To CRList.Rows.Count - 1
-                    prog.Minimum = 0
-                    prog.Maximum = CRList.Rows.Count
+                prog.Minimum = 0
+                prog.Maximum = CRList.Rows.Count
 
+                For i = 0 To CRList.Rows.Count - 1
 
                     If CRList.Rows(i).Cells(11).Value = True Then
                         'MsgBox(CRList.Rows(i).Cells(2).Value)

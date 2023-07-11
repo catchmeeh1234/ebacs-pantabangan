@@ -180,24 +180,24 @@
                     earlyPaymentDate = Date.Parse(billdata(0)("ReadingDate")).AddDays(8)
                 End If
 
-                If (earlyPaymentDate >= d.ToShortDateString) Then
-                    Select Case MsgBox("Add early payment discount to this bill?", MsgBoxStyle.YesNo)
-                        Case MsgBoxResult.No
-                            billEarlyDisc.Text = 0.00
-                        Case MsgBoxResult.Yes
-                            billEarlyDisc.Text = Math.Round(billamountdue.Text * 0.05, 2).ToString("0.00")
-                    End Select
+                'If (earlyPaymentDate >= d.ToShortDateString) Then
+                '    Select Case MsgBox("Add early payment discount to this bill?", MsgBoxStyle.YesNo)
+                '        Case MsgBoxResult.No
+                '            billEarlyDisc.Text = 0.00
+                '        Case MsgBoxResult.Yes
+                '            billEarlyDisc.Text = Math.Round(billamountdue.Text * 0.05, 2).ToString("0.00")
+                '    End Select
 
-                Else
-                    billEarlyDisc.Text = 0.00
-                End If
+                'Else
+                '    billEarlyDisc.Text = 0.00
+                'End If
 
-                'Select Case MsgBox("Add early payment discount to this bill?", MsgBoxStyle.YesNo)
-                '    Case MsgBoxResult.No
-                '        billEarlyDisc.Text = 0.00
-                '    Case MsgBoxResult.Yes
-                '        billEarlyDisc.Text = Math.Round(billamountdue.Text * 0.05, 2).ToString("0.00")
-                'End Select
+                Select Case MsgBox("Add early payment discount to this bill?", MsgBoxStyle.YesNo)
+                    Case MsgBoxResult.No
+                        billEarlyDisc.Text = 0.00
+                    Case MsgBoxResult.Yes
+                        billEarlyDisc.Text = Math.Round(billamountdue.Text * 0.05, 2).ToString("0.00")
+                End Select
 
                 'If (Format(Date.Parse(billdata(0)("DiscDate")).AddDays(10) == "") Then
                 Dim disc_date As DateTime

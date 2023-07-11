@@ -2557,8 +2557,8 @@
                 Dim iWidth As Integer = 275
 
                 CurY = PrintCellText("Republic of the Philippines", CurX, CurY, iWidth, e, headFont, MidCenterhead)
-                CurY = PrintCellText("Pantabangan Water System", CurX, CurY, iWidth, e, headFont, MidCenterhead)
-                CurY = PrintCellText("Barangay Poblacion", CurX, CurY, iWidth, e, headsubFont, MidCenterhead)
+                CurY = PrintCellText("Pantabangan Municipal Water System", CurX, CurY, iWidth, e, headFont, MidCenterhead)
+                CurY = PrintCellText("Barangay East Poblacion", CurX, CurY, iWidth, e, headsubFont, MidCenterhead)
                 CurY = PrintCellText("Pantabangan, Nueva Ecija", CurX, CurY, iWidth, e, headsubFont, MidCenterhead)
                 'CurY = PrintCellText("Contact Number : 0908 8145 758", CurX, CurY, iWidth, e, headsubFont, MidCenterhead)
 
@@ -2779,10 +2779,13 @@
 
 
                 Dim dt_duedate As DateTime = reprintdata(0)("DueDate")
-                Dim dt_discdate As DateTime = reprintdata(0)("DiscDate")
+                Dim dt_discdate As DateTime = reprintdata(0)("DueDate").AddDays(1)
+                Dim dt_surchargedate As DateTime = reprintdata(0)("DueDate").AddDays(21)
+
 
                 Dim print_duedate As String = dt_duedate.ToString("MM/dd/yyyy")
                 Dim print_discdate As String = dt_discdate.ToString("MM/dd/yyyy")
+                Dim print_surchargedate As String = dt_surchargedate.ToString("MM/dd/yyyy")
 
                 Console.WriteLine(print_duedate)
                 Console.WriteLine(print_discdate)
@@ -3037,14 +3040,14 @@
                 Dim cellRectAfterDue As RectangleF
                     cellRectAfterDue = New RectangleF()
                     cellRectAfterDue.Location = New Point(0, locationv)
-                    cellRectAfterDue.Size = New Size(100, 15)
+                cellRectAfterDue.Size = New Size(120, 15)
 
-                e.Graphics.DrawString("Surcharge", headsubFont, Brushes.Black, cellRectAfterDue, nearnear)
+                e.Graphics.DrawString("Surcharge(" & print_surchargedate & ")", headsubFont, Brushes.Black, cellRectAfterDue, nearnear)
                 e.Graphics.DrawString("|", headsubFont, Brushes.Black, 130, locationv)
 
-                    cellRectAfterDue.Location = New Point(150, locationv)
+                cellRectAfterDue.Location = New Point(130, locationv)
 
-                    e.Graphics.DrawString(Format(penafterdue, "standard"), headsubFont, Brushes.Black, cellRectAfterDue, nearfar)
+                e.Graphics.DrawString(Format(penafterdue, "standard"), headsubFont, Brushes.Black, cellRectAfterDue, nearfar)
 
                     locationv = locationv + 15
 
@@ -3075,9 +3078,9 @@
                     cellRectreprinted.Location = New Point(0, locationv)
                     cellRectreprinted.Size = New Size(280, 35)
 
-                    e.Graphics.DrawString("----- Reprinted -----" & vbCrLf & Format(Now, "Short date"), headsubFont, Brushes.Black, cellRectreprinted, MidCenterhead)
+                e.Graphics.DrawString("----- Reprinted -----" & vbCrLf & Now.ToString("MM/dd/yyyy"), headsubFont, Brushes.Black, cellRectreprinted, MidCenterhead)
 
-                    locationv = locationv + 30
+                locationv = locationv + 30
 
 
                 Dim getancon As New DataTable
@@ -3117,16 +3120,16 @@
 
                     Dim previousMonthYearString As String = "(" & previousMonth.ToString("MMMM yyyy") & ")"
 
-                    e.Graphics.DrawString("PLEASE PAY BEFORE" & vbCrLf & "DUE DATE", headsubFontbold, Brushes.Black, cellRectAnouncement, MidCenterhead)
+                    e.Graphics.DrawString(previousMonthYearString & vbCrLf & "PLEASE PAY BEFORE" & vbCrLf & "DUE DATE", headsubFontbold, Brushes.Black, cellRectAnouncement, MidCenterhead)
 
-                    locationv = locationv + 20
+                    locationv = locationv + 30
 
                     Dim cellRectAnouncement1 As RectangleF
                     cellRectAnouncement1 = New RectangleF()
                     cellRectAnouncement1.Location = New Point(0, locationv)
                     cellRectAnouncement1.Size = New Size(280, cellRectAnouncement1.Height)
 
-                    e.Graphics.DrawString(getancon.Rows(0)("Announce") & previousMonthYearString, headsubFont, Brushes.Black, cellRectAnouncement1, MidCenterhead)
+                    e.Graphics.DrawString(getancon.Rows(0)("Announce"), headsubFont, Brushes.Black, cellRectAnouncement1, MidCenterhead)
 
                     locationv = locationv + 10
 

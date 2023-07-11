@@ -72,7 +72,7 @@ Public Class ListofActiveConnection
 
             If acsconn.State = ConnectionState.Closed Then acsconn.Open()
             activelist.Clear()
-            stracs = "select AccountNo,Lastname,Firstname,Middlename,ServiceAddress,Zone,MeterNo,DateInstalled from Customers WHERE CustomerStatus = 'Active' ORDER by Zone ASC, AccountNo ASC"
+            stracs = "select AccountNo,Lastname,Firstname,Middlename,ServiceAddress,Zone,MeterNo,DateInstalled, ReadingSeqNo from Customers WHERE CustomerStatus = 'Active' ORDER by Zone ASC, AccountNo ASC"
             acscmd.CommandText = stracs
             acscmd.Connection = acsconn
             acsda.SelectCommand = acscmd
@@ -85,7 +85,7 @@ Public Class ListofActiveConnection
 
                 For p = 0 To activelist.Rows.Count - 1
 
-                    dt.Rows.Add(activelist.Rows(p)("Zone"), activelist.Rows(p)("AccountNo"), activelist.Rows(p)("Firstname") _
+                    dt.Rows.Add(activelist.Rows(p)("Zone"), activelist.Rows(p)("AccountNo") & "(" & activelist.Rows(p)("ReadingSeqNo") & ")", activelist.Rows(p)("Firstname") _
                                 & " " & activelist.Rows(p)("Middlename") & " " & activelist.Rows(p)("Lastname") _
                                 , activelist.Rows(p)("ServiceAddress"), activelist.Rows(p)("DateInstalled"), activelist.Rows(p)("MeterNo"))
                 Next
@@ -99,7 +99,7 @@ Public Class ListofActiveConnection
 
             If acsconn.State = ConnectionState.Closed Then acsconn.Open()
             activelist.Clear()
-            stracs = "select AccountNo,Lastname,Firstname,Middlename,ServiceAddress,Zone,MeterNo,DateInstalled from Customers WHERE CustomerStatus = 'Active' AND Zone = '" & cbzone.Text & "' ORDER by Zone ASC, AccountNo ASC"
+            stracs = "select AccountNo,Lastname,Firstname,Middlename,ServiceAddress,Zone,MeterNo,DateInstalled, ReadingSeqNo from Customers WHERE CustomerStatus = 'Active' AND Zone = '" & cbzone.Text & "' ORDER by Zone ASC, AccountNo ASC"
             acscmd.CommandText = stracs
             acscmd.Connection = acsconn
             acsda.SelectCommand = acscmd
@@ -112,7 +112,7 @@ Public Class ListofActiveConnection
 
                 For p = 0 To activelist.Rows.Count - 1
 
-                    dt.Rows.Add(activelist.Rows(p)("Zone"), activelist.Rows(p)("AccountNo"), activelist.Rows(p)("Firstname") _
+                    dt.Rows.Add(activelist.Rows(p)("Zone"), activelist.Rows(p)("AccountNo") & "(" & activelist.Rows(p)("ReadingSeqNo") & ")", activelist.Rows(p)("Firstname") _
                                 & " " & activelist.Rows(p)("Middlename") & " " & activelist.Rows(p)("Lastname") _
                                 , activelist.Rows(p)("ServiceAddress"), activelist.Rows(p)("DateInstalled"), activelist.Rows(p)("MeterNo"))
                 Next
